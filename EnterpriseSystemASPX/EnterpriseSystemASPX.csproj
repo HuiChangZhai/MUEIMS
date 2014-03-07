@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DACF0739-E3DF-4E5D-9806-F9C008604B60}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnterpriseSystemASPX</RootNamespace>
+    <AssemblyName>EnterpriseSystemASPX</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BLL\BLLEnterprise.cs" />
+    <Compile Include="BLL\BLLEnterpriseCases.cs" />
+    <Compile Include="BLL\BLLEnterpriseDynamic.cs" />
+    <Compile Include="BLL\BLLMEnterprise.cs" />
+    <Compile Include="BLL\BLLMEnterpriseAdmin.cs" />
+    <Compile Include="BLL\BLLMEnterpriseAdvertising.cs" />
+    <Compile Include="BLL\BLLMEnterpriseCases.cs" />
+    <Compile Include="BLL\CommonHelper.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EnterpriseBgController.cs" />
+    <Compile Include="Controllers\EnterpriseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\DALEnterprise.cs" />
+    <Compile Include="DAL\DALEnterpriseCases.cs" />
+    <Compile Include="DAL\DALEnterpriseDynamic.cs" />
+    <Compile Include="DAL\DALMEnterprise.cs" />
+    <Compile Include="DAL\DALMEnterpriseAdmin.cs" />
+    <Compile Include="DAL\DALMEnterpriseAdvertising.cs" />
+    <Compile Include="DAL\DALMEnterpriseCases.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMSMode.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMSMode.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMSMode.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMSMode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMSMode.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMSMode.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Enterprise.cs">
+      <DependentUpon>EMSMode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EnterpriseCases.cs">
+      <DependentUpon>EMSMode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EnterpriseDynamic.cs">
+      <DependentUpon>EMSMode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MEnterprise.cs">
+      <DependentUpon>EMSMode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MEnterpriseAdmin.cs">
+      <DependentUpon>EMSMode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MEnterpriseAdvertising.cs">
+      <DependentUpon>EMSMode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MEnterpriseCases.cs">
+      <DependentUpon>EMSMode.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\CSS\Account.css" />
+    <Content Include="Content\CSS\bootstrap.css" />
+    <Content Include="Content\CSS\ie.css" />
+    <Content Include="Content\CSS\kwicks-slider.css" />
+    <Content Include="Content\CSS\responsive.css" />
+    <Content Include="Content\CSS\SiteBg.css" />
+    <Content Include="Content\CSS\style.css" />
+    <Content Include="Content\CSS\template.css" />
+    <Content Include="Content\CSS\touchTouch.css" />
+    <Content Include="Content\Images\arrows.png" />
+    <Content Include="Content\Images\bg-content.jpg" />
+    <Content Include="Content\Images\bgImages\!.gif" />
+    <Content Include="Content\Images\bgImages\add.gif" />
+    <Content Include="Content\Images\bgImages\admin_p.gif" />
+    <Content Include="Content\Images\bgImages\back.gif" />
+    <Content Include="Content\Images\bgImages\bg.gif" />
+    <Content Include="Content\Images\bgImages\bigsize.jpg" />
+    <Content Include="Content\Images\bgImages\bootnbg.jpg" />
+    <Content Include="Content\Images\bgImages\btn-edit-off.png" />
+    <Content Include="Content\Images\bgImages\btn-save-off.png" />
+    <Content Include="Content\Images\bgImages\bt_login.gif" />
+    <Content Include="Content\Images\bgImages\bullet.gif" />
+    <Content Include="Content\Images\bgImages\buttom-copy-bg.gif" />
+    <Content Include="Content\Images\bgImages\buttom-left.gif" />
+    <Content Include="Content\Images\bgImages\buttom-right.gif" />
+    <Content Include="Content\Images\bgImages\buttom_bgs.gif" />
+    <Content Include="Content\Images\bgImages\buttom_left2.gif" />
+    <Content Include="Content\Images\bgImages\buttom_right2.gif" />
+    <Content Include="Content\Images\bgImages\card.jpg" />
+    <Content Include="Content\Images\bgImages\check-out_.gif" />
+    <Content Include="Content\Images\bgImages\close.gif" />
+    <Content Include="Content\Images\bgImages\content-bg-line.gif" />
+    <Content Include="Content\Images\bgImages\content-bg.gif" />
+    <Content Include="Content\Images\bgImages\cry.jpg" />
+    <Content Include="Content\Images\bgImages\database_import_.gif" />
+    <Content Include="Content\Images\bgImages\DefaultDocs.gif" />
+    <Content Include="Content\Images\bgImages\defind.gif" />
+    <Content Include="Content\Images\bgImages\del.jpg" />
+    <Content Include="Content\Images\bgImages\delete.gif" />
+    <Content Include="Content\Images\bgImages\delete_6.gif" />
+    <Content Include="Content\Images\bgImages\edit.gif" />
+    <Content Include="Content\Images\bgImages\ershou_1.gif" />
+    <Content Include="Content\Images\bgImages\ershou_2.gif" />
+    <Content Include="Content\Images\bgImages\format.gif" />
+    <Content Include="Content\Images\bgImages\fox.css" />
+    <Content Include="Content\Images\bgImages\g.gif" />
+    <Content Include="Content\Images\bgImages\gw.gif" />
+    <Content Include="Content\Images\bgImages\gw2.gif" />
+    <Content Include="Content\Images\bgImages\header_bg.jpg" />
+    <Content Include="Content\Images\bgImages\header_left.jpg" />
+    <Content Include="Content\Images\bgImages\header_left.png" />
+    <Content Include="Content\Images\bgImages\header_right.jpg" />
+    <Content Include="Content\Images\bgImages\header_right.png" />
+    <Content Include="Content\Images\bgImages\icon-demo.gif" />
+    <Content Include="Content\Images\bgImages\icon-login-seaver.gif" />
+    <Content Include="Content\Images\bgImages\icon-mail2.gif" />
+    <Content Include="Content\Images\bgImages\icon-phone.gif" />
+    <Content Include="Content\Images\bgImages\icon2_004.png" />
+    <Content Include="Content\Images\bgImages\icon2_089.png" />
+    <Content Include="Content\Images\bgImages\icon2_090.png" />
+    <Content Include="Content\Images\bgImages\imagedelete.gif" />
+    <Content Include="Content\Images\bgImages\imageedit.gif" />
+    <Content Include="Content\Images\bgImages\image_%28add%296.gif" />
+    <Content Include="Content\Images\bgImages\image_1.gif" />
+    <Content Include="Content\Images\bgImages\ipsecurity.gif" />
+    <Content Include="Content\Images\bgImages\l1b3.gif" />
+    <Content Include="Content\Images\bgImages\l1b4.gif" />
+    <Content Include="Content\Images\bgImages\l1b5.gif" />
+    <Content Include="Content\Images\bgImages\left-bg.gif" />
+    <Content Include="Content\Images\bgImages\left-top-right.gif" />
+    <Content Include="Content\Images\bgImages\line2.jpg" />
+    <Content Include="Content\Images\bgImages\linkspic3.gif" />
+    <Content Include="Content\Images\bgImages\linkspic6.gif" />
+    <Content Include="Content\Images\bgImages\lm.gif" />
+    <Content Include="Content\Images\bgImages\lminfo.gif" />
+    <Content Include="Content\Images\bgImages\login-buttom-bg.gif" />
+    <Content Include="Content\Images\bgImages\login-content-bg.gif" />
+    <Content Include="Content\Images\bgImages\login-top-bg.gif" />
+    <Content Include="Content\Images\bgImages\login-wel.gif" />
+    <Content Include="Content\Images\bgImages\login_1.jpg" />
+    <Content Include="Content\Images\bgImages\login_3.jpg" />
+    <Content Include="Content\Images\bgImages\login_4.jpg" />
+    <Content Include="Content\Images\bgImages\login_5.jpg" />
+    <Content Include="Content\Images\bgImages\login_6.gif" />
+    <Content Include="Content\Images\bgImages\login_bg.jpg" />
+    <Content Include="Content\Images\bgImages\Login_but.gif" />
+    <Content Include="Content\Images\bgImages\login_header.jpg" />
+    <Content Include="Content\Images\bgImages\logo.gif" />
+    <Content Include="Content\Images\bgImages\logo.png" />
+    <Content Include="Content\Images\bgImages\luck.gif" />
+    <Content Include="Content\Images\bgImages\mail_leftbg.gif" />
+    <Content Include="Content\Images\bgImages\mail_rightbg.gif" />
+    <Content Include="Content\Images\bgImages\menu_bg.gif" />
+    <Content Include="Content\Images\bgImages\menu_bg.jpg" />
+    <Content Include="Content\Images\bgImages\menu_bg1.gif" />
+    <Content Include="Content\Images\bgImages\menu_bg2.gif" />
+    <Content Include="Content\Images\bgImages\menu_bg2.png" />
+    <Content Include="Content\Images\bgImages\menu_bgs.gif" />
+    <Content Include="Content\Images\bgImages\menu_bt.jpg" />
+    <Content Include="Content\Images\bgImages\menu_icon.gif" />
+    <Content Include="Content\Images\bgImages\menu_topimg.gif" />
+    <Content Include="Content\Images\bgImages\menu_topline.gif" />
+    <Content Include="Content\Images\bgImages\menu_topline.png" />
+    <Content Include="Content\Images\bgImages\mime.gif" />
+    <Content Include="Content\Images\bgImages\nav-right-bg.gif" />
+    <Content Include="Content\Images\bgImages\news-title-bg.gif" />
+    <Content Include="Content\Images\bgImages\ok.gif" />
+    <Content Include="Content\Images\bgImages\OK.jpg" />
+    <Content Include="Content\Images\bgImages\out.gif" />
+    <Content Include="Content\Images\bgImages\password.gif" />
+    <Content Include="Content\Images\bgImages\pic1.gif" />
+    <Content Include="Content\Images\bgImages\pic10.gif" />
+    <Content Include="Content\Images\bgImages\pic11.gif" />
+    <Content Include="Content\Images\bgImages\pic12.gif" />
+    <Content Include="Content\Images\bgImages\pic13.gif" />
+    <Content Include="Content\Images\bgImages\pic14.gif" />
+    <Content Include="Content\Images\bgImages\pic15.gif" />
+    <Content Include="Content\Images\bgImages\pic16.gif" />
+    <Content Include="Content\Images\bgImages\pic17.gif" />
+    <Content Include="Content\Images\bgImages\pic18.gif" />
+    <Content Include="Content\Images\bgImages\pic19.gif" />
+    <Content Include="Content\Images\bgImages\pic21.gif" />
+    <Content Include="Content\Images\bgImages\pic22.gif" />
+    <Content Include="Content\Images\bgImages\pic23.gif" />
+    <Content Include="Content\Images\bgImages\pic24.gif" />
+    <Content Include="Content\Images\bgImages\pic25.gif" />
+    <Content Include="Content\Images\bgImages\pic26.gif" />
+    <Content Include="Content\Images\bgImages\pic5.gif" />
+    <Content Include="Content\Images\bgImages\pic6.gif" />
+    <Content Include="Content\Images\bgImages\pic7.gif" />
+    <Content Include="Content\Images\bgImages\pic8.gif" />
+    <Content Include="Content\Images\bgImages\pic9.gif" />
+    <Content Include="Content\Images\bgImages\Redirects.gif" />
+    <Content Include="Content\Images\bgImages\report2_%28add%29.gif" />
+    <Content Include="Content\Images\bgImages\report2_%28delete%29.gif" />
+    <Content Include="Content\Images\bgImages\right_smbg.jpg" />
+    <Content Include="Content\Images\bgImages\servicezhgb2312.gif" />
+    <Content Include="Content\Images\bgImages\set.gif" />
+    <Content Include="Content\Images\bgImages\set2.gif" />
+    <Content Include="Content\Images\bgImages\shadow_bg.jpg" />
+    <Content Include="Content\Images\bgImages\sitebackup.gif" />
+    <Content Include="Content\Images\bgImages\skin.css" />
+    <Content Include="Content\Images\bgImages\smallbg.jpg" />
+    <Content Include="Content\Images\bgImages\st.gif" />
+    <Content Include="Content\Images\bgImages\st.png" />
+    <Content Include="Content\Images\bgImages\stop.gif" />
+    <Content Include="Content\Images\bgImages\str.gif" />
+    <Content Include="Content\Images\bgImages\Submit_bg.gif" />
+    <Content Include="Content\Images\bgImages\t2bg1.gif" />
+    <Content Include="Content\Images\bgImages\t2bg2.gif" />
+    <Content Include="Content\Images\bgImages\t2bg4.gif" />
+    <Content Include="Content\Images\bgImages\t2bg5.gif" />
+    <Content Include="Content\Images\bgImages\title.gif" />
+    <Content Include="Content\Images\bgImages\title_bg1.jpg" />
+    <Content Include="Content\Images\bgImages\title_bg2.jpg" />
+    <Content Include="Content\Images\bgImages\tj.jpg" />
+    <Content Include="Content\Images\bgImages\to.gif" />
+    <Content Include="Content\Images\bgImages\tool-down-pic.gif" />
+    <Content Include="Content\Images\bgImages\top-right.gif" />
+    <Content Include="Content\Images\bgImages\top_bt.jpg" />
+    <Content Include="Content\Images\bgImages\ts.gif" />
+    <Content Include="Content\Images\bgImages\user-info.gif" />
+    <Content Include="Content\Images\bgImages\usercontrol.gif" />
+    <Content Include="Content\Images\bgImages\vie.gif" />
+    <Content Include="Content\Images\bgImages\X.gif" />
+    <Content Include="Content\Images\bgImages\yc.gif" />
+    <Content Include="Content\Images\bgImages\yx.gif" />
+    <Content Include="Content\Images\border-horiz.gif" />
+    <Content Include="Content\Images\favicon.ico" />
+    <Content Include="Content\Images\image-blank.png" />
+    <Content Include="Content\Images\indicator.png" />
+    <Content Include="Content\Images\indicator1.png" />
+    <Content Include="Content\Images\loader.gif" />
+    <Content Include="Content\Images\logo.gif" />
+    <Content Include="Content\Images\magnifier.png" />
+    <Content Include="Content\Images\marker-1.png" />
+    <Content Include="Content\Images\marker.png" />
+    <Content Include="Content\Images\next.png" />
+    <Content Include="Content\Images\page1-img1.jpg" />
+    <Content Include="Content\Images\page1-img10.jpg" />
+    <Content Include="Content\Images\page1-img11.jpg" />
+    <Content Include="Content\Images\page1-img12.jpg" />
+    <Content Include="Content\Images\page1-img13.jpg" />
+    <Content Include="Content\Images\page1-img14.jpg" />
+    <Content Include="Content\Images\page1-img15.jpg" />
+    <Content Include="Content\Images\page1-img16.jpg" />
+    <Content Include="Content\Images\page1-img17.jpg" />
+    <Content Include="Content\Images\page1-img2.jpg" />
+    <Content Include="Content\Images\page1-img3.jpg" />
+    <Content Include="Content\Images\page1-img4.jpg" />
+    <Content Include="Content\Images\page1-img5.jpg" />
+    <Content Include="Content\Images\page1-img6.jpg" />
+    <Content Include="Content\Images\page1-img7.jpg" />
+    <Content Include="Content\Images\page1-img8.jpg" />
+    <Content Include="Content\Images\page1-img9.jpg" />
+    <Content Include="Content\Images\page2-img1.jpg" />
+    <Content Include="Content\Images\page2-img2.jpg" />
+    <Content Include="Content\Images\page2-img3.jpg" />
+    <Content Include="Content\Images\page2-img4.jpg" />
+    <Content Include="Content\Images\page2-img5.jpg" />
+    <Content Include="Content\Images\page2-img6.jpg" />
+    <Content Include="Content\Images\page3-img1.jpg" />
+    <Content Include="Content\Images\page3-img10.jpg" />
+    <Content Include="Content\Images\page3-img11.jpg" />
+    <Content Include="Content\Images\page3-img12.jpg" />
+    <Content Include="Content\Images\page3-img13.jpg" />
+    <Content Include="Content\Images\page3-img14.jpg" />
+    <Content Include="Content\Images\page3-img15.jpg" />
+    <Content Include="Content\Images\page3-img16.jpg" />
+    <Content Include="Content\Images\page3-img2.jpg" />
+    <Content Include="Content\Images\page3-img3.jpg" />
+    <Content Include="Content\Images\page3-img4.jpg" />
+    <Content Include="Content\Images\page3-img5.jpg" />
+    <Content Include="Content\Images\page3-img6.jpg" />
+    <Content Include="Content\Images\page3-img7.jpg" />
+    <Content Include="Content\Images\page3-img8.jpg" />
+    <Content Include="Content\Images\page3-img9.jpg" />
+    <Content Include="Content\Images\page4-img1.jpg" />
+    <Content Include="Content\Images\page4-img2.jpg" />
+    <Content Include="Content\Images\prev.png" />
+    <Content Include="Content\Images\slide-1.jpg" />
+    <Content Include="Content\Images\slide-2.jpg" />
+    <Content Include="Content\Images\slide-3.jpg" />
+    <Content Include="Content\Images\slide-4.jpg" />
+    <Content Include="Content\Images\slide-5.jpg" />
+    <Content Include="Content\Images\soc-icon-1.png" />
+    <Content Include="Content\Images\soc-icon-2.png" />
+    <Content Include="Content\Images\soc-icon-3.png" />
+    <Content Include="Content\Images\soc-icon-4.png" />
+    <Content Include="Content\Images\soc-icon-5.png" />
+    <Content Include="Content\Images\spinner.gif" />
+    <Content Include="Content\Images\template\bg-footer.png" />
+    <Content Include="Content\Images\template\bg-header.png" />
+    <Content Include="Content\Images\template\bg-page.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <EntityDeploy Include="Models\EMSMode.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EMSMode.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\EMSMode.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EMSMode.edmx</DependentUpon>
+      <LastGenOutput>EMSMode.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\EMSMode.edmx.diagram">
+      <DependentUpon>EMSMode.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\EMSMode.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EMSMode.edmx</DependentUpon>
+      <LastGenOutput>EMSMode.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\WebSite\bootstrap.js" />
+    <Content Include="Scripts\WebSite\forms.js" />
+    <Content Include="Scripts\WebSite\jquery.easing.1.3.js" />
+    <Content Include="Scripts\WebSite\jquery.flexslider-min.js" />
+    <Content Include="Scripts\WebSite\jquery.js" />
+    <Content Include="Scripts\WebSite\jquery.kwicks-1.5.1.js" />
+    <Content Include="Scripts\WebSite\jquery.preloader.js" />
+    <Content Include="Scripts\WebSite\superfish.js" />
+    <Content Include="Scripts\WebSite\touchTouch.jquery.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Account\Login.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\EnterpriseBg\Index.aspx" />
+    <Content Include="Views\Enterprise\EPAboutUs.aspx" />
+    <Content Include="Views\Enterprise\EPAchieveCase.aspx" />
+    <Content Include="Views\Enterprise\EPBrief.aspx" />
+    <Content Include="Views\Enterprise\EPDynamic.aspx" />
+    <Content Include="Views\Enterprise\Index.aspx" />
+    <Content Include="Views\Home\AboutUs.aspx" />
+    <Content Include="Views\Home\AchieveCase.aspx" />
+    <Content Include="Views\Home\HelpMessage.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\ManagementBrief.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\Main.Master" />
+    <Content Include="Views\Shared\EnterpriseBg.Master" />
+    <Content Include="Views\Shared\template1.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\Images\bgImages\BgImages\" />
+    <Folder Include="uploadImages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4308/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

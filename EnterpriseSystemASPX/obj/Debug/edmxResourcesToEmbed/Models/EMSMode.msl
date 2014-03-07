@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EMSysModelStoreContainer" CdmEntityContainer="EMSEntities">
+    <EntitySetMapping Name="Enterprise">
+      <EntityTypeMapping TypeName="EMSysModel.Enterprise">
+        <MappingFragment StoreEntitySet="Enterprise">
+          <ScalarProperty Name="EnterpriseID" ColumnName="EnterpriseID" />
+          <ScalarProperty Name="EnterpriseName" ColumnName="EnterpriseName" />
+          <ScalarProperty Name="EnterprisePassword" ColumnName="EnterprisePassword" />
+          <ScalarProperty Name="EnterpriseAddress" ColumnName="EnterpriseAddress" />
+          <ScalarProperty Name="EnterpriseTelphoneNumber" ColumnName="EnterpriseTelphoneNumber" />
+          <ScalarProperty Name="EnterpriseBriefShort" ColumnName="EnterpriseBriefShort" />
+          <ScalarProperty Name="EnterpriseBrief" ColumnName="EnterpriseBrief" />
+          <ScalarProperty Name="EnterpriseEmail" ColumnName="EnterpriseEmail" />
+          <ScalarProperty Name="EnterpriseRight" ColumnName="EnterpriseRight" />
+          <ScalarProperty Name="EnterpriseLogo" ColumnName="EnterpriseLogo" />
+          <ScalarProperty Name="EnterpriseRegistTime" ColumnName="EnterpriseRegistTime" />
+          <ScalarProperty Name="EnterpriseActive" ColumnName="EnterpriseActive" />
+          <ScalarProperty Name="EnterpriseStatus" ColumnName="EnterpriseStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnterpriseCases">
+      <EntityTypeMapping TypeName="EMSysModel.EnterpriseCases">
+        <MappingFragment StoreEntitySet="EnterpriseCases">
+          <ScalarProperty Name="EnterpriseCasesID" ColumnName="EnterpriseCasesID" />
+          <ScalarProperty Name="EnterpriseID" ColumnName="EnterpriseID" />
+          <ScalarProperty Name="EnterpriseTitle" ColumnName="EnterpriseTitle" />
+          <ScalarProperty Name="EnterpriseContent" ColumnName="EnterpriseContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnterpriseDynamic">
+      <EntityTypeMapping TypeName="EMSysModel.EnterpriseDynamic">
+        <MappingFragment StoreEntitySet="EnterpriseDynamic">
+          <ScalarProperty Name="EnterpriseDynamicID" ColumnName="EnterpriseDynamicID" />
+          <ScalarProperty Name="EnterpriseID" ColumnName="EnterpriseID" />
+          <ScalarProperty Name="EnterpriseDynamicTitle" ColumnName="EnterpriseDynamicTitle" />
+          <ScalarProperty Name="EnterpriseDynamicContent" ColumnName="EnterpriseDynamicContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEnterprise">
+      <EntityTypeMapping TypeName="EMSysModel.MEnterprise">
+        <MappingFragment StoreEntitySet="MEnterprise">
+          <ScalarProperty Name="MEnterpriseID" ColumnName="MEnterpriseID" />
+          <ScalarProperty Name="MEnterpriseName" ColumnName="MEnterpriseName" />
+          <ScalarProperty Name="MEnterpriseAddress" ColumnName="MEnterpriseAddress" />
+          <ScalarProperty Name="MEnterpriseTelphoneNumber" ColumnName="MEnterpriseTelphoneNumber" />
+          <ScalarProperty Name="MEnterpriseBriefShort" ColumnName="MEnterpriseBriefShort" />
+          <ScalarProperty Name="MEnterpriseBrief" ColumnName="MEnterpriseBrief" />
+          <ScalarProperty Name="MEnterpriseEmail" ColumnName="MEnterpriseEmail" />
+          <ScalarProperty Name="MEnterpriseRight" ColumnName="MEnterpriseRight" />
+          <ScalarProperty Name="MEnterpriseLogo" ColumnName="MEnterpriseLogo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEnterpriseAdmin">
+      <EntityTypeMapping TypeName="EMSysModel.MEnterpriseAdmin">
+        <MappingFragment StoreEntitySet="MEnterpriseAdmin">
+          <ScalarProperty Name="MEnterpriseAdminID" ColumnName="MEnterpriseAdminID" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="MEnterpriseAdminPassword" ColumnName="MEnterpriseAdminPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEnterpriseAdvertising">
+      <EntityTypeMapping TypeName="EMSysModel.MEnterpriseAdvertising">
+        <MappingFragment StoreEntitySet="MEnterpriseAdvertising">
+          <ScalarProperty Name="MEnterpriseAdvertisingID" ColumnName="MEnterpriseAdvertisingID" />
+          <ScalarProperty Name="MEnterpriseAdvertisingTitle" ColumnName="MEnterpriseAdvertisingTitle" />
+          <ScalarProperty Name="MEnterpriseAdvertisingImage" ColumnName="MEnterpriseAdvertisingImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEnterpriseCases">
+      <EntityTypeMapping TypeName="EMSysModel.MEnterpriseCases">
+        <MappingFragment StoreEntitySet="MEnterpriseCases">
+          <ScalarProperty Name="MEnterpriseCasesID" ColumnName="MEnterpriseCasesID" />
+          <ScalarProperty Name="MEnterpriseID" ColumnName="MEnterpriseID" />
+          <ScalarProperty Name="MEnterpriseCasesTitle" ColumnName="MEnterpriseCasesTitle" />
+          <ScalarProperty Name="MEnterpriseCasesContent" ColumnName="MEnterpriseCasesContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

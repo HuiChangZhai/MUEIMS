@@ -1,0 +1,240 @@
+.bodyBg
+{
+    background-color:#fff;
+}
+.div-login
+{
+    background-position: center;
+    height: 500px;
+    background-image: url('/Content/Images/bgImages/login.jpg');
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top:80px;
+}
+
+    .div-login .table-login
+    {
+        line-height: 36px;
+        padding-top: 265px;
+        padding-left: 567px;
+    }
+
+.table-login td
+{
+    line-height: 36px;
+}
+
+.tr-username input, .tr-pwd input
+{
+    width: 150px;
+    text-align: center;
+}
+
+A:link
+{
+    color: #036;
+    text-decoration: none;
+}
+
+A:visited
+{
+    color: #036;
+    text-decoration: none;
+}
+
+A:hover
+{
+    color: #f60;
+    text-decoration: underline;
+}
+
+A.menuChild:link
+{
+    color: #036;
+    text-decoration: none;
+}
+
+A.menuChild:visited
+{
+    color: #036;
+    text-decoration: none;
+}
+
+A.menuChild:hover
+{
+    color: #f60;
+    text-decoration: underline;
+}
+
+A.menuParent:link
+{
+    color: #000;
+    text-decoration: none;
+}
+
+A.menuParent:visited
+{
+    color: #000;
+    text-decoration: none;
+}
+
+A.menuParent:hover
+{
+    color: #f60;
+    text-decoration: none;
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #000;
+    background-color: #eef2fb;
+    margin: 0px;
+}
+
+#container
+{
+    width: 202px;
+}
+
+H1
+{
+    font-size: 12px;
+    margin: 0px;
+    width: 202px;
+    cursor: pointer;
+    height: 30px;
+    line-height: 20px;
+}
+
+    H1 a
+    {
+        display: block;
+        width: 202px;
+        color: #000;
+        height: 30px;
+        text-decoration: none;
+        moz-outline-style: none;
+        background-image: url(/Content/Images/bgImages/menu_bgS.gif);
+        background-repeat: no-repeat;
+        line-height: 30px;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+    }
+
+.content
+{
+    width: 202px;
+}
+
+.MM ul
+{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+.MM li
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 26px;
+    color: #333333;
+    list-style-type: none;
+    display: block;
+    text-decoration: none;
+    height: 26px;
+    width: 202px;
+    padding-left: 0px;
+}
+
+.MM
+{
+    width: 202px;
+    margin: 0px;
+    padding: 0px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    clip: rect(0px,0px,0px,0px);
+}
+
+    .MM a:link
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 26px;
+        color: #333333;
+        background-image: url(/Content/Images/bgImages/menu_bg1.gif);
+        background-repeat: no-repeat;
+        height: 26px;
+        width: 202px;
+        display: block;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    .MM a:visited
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 26px;
+        color: #333333;
+        background-image: url(/Content/Images/bgImages/menu_bg1.gif);
+        background-repeat: no-repeat;
+        display: block;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        height: 26px;
+        width: 202px;
+        text-decoration: none;
+    }
+
+    .MM a:active
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 26px;
+        color: #333333;
+        background-image: url(/Content/Images/bgImages/menu_bg1.gif);
+        background-repeat: no-repeat;
+        height: 26px;
+        width: 202px;
+        display: block;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    .MM a:hover
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 26px;
+        font-weight: bold;
+        color: #006600;
+        background-image: url(/Content/Images/bgImages/menu_bg2.gif);
+        background-repeat: no-repeat;
+        text-align: center;
+        display: block;
+        margin: 0px;
+        padding: 0px;
+        height: 26px;
+        width: 202px;
+        text-decoration: none;
+    }

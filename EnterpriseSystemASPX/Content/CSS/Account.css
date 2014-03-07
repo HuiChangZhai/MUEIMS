@@ -1,0 +1,39 @@
+﻿.box-404 .div-formlogin
+{
+    width: 60%;
+    float: left;
+    border-right: solid 1px #333;
+    margin-bottom: 30px;
+}
+
+.box-404 .div-btnregister
+{
+    width: auto;
+    float: right;
+}
+
+.box-404 .div-btnregister .btn-register
+{
+    margin-right: 190px;
+    margin-top: 30px;
+}
+
+.box-404 .div-formregister
+{
+    width: 60%;
+    float: left;
+    border-right: solid 1px #333;
+    margin-bottom: 30px;
+}
+
+.box-404 .div-btnlogin
+{
+    width: auto;
+    float: right;
+}
+
+.box-404 .div-btnlogin .btn-login
+{
+    margin-right: 190px;
+    margin-top: 30px;
+}
