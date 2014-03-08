@@ -31,6 +31,7 @@ namespace EnterpriseSystemASPX.Controllers
             {
                 Regex reg = new Regex(@"^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})");
                 if (!reg.IsMatch(email)) ViewBag.emailError = "请输入正确的邮箱地址";
+            
                 //检查是否存在这个用户
                 Enterprise existEnterprise = BLLEnterprise.ExistEnterprise(email);
                 if (existEnterprise == null) ViewBag.emailError = "该邮箱地址不存在";

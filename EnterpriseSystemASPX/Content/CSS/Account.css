@@ -59,6 +59,58 @@
     color: #d9534f;
     line-height: 28px;
     font-weight: normal;
+}
+
+.fogetpwd
+{
+    margin-left: 132px;
+}
+
+.btnLogin
+{
+    width: 97px;
+    height: 28px;
+    border: 1px solid #0081ce;
+    background-color: #5b9bd9;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    text-align: center;
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    padding-top: 8px;
+    margin-bottom: 44px;
+    margin-top: 18px;
+}
+
+    .btnLogin:hover
+    {
+        color: #ffffff !important;
+        background-color: #0081ce;
+    }
+
+.div-btnregister a
+{
+    width: 129px;
+    height: 29px;
+    border: 1px solid #ef7b18;
+    background-color: #f2aa20;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    text-align: center;
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    padding-top: 8px;
+    margin-bottom: 44px;
+    margin-right: 102px;
+    margin-top: 10px;
+}
+.div-btnregister .lalregister
+{
+    margin-top: 20px;
     margin-left: -20px;
 }
 
@@ -129,3 +181,8 @@
     padding-top: 23px;
     margin-right: 316px;
 }
+    .div-btnregister a:hover
+    {
+        color: #ffffff !important;
+        background-color: #ef7b18;
+    }
