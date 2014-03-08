@@ -6,6 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <link href="/Content/CSS/Account.css" rel="stylesheet" />
+    <script src="/Scripts/WebSite/Accountlogin.js"></script>
     <!--============================== content begin=================================-->
     <div class="bg-content">
         <div id="content">
@@ -15,17 +16,29 @@
                         <div class="block-404">
                             <div class="box-404">
                                 <div class="div-formlogin">
-                                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil doming id quod mazim placerat facer possim assum orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy euismod.</p>
-
-                                    <form id="form-search" action="search.php" method="GET" accept-charset="utf-8">
-                                        <div class="clearfix">
-                                            <input type="text" name="s" onblur="if(this.value=='') this.value=''" onfocus="if(this.value =='' ) this.value=''">
-                                            <a href="#" onclick="document.getElementById('form-search').submit()" class="btn btn-1 ">Search</a>
+                                    <div>
+                                        <input type="text" id="useremail" name="useremail" placeholder="请输入您的邮箱" class="inputcss" onblur="CheckExistEmail()"/>
+                                        <div class="errinfo" id="emailError"></div>
+                                    </div>
+                                    <div>
+                                        <input type="text" id="userpwd" name="userpwd" placeholder="请输入您的密码" class="inputcss" />
+                                        <div class="errinfo" id="pwdError"></div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <input type="checkbox" id="rememberme" name="rememberme" style="margin-top: -4px;" />
+                                            <span>记住我</span>
+                                            <a class="fogetpwd">忘记密码？</a>
                                         </div>
-                                    </form>
+                                    </div>
+                                    <div>
+                                        <a class="btnLogin" onclick="AccountLogin()">登录</a>
+                                        <span class="errinfo" id="loginError"></span>
+                                    </div>
                                 </div>
                                 <div class="div-btnregister">
-                                    <div class="btn-register">注册按钮</div>
+                                    <div class="lalregister">您还没有注册吗？</div>
+                                    <a>注册按钮</a>
                                 </div>
                             </div>
                         </div>
