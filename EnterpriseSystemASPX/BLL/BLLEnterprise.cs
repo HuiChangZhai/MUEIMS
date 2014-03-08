@@ -99,7 +99,7 @@ namespace EnterpriseSystemASPX.BLL
         }
 
         public static void Login()
-        { 
+        {
 
         }
     }
