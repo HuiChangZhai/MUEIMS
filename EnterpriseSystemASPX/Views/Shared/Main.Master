@@ -57,7 +57,12 @@
     <header>
         <div class="container clearfix">
             <div class="row pull-right" style="height: 22px;">
+                <% Enterprise islogin=BLLEnterprise.Current;
+                    if(islogin==null){ %>
                 <a href="/Account/Login">登录</a>&nbsp;|&nbsp;<a href="/Account/Register">注册</a>
+                <%}else{ %>
+                <a title="欢迎<%:islogin.EnterpriseName %>回来"><%:islogin.EnterpriseEmail %></a>&nbsp;|&nbsp;<a href="/Account/Logoff">退出</a>
+                <%} %>
             </div>
             <div class="span12">
 

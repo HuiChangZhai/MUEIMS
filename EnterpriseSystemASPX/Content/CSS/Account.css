@@ -59,6 +59,7 @@
     color: #d9534f;
     line-height: 28px;
     font-weight: normal;
+    margin-left: -20px;
 }
 
 .fogetpwd
@@ -82,6 +83,7 @@
     padding-top: 8px;
     margin-bottom: 44px;
     margin-top: 18px;
+    float: left;
 }
 
     .btnLogin:hover
@@ -108,13 +110,22 @@
     margin-right: 102px;
     margin-top: 10px;
 }
+
 .div-btnregister .lalregister
 {
     margin-top: 20px;
-color: #666;
+    color: #666;
 }
-    .div-btnregister a:hover
-    {
-        color: #ffffff !important;
-        background-color: #ef7b18;
-    }
+
+.div-btnregister a:hover
+{
+    color: #ffffff !important;
+    background-color: #ef7b18;
+}
+
+.postitionError
+{
+    float: right;
+    padding-top: 23px;
+    margin-right: 316px;
+}

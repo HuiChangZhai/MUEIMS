@@ -17,12 +17,12 @@
                             <div class="box-404">
                                 <div class="div-formlogin">
                                     <div>
-                                        <input type="text" id="useremail" name="useremail" placeholder="请输入您的邮箱" class="inputcss" onblur="CheckExistEmail()"/>
-                                        <div class="errinfo" id="emailError"></div>
+                                        <input type="text" id="useremail" name="useremail" placeholder="请输入您的邮箱" class="inputcss"/>
+                                        <span class="errinfo" id="emailError"><%:ViewBag.emailError??"" %></span>
                                     </div>
                                     <div>
                                         <input type="text" id="userpwd" name="userpwd" placeholder="请输入您的密码" class="inputcss" />
-                                        <div class="errinfo" id="pwdError"></div>
+                                        <span class="errinfo" id="pwdError"><%:ViewBag.pwdError??"" %></span>
                                     </div>
                                     <div>
                                         <div>
@@ -33,12 +33,12 @@
                                     </div>
                                     <div>
                                         <a class="btnLogin" onclick="AccountLogin()">登录</a>
-                                        <span class="errinfo" id="loginError"></span>
+                                        <span class="errinfo postitionError" id="loginError"><%:ViewBag.loginError??"" %></span>
                                     </div>
                                 </div>
                                 <div class="div-btnregister">
                                     <div class="lalregister">您还没有注册吗？</div>
-                                    <a>注册按钮</a>
+                                    <a href="/Account/Register">注册按钮</a>
                                 </div>
                             </div>
                         </div>
