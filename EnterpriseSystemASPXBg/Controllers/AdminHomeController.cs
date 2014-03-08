@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnterpriseSystemASPX.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,14 @@ namespace EnterpriseSystemASPXBg.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            if (!BLLMEnterpriseAdmin.IsLogin())
+            {
+                return Redirect("~/AdminAccount/Login");
+            }
+            else
+            {
+                return View();
+            }
         }
 
     }

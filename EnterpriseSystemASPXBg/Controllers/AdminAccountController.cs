@@ -19,30 +19,34 @@ namespace EnterpriseSystemASPXBg.Controllers
         {
             if (string.IsNullOrEmpty(adminname) && string.IsNullOrEmpty(password))
             {
-                if (EMSCookie.ReadCookie("AdminCookie") == "")
+                if (!BLLMEnterpriseAdmin.IsLogin())
                 {
-                    ViewBag.Message = "请登录";
+                    ViewBag.Message = "";
                 }
                 else
                 {
-                    ViewBag.Message = "自动登录";
+                    return Redirect("~/AdminHome/Index");
                 }
             }
-            else 
+            else
             {
-                MEnterpriseAdmin admin = BLLMEnterpriseAdmin.AdminLogin(adminname, password);
-                if (admin == null)
+                if (BLLMEnterpriseAdmin.Login(adminname, password))
+                {
+                    return Redirect("~/AdminHome/Index");
+                }
+                else
                 {
                     ViewBag.Message = "登录失败";
                 }
-                else
-                {
-                    ViewBag.Message = "已经登录";
-                    EMSCookie.AddCookie("AdminCookie", adminname);
-                }
             }
+
             return View();
         }
 
+        public ActionResult Logout()
+        {
+            BLLMEnterpriseAdmin.Logout();
+            return Redirect("~/AdminAccount/Login");
+        }
     }
 }
