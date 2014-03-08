@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3679d1c673dd4588bf9737585c1c4051" Name="关系图1">
+      <Diagram DiagramId="3679d1c673dd4588bf9737585c1c4051" Name="关系图1" ZoomLevel="93">
         <EntityTypeShape EntityType="EMSysModel.Enterprise" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="EMSysModel.EnterpriseCases" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="EMSysModel.EnterpriseDynamic" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />

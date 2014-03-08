@@ -26,6 +26,7 @@
                                 </div>
                                 <div class="div-btnregister">
                                     <div class="btn-register">注册按钮</div>
+                                    <p><%:ViewBag.Message %></p>
                                 </div>
                             </div>
                         </div>

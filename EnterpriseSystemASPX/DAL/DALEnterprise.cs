@@ -24,5 +24,13 @@ namespace EnterpriseSystemASPX.DAL
 
             return enterprise;
         }
+
+        public Enterprise GetEnterprise(string enterpriEmail, string password)
+        {
+            EMSEntities entity = new EMSEntities();
+            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseEmail == enterpriEmail && m.EnterprisePassword == password);
+
+            return enterprise;
+        }
     }
 }
