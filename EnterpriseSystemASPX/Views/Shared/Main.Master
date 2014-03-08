@@ -61,7 +61,9 @@
                     if(islogin==null){ %>
                 <a href="/Account/Login">登录</a>&nbsp;|&nbsp;<a href="/Account/Register">注册</a>
                 <%}else{ %>
-                <a title="欢迎<%:islogin.EnterpriseName %>回来"><%:islogin.EnterpriseEmail %></a>&nbsp;|&nbsp;<a href="/Account/Logoff">退出</a>
+                <a title="欢迎<%:islogin.EnterpriseName %>回来">
+                    <%:islogin.EnterpriseEmail %></a>&nbsp;|&nbsp;
+                <a href="/Account/Logout">退出</a>
                 <%} %>
             </div>
             <div class="span12">

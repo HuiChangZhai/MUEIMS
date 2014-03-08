@@ -131,7 +131,8 @@
     <Compile Include="BLL\BLLMEnterpriseAdmin.cs" />
     <Compile Include="BLL\BLLMEnterpriseAdvertising.cs" />
     <Compile Include="BLL\BLLMEnterpriseCases.cs" />
-    <Compile Include="BLL\CommonHelper.cs" />
+    <Compile Include="BLL\BLLMEnterpriseMessage.cs" />
+    <Compile Include="Common\EmailHelper.cs" />
     <Compile Include="Common\EMSCookie.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EnterpriseBgController.cs" />
@@ -144,44 +145,48 @@
     <Compile Include="DAL\DALMEnterpriseAdmin.cs" />
     <Compile Include="DAL\DALMEnterpriseAdvertising.cs" />
     <Compile Include="DAL\DALMEnterpriseCases.cs" />
+    <Compile Include="DAL\DALMEnterpriseMessage.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\EMSMode.Context.cs">
+    <Compile Include="Models\EMSModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EMSMode.Context.tt</DependentUpon>
+      <DependentUpon>EMSModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EMSMode.cs">
+    <Compile Include="Models\EMSModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EMSMode.tt</DependentUpon>
+      <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EMSMode.Designer.cs">
+    <Compile Include="Models\EMSModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EMSMode.edmx</DependentUpon>
+      <DependentUpon>EMSModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Enterprise.cs">
-      <DependentUpon>EMSMode.tt</DependentUpon>
+      <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EnterpriseCases.cs">
-      <DependentUpon>EMSMode.tt</DependentUpon>
+      <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EnterpriseDynamic.cs">
-      <DependentUpon>EMSMode.tt</DependentUpon>
+      <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MEnterprise.cs">
-      <DependentUpon>EMSMode.tt</DependentUpon>
+      <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MEnterpriseAdmin.cs">
-      <DependentUpon>EMSMode.tt</DependentUpon>
+      <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MEnterpriseAdvertising.cs">
-      <DependentUpon>EMSMode.tt</DependentUpon>
+      <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MEnterpriseCases.cs">
-      <DependentUpon>EMSMode.tt</DependentUpon>
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MEnterpriseMessage.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -476,22 +481,22 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <EntityDeploy Include="Models\EMSMode.edmx">
+    <EntityDeploy Include="Models\EMSModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EMSMode.Designer.cs</LastGenOutput>
+      <LastGenOutput>EMSModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\EMSMode.Context.tt">
+    <Content Include="Models\EMSModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EMSMode.edmx</DependentUpon>
-      <LastGenOutput>EMSMode.Context.cs</LastGenOutput>
+      <DependentUpon>EMSModel.edmx</DependentUpon>
+      <LastGenOutput>EMSModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\EMSMode.edmx.diagram">
-      <DependentUpon>EMSMode.edmx</DependentUpon>
+    <Content Include="Models\EMSModel.edmx.diagram">
+      <DependentUpon>EMSModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\EMSMode.tt">
+    <Content Include="Models\EMSModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EMSMode.edmx</DependentUpon>
-      <LastGenOutput>EMSMode.cs</LastGenOutput>
+      <DependentUpon>EMSModel.edmx</DependentUpon>
+      <LastGenOutput>EMSModel.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -511,6 +516,7 @@
     <Content Include="Scripts\WebSite\Accountlogin.js" />
     <Content Include="Scripts\WebSite\bootstrap.js" />
     <Content Include="Scripts\WebSite\forms.js" />
+    <Content Include="Scripts\WebSite\HomeAboutus.js" />
     <Content Include="Scripts\WebSite\jquery.easing.1.3.js" />
     <Content Include="Scripts\WebSite\jquery.flexslider-min.js" />
     <Content Include="Scripts\WebSite\jquery.js" />

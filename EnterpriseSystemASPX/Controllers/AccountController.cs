@@ -14,12 +14,6 @@ namespace EnterpriseSystemASPX.Controllers
         //
         // GET: /Account/
 
-        public ActionResult Login()
-        {
-            return View();
-        }
-
-        [HttpGet]
         public ActionResult Login(string email, string pwd,bool? remember)
         {
             if (string.IsNullOrEmpty(email) && string.IsNullOrEmpty(pwd))
@@ -41,14 +35,13 @@ namespace EnterpriseSystemASPX.Controllers
             if (!string.IsNullOrEmpty(ViewBag.emailError) || !string.IsNullOrEmpty(ViewBag.pwdError))
                 return View();
             //检查用户输入是否正确
-            Enterprise enterprise = BLLEnterprise.GetEnterprise(email, pwd);
-            if (enterprise == null)
+            bool islogin=BLLEnterprise.IsLogin(email,pwd);
+            if (!islogin)
             {
                 ViewBag.loginError = "邮箱密码错误";
                 return View();
             }
-            BLLEnterprise.SetAuthCookies(email, remember.HasValue ? remember.Value : true);
-            return View("Index","Home");
+            return Redirect("~/Home/Index");
         }
 
         public ActionResult Register()
@@ -56,9 +49,10 @@ namespace EnterpriseSystemASPX.Controllers
             return View();
         }
 
-        public void Logoff()
+        public ActionResult Logout()
         {
-            BLLEnterprise.ClearAuthCookies();
+            BLLEnterprise.Logout();
+            return Redirect("~/Home/Index");
         }
     }
 }

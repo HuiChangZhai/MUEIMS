@@ -20,14 +20,35 @@ function CheckExistEmail()
         return;
     }
     var url = "/Account/Login?email=" + email;
-    AjaxMethod(url, "emailError","get");
+    $.ajax({
+        type: "get",
+        url: url,
+        dataType: "html",
+        success: function (data) {
+            $("#emailError").html(data);
+        }
+    });
+}
+
+function Logout() {
+    var url = "/Account/Logout";
+    window.location.href = url;
 }
 
 function AccountLogin()
 {
-    var email = $("#useremail").val();
-    var pwd = $("#userpwd").val();
-    var url = "/Account/Login?email=" + email + "&pwd=" + pwd;
-    window.location.href = url;
-    //AjaxMethod(url,)
+    var emailerror = $("#emailError").html();
+    var pwderror = $("#pwdError").html();
+    var loginerror = $("#loginError").html();
+    if (emailerror.trim() == "" && pwderror.trim() == "" && loginerror.trim() == "") {
+        var email = $("#useremail").val();
+        var remember = $('input[name=rememberme]').is(':checked');
+        var pwd = $("#userpwd").val();
+        var url = "/Account/Login?email=" + email + "&pwd=" + pwd + "&remember=" + remember;
+        window.location.href = url;
+        $("#emailError").html("");
+        $("#pwdError").html("");
+        $("#loginError").html("");
+        //AjaxMethod(url,)
+    }
 }

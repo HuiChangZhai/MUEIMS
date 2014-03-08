@@ -32,5 +32,6 @@ namespace EnterpriseSystemASPX.Models
         public DbSet<MEnterpriseAdmin> MEnterpriseAdmin { get; set; }
         public DbSet<MEnterpriseAdvertising> MEnterpriseAdvertising { get; set; }
         public DbSet<MEnterpriseCases> MEnterpriseCases { get; set; }
+        public DbSet<MEnterpriseMessage> MEnterpriseMessage { get; set; }
     }
 }
