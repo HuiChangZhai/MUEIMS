@@ -97,5 +97,10 @@ namespace EnterpriseSystemASPX.BLL
             HttpContext.Current.Response.Cookies.Add(cUser);
             HttpContext.Current.User = null;
         }
+
+        public static void Login()
+        { 
+
+        }
     }
 }
