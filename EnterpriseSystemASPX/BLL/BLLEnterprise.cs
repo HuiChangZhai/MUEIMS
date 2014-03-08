@@ -97,5 +97,21 @@ namespace EnterpriseSystemASPX.BLL
             HttpContext.Current.Response.Cookies.Add(cUser);
             HttpContext.Current.User = null;
         }
+
+        public static Enterprise GetEnterprise(string enterpriseemail, string enterprisepwd)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+            Enterprise enterprise = _DAL.GetEnterprise(enterpriseemail, enterprisepwd);
+
+            return enterprise;
+        }
+
+        public static Enterprise ExistEnterprise(string enterpriseemail)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+            Enterprise enterprise = _DAL.ExistEnterprise(enterpriseemail);
+
+            return enterprise;
+        }
     }
 }

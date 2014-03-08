@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace EnterpriseSystemASPXBg.Controllers
 {
-    public class HomeController : Controller
+    public class AdminHomeController : Controller
     {
         //
         // GET: /Home/

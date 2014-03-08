@@ -1,0 +1,82 @@
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\EnterpriseSystemASPXBg.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\EnterpriseSystemASPXBg.pdb
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\Antlr3.Runtime.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\EntityFramework.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\Microsoft.Web.Infrastructure.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\Newtonsoft.Json.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Net.Http.Formatting.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.Http.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.Http.WebHost.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.Mvc.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.Optimization.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.Providers.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.Razor.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.WebPages.Deployment.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.WebPages.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.WebPages.Razor.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\WebGrease.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\EntityFramework.xml
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\Newtonsoft.Json.xml
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Net.Http.Formatting.xml
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.Http.xml
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.Http.WebHost.xml
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.Mvc.xml
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.Razor.xml
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.WebPages.xml
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.WebPages.Deployment.xml
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\System.Web.WebPages.Razor.xml
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\zh-Hans\EntityFramework.resources.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Http.resources.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Mvc.resources.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Optimization.resources.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Providers.resources.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Razor.resources.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.WebPages.resources.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\obj\Debug\EnterpriseSystemASPXBg.dll
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\obj\Debug\EnterpriseSystemASPXBg.pdb
+E:\Studying\VS document\EnterpriseSystem\EnterpriseSystemASPX\EnterpriseSystemASPXBg\obj\Debug\EnterpriseSystemASPXBg.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\EnterpriseSystemASPXBg.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\EnterpriseSystemASPXBg.pdb
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\EntityFramework.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Net.Http.Formatting.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.Http.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.Http.WebHost.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.Optimization.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.Providers.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\WebGrease.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Net.Http.Formatting.xml
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.Http.xml
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.Http.WebHost.xml
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.Razor.xml
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Http.resources.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Providers.resources.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\obj\Debug\EnterpriseSystemASPXBg.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\obj\Debug\EnterpriseSystemASPXBg.dll
+C:\Users\Administrator\Desktop\新建文件夹\MUEIMS\EnterpriseSystemASPXBg\obj\Debug\EnterpriseSystemASPXBg.pdb
