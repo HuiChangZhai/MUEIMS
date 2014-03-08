@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using EnterpriseSystemASPX;
 using EnterpriseSystemASPX.BLL;
 using EnterpriseSystemASPX.Models;
+using EnterpriseSystemASPX.Common;
 
 namespace EnterpriseSystemASPXBg.Controllers
 {
@@ -18,7 +19,14 @@ namespace EnterpriseSystemASPXBg.Controllers
         {
             if (string.IsNullOrEmpty(adminname) && string.IsNullOrEmpty(password))
             {
-                ViewBag.Message = "请登录";
+                if (EMSCookie.ReadCookie("AdminCookie") == "")
+                {
+                    ViewBag.Message = "请登录";
+                }
+                else
+                {
+                    ViewBag.Message = "自动登录";
+                }
             }
             else 
             {
@@ -30,6 +38,7 @@ namespace EnterpriseSystemASPXBg.Controllers
                 else
                 {
                     ViewBag.Message = "已经登录";
+                    EMSCookie.AddCookie("AdminCookie", adminname);
                 }
             }
             return View();
