@@ -13,7 +13,6 @@ namespace EnterpriseSystemASPX.BLL
     public static class BLLEnterprise
     {
         private static readonly object userlock = new object();
-
         public static Enterprise Current
         {
             get
@@ -97,14 +96,6 @@ namespace EnterpriseSystemASPX.BLL
             HttpContext.Current.Response.Cookies.Add(c);
             HttpContext.Current.Response.Cookies.Add(cUser);
             HttpContext.Current.User = null;
-        }
-
-        public static Enterprise Login(string enterpriseEmail, string password)
-        {
-            DALEnterprise DEnterprise = new DALEnterprise();
-            Enterprise enterprise = DEnterprise.GetEnterprise(enterpriseEmail, password);
-
-            return enterprise;
         }
     }
 }

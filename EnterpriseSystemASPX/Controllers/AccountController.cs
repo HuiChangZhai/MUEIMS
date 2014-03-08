@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
-using EnterpriseSystemASPX.BLL;
-using EnterpriseSystemASPX.Models;
 
 namespace EnterpriseSystemASPX.Controllers
 {
@@ -13,26 +12,31 @@ namespace EnterpriseSystemASPX.Controllers
         //
         // GET: /Account/
 
-        public ActionResult Login(string enterpriseEmail, string password)
+        public ActionResult Login()
         {
-            if (enterpriseEmail != null && password != null)
-            {
-                Enterprise enterprise = BLLEnterprise.Login(enterpriseEmail, password);
-                if(enterprise != null)
-                {
-                    ViewBag.Message = "登录成功。";
-                }
-                else
-                {
-                    ViewBag.Message = "登录失败!";
-                }
-                return View();
-            }
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Login(string email, string pwd)
+        {
+            //检查是否存在这个用户
+
+            //服务端开始验证数据
+            if (string.IsNullOrWhiteSpace(email))
+                ViewBag.emailError = "请输入您的邮箱";
             else
             {
-                ViewBag.Message = "请登录。";
-                return View();
+                Regex reg = new Regex(@"^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})");
+                if (!reg.IsMatch(email)) ViewBag.emailError = "请输入正确的邮箱地址";
             }
+            if (string.IsNullOrWhiteSpace(pwd))
+                ViewBag.pwdError = "请输入您的密码";
+            if (string.IsNullOrEmpty(ViewBag.emailError) && string.IsNullOrEmpty(ViewBag.pwdError))
+                return View();
+            //检查用户输入是否正确
+
+            return View();
         }
 
         public ActionResult Register()
