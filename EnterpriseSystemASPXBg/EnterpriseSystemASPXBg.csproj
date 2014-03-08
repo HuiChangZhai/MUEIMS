@@ -130,6 +130,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\CSS\login.css" />
     <Content Include="Content\CSS\SiteBg.css" />
     <Content Include="Content\Images\!.gif" />
     <Content Include="Content\Images\ad.gif" />
