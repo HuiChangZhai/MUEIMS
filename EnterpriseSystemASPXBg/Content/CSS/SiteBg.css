@@ -9,15 +9,20 @@
     background-image: url('/Content/Images/login.jpg');
     background-repeat: no-repeat;
     text-align: center;
-    margin-top:80px;
+    position:fixed;
+    margin:auto auto;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
 }
 
-    .div-login .table-login
-    {
-        line-height: 36px;
-        padding-top: 265px;
-        padding-left: 567px;
-    }
+.div-login .table-login
+{
+    line-height: 36px;
+    padding-top: 265px;
+    padding-left: 567px;
+}
 
 .table-login td
 {
@@ -27,7 +32,7 @@
 .tr-username input, .tr-pwd input
 {
     width: 150px;
-    text-align: center;
+    text-align: left;
 }
 
 A:link
@@ -120,7 +125,7 @@ H1
         color: #000;
         height: 30px;
         text-decoration: none;
-        moz-outline-style: none;
+        -moz-outline-style: none;
         background-image: url(/Content/Images/menu_bgS.gif);
         background-repeat: no-repeat;
         line-height: 30px;
