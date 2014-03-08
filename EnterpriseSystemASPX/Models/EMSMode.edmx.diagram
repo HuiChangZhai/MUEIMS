@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="3679d1c673dd4588bf9737585c1c4051" Name="关系图1">
-        <EntityTypeShape EntityType="EMSysModel.Enterprise" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="EMSysModel.EnterpriseCases" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="EMSysModel.EnterpriseDynamic" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EMSysModel.MEnterprise" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="EMSysModel.MEnterpriseAdmin" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EMSysModel.MEnterpriseAdvertising" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EMSysModel.MEnterpriseCases" Width="1.5" PointX="8" PointY="1.5" IsExpanded="true" />
-        <AssociationConnector Association="EMSysModel.FK_EnterpriseCases_Enterprise" ManuallyRouted="false" />
-        <AssociationConnector Association="EMSysModel.FK_EnterpriseDynamic_Enterprise" ManuallyRouted="false" />
         <AssociationConnector Association="EMSysModel.FK_MEnterpriseCases_MEnterprise" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EMSysModel.Enterprise" Width="1.5" PointX="11.710204470767735" PointY="14.738215751358409" />
+        <AssociationConnector Association="EMSysModel.FK_EnterpriseCases_Enterprise" />
+        <AssociationConnector Association="EMSysModel.FK_EnterpriseDynamic_Enterprise" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -99,8 +99,8 @@ namespace EnterpriseSystemASPX.BLL
         }
 
         public static void Login()
-        { 
-
+        {
+            Enterprise ere = new Enterprise();
         }
     }
 }
