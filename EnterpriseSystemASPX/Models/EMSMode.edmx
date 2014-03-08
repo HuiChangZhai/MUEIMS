@@ -33,6 +33,7 @@
           <Property Name="EnterpriseID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="EnterpriseName" Type="nvarchar" Nullable="false" MaxLength="255" />
           <Property Name="EnterprisePassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EnterpriseUrl" Type="nvarchar" MaxLength="50" />
           <Property Name="EnterpriseAddress" Type="nvarchar" MaxLength="255" />
           <Property Name="EnterpriseTelphoneNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="EnterpriseBriefShort" Type="text" />
@@ -43,7 +44,6 @@
           <Property Name="EnterpriseRegistTime" Type="datetime" />
           <Property Name="EnterpriseActive" Type="bit" />
           <Property Name="EnterpriseStatus" Type="bit" />
-          <Property Name="EnterpriseUrl" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="EnterpriseCases">
           <Key>

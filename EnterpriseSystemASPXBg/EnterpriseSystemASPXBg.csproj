@@ -122,8 +122,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AdminAccountController.cs" />
+    <Compile Include="Controllers\AdminHomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -369,8 +369,8 @@
     <Content Include="Scripts\Website\jquery.js" />
     <Content Include="Scripts\Website\js.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\Account\Login.aspx" />
-    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\AdminAccount\Login.aspx" />
+    <Content Include="Views\AdminHome\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -390,6 +390,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EnterpriseSystemASPX\EnterpriseSystemASPX.csproj">
+      <Project>{dacf0739-e3df-4e5d-9806-f9c008604b60}</Project>
+      <Name>EnterpriseSystemASPX</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
