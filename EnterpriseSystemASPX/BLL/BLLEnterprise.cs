@@ -30,7 +30,6 @@ namespace EnterpriseSystemASPX.BLL
             EMSCookie.AddCookie("EnterpriseCookie", email);
 
             bool isLoginSuccess = enterprise != null;
-            //HttpContext.Current.Session["AdminSession"] = enterprise;
 
             return isLoginSuccess;
         }

@@ -63,6 +63,7 @@
                 <%}else{ %>
                 <a title="欢迎<%:islogin.EnterpriseName %>回来">
                     <%:islogin.EnterpriseEmail %></a>&nbsp;|&nbsp;
+                <a href="/EnterpriseBg/Index">后台管理</a>
                 <a href="/Account/Logout">退出</a>
                 <%} %>
             </div>

@@ -28,7 +28,7 @@ namespace EnterpriseSystemASPX.DAL
         public MEnterpriseAdmin GetMEnterpriseAdmin(string adminName, string password)
         {
             EMSEntities entity = new EMSEntities();
-            MEnterpriseAdmin admin =  entity.MEnterpriseAdmin.SingleOrDefault(m => (m.AdminName == adminName && m.MEnterpriseAdminPassword == password));
+            MEnterpriseAdmin admin =  entity.MEnterpriseAdmin.SingleOrDefault(m => m.AdminName == adminName && m.MEnterpriseAdminPassword == password );
 
             return admin;
         }

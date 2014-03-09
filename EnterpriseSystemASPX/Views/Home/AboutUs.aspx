@@ -14,30 +14,30 @@
                     <article class="span8">
                         <h3>联系我们</h3>
                         <div class="inner-1">
-                            <form id="contact-form">
+                            <form id="contact-form" name="contact-form" action="SendMessage" method="post">
                                 <div class="success">提交成功 <strong>我们会尽快的查看您的建议和意见</strong> </div>
                                 <fieldset>
                                     <div>
                                         <label class="name">
-                                            <input id="Mname" type="text" placeholder="公司名称">
+                                            <input id="Mname" name="Mname" type="text" placeholder="公司名称">
                                             <span class="error" id="MnameError"><%:ViewBag.MnameEorror??"" %></span>
                                         </label>
                                     </div>
                                     <div>
                                         <label class="phone">
-                                            <input id="Mtel" type="tel" placeholder="电话号码">
+                                            <input id="Mtel" name="Mtel" type="tel" placeholder="电话号码">
                                             <span class="error" id="MtelError"><%:ViewBag.MtelEorror??"" %></span>
                                         </label>
                                     </div>
                                     <div>
                                         <label class="email">
-                                            <input id="Memail" type="email" placeholder="邮箱地址">
+                                            <input id="Memail" name="Memail" type="email" placeholder="邮箱地址">
                                             <span class="error" id="MemailError"><%:ViewBag.MemailEorror??"" %></span>
                                         </label>
                                     </div>
                                     <div>
                                         <label class="message">
-                                            <textarea id="Mmessage" placeholder="留下您的宝贵意见和建议 ..."></textarea>
+                                            <textarea id="Mmessage" name="Mmessage" placeholder="留下您的宝贵意见和建议 ..."></textarea>
                                         </label>
                                     </div>
                                     <div class="buttons-wrapper">

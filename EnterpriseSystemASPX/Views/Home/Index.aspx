@@ -42,7 +42,6 @@
         <!--============================== content =================================-->
 
         <div id="content" class="content-extra">
-            <div class="ic">More Website Templates at <a href="http://www.cssmoban.com/">Website Template</a></div>
             <div class="row-1">
                 <div class="container">
                     <div class="row">
