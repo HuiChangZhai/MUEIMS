@@ -12,6 +12,8 @@ namespace EnterpriseSystemASPX.DAL
         {
             EMSEntities entity = new EMSEntities();
             entity.MEnterpriseMessage.Add(message);
+
+            entity.SaveChanges();
         }
     }
 }

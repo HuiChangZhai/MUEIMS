@@ -19,6 +19,8 @@ function CheckExistEmail()
         $("#emailError").val("请输入正确的邮箱地址");
         return;
     }
+    else
+        $("#emailError").val("");
     var url = "/Account/Login?email=" + email;
     $.ajax({
         type: "get",

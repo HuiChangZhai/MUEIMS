@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="EMSModelStoreContainer">
           <EntitySet Name="Enterprise" EntityType="EMSModel.Store.Enterprise" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="EnterpriseCases" EntityType="EMSModel.Store.EnterpriseCases" store:Type="Tables" Schema="dbo" />
@@ -13,16 +13,7 @@
           <EntitySet Name="MEnterpriseAdmin" EntityType="EMSModel.Store.MEnterpriseAdmin" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="MEnterpriseAdvertising" EntityType="EMSModel.Store.MEnterpriseAdvertising" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="MEnterpriseCases" EntityType="EMSModel.Store.MEnterpriseCases" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="MEnterpriseMessage" EntityType="EMSModel.Store.MEnterpriseMessage" store:Type="Tables" store:Schema="dbo" store:Name="MEnterpriseMessage">
-            <DefiningQuery>SELECT 
-      [MEnterpriseMessage].[MessageID] AS [MessageID], 
-      [MEnterpriseMessage].[MessageEnterpriseName] AS [MessageEnterpriseName], 
-      [MEnterpriseMessage].[MessageEnterpriseTel] AS [MessageEnterpriseTel], 
-      [MEnterpriseMessage].[MessageEnterpriseEmail] AS [MessageEnterpriseEmail], 
-      [MEnterpriseMessage].[Message] AS [Message], 
-      [MEnterpriseMessage].[MessageIsRead] AS [MessageIsRead]
-      FROM [dbo].[MEnterpriseMessage] AS [MEnterpriseMessage]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="MEnterpriseMessage" EntityType="EMSModel.Store.MEnterpriseMessage" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK_EnterpriseCases_Enterprise" Association="EMSModel.Store.FK_EnterpriseCases_Enterprise">
             <End Role="Enterprise" EntitySet="Enterprise" />
             <End Role="EnterpriseCases" EntitySet="EnterpriseCases" />
@@ -112,9 +103,6 @@
           <Property Name="MEnterpriseCasesTitle" Type="text" />
           <Property Name="MEnterpriseCasesContent" Type="text" />
         </EntityType>
-        <!--生成过程中发现错误:
-      警告 6002: 表/视图“EnterpriseInfoManagementSys.dbo.MEnterpriseMessage”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
-      -->
         <EntityType Name="MEnterpriseMessage">
           <Key>
             <PropertyRef Name="MessageID" />
@@ -162,8 +150,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EMSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -175,7 +162,6 @@
           <EntitySet Name="MEnterpriseAdmin" EntityType="EMSModel.MEnterpriseAdmin" />
           <EntitySet Name="MEnterpriseAdvertising" EntityType="EMSModel.MEnterpriseAdvertising" />
           <EntitySet Name="MEnterpriseCases" EntityType="EMSModel.MEnterpriseCases" />
-          <EntitySet Name="MEnterpriseMessage" EntityType="EMSModel.MEnterpriseMessage" />
           <AssociationSet Name="FK_EnterpriseCases_Enterprise" Association="EMSModel.FK_EnterpriseCases_Enterprise">
             <End Role="Enterprise" EntitySet="Enterprise" />
             <End Role="EnterpriseCases" EntitySet="EnterpriseCases" />
@@ -188,6 +174,7 @@
             <End Role="MEnterprise" EntitySet="MEnterprise" />
             <End Role="MEnterpriseCases" EntitySet="MEnterpriseCases" />
           </AssociationSet>
+          <EntitySet Name="MEnterpriseMessage" EntityType="EMSModel.MEnterpriseMessage" />
         </EntityContainer>
         <EntityType Name="Enterprise">
           <Key>
@@ -271,17 +258,6 @@
           <Property Name="MEnterpriseCasesContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="MEnterprise" Relationship="EMSModel.FK_MEnterpriseCases_MEnterprise" FromRole="MEnterpriseCases" ToRole="MEnterprise" />
         </EntityType>
-        <EntityType Name="MEnterpriseMessage">
-          <Key>
-            <PropertyRef Name="MessageID" />
-          </Key>
-          <Property Name="MessageID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="MessageEnterpriseName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
-          <Property Name="MessageEnterpriseTel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="MessageEnterpriseEmail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Message" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="MessageIsRead" Type="Boolean" />
-        </EntityType>
         <Association Name="FK_EnterpriseCases_Enterprise">
           <End Role="Enterprise" Type="EMSModel.Enterprise" Multiplicity="1" />
           <End Role="EnterpriseCases" Type="EMSModel.EnterpriseCases" Multiplicity="*" />
@@ -318,6 +294,17 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="MEnterpriseMessage">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Type="Int32" Name="MessageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MessageEnterpriseName" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MessageEnterpriseTel" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MessageEnterpriseEmail" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Message" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="MessageIsRead" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -410,12 +397,12 @@
           <EntitySetMapping Name="MEnterpriseMessage">
             <EntityTypeMapping TypeName="EMSModel.MEnterpriseMessage">
               <MappingFragment StoreEntitySet="MEnterpriseMessage">
-                <ScalarProperty Name="MessageID" ColumnName="MessageID" />
-                <ScalarProperty Name="MessageEnterpriseName" ColumnName="MessageEnterpriseName" />
-                <ScalarProperty Name="MessageEnterpriseTel" ColumnName="MessageEnterpriseTel" />
-                <ScalarProperty Name="MessageEnterpriseEmail" ColumnName="MessageEnterpriseEmail" />
-                <ScalarProperty Name="Message" ColumnName="Message" />
                 <ScalarProperty Name="MessageIsRead" ColumnName="MessageIsRead" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="MessageEnterpriseEmail" ColumnName="MessageEnterpriseEmail" />
+                <ScalarProperty Name="MessageEnterpriseTel" ColumnName="MessageEnterpriseTel" />
+                <ScalarProperty Name="MessageEnterpriseName" ColumnName="MessageEnterpriseName" />
+                <ScalarProperty Name="MessageID" ColumnName="MessageID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

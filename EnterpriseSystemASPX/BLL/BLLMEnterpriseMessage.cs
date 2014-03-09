@@ -12,7 +12,7 @@ namespace EnterpriseSystemASPX.BLL
         public static void SetMEnterriseMessage(MEnterpriseMessage message)
         {
             DALMEnterpriseMessage _DAL = new DALMEnterpriseMessage();
-            message.MessageIsRead = false;
+            
             _DAL.SetMEnterriseMessage(message);
         }
     }

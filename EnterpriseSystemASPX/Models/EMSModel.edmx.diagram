@@ -12,10 +12,10 @@
         <EntityTypeShape EntityType="EMSModel.MEnterpriseAdmin" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EMSModel.MEnterpriseAdvertising" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EMSModel.MEnterpriseCases" Width="1.5" PointX="8" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="EMSModel.MEnterpriseMessage" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="EMSModel.FK_EnterpriseCases_Enterprise" ManuallyRouted="false" />
         <AssociationConnector Association="EMSModel.FK_EnterpriseDynamic_Enterprise" ManuallyRouted="false" />
         <AssociationConnector Association="EMSModel.FK_MEnterpriseCases_MEnterprise" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EMSModel.MEnterpriseMessage" Width="1.5" PointX="10.260829483280345" PointY="6.9239290090854881" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
