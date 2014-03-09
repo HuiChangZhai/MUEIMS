@@ -1,5 +1,4 @@
-﻿function ClearMessage()
-{
+﻿function ClearMessage() {
     $("#Mname").val("");
     $("#Mtel").val("");
     $("#Memail").val("");
@@ -11,13 +10,13 @@
 }
 
 function SendMessage() {
-    debugger;
+    //debugger;
     var name = $("#Mname").val();
     var tel = $("#Mtel").val();
     var email = $("#Memail").val();
     var message = $("#Mmessage").val();
     //验证数据
-    if(name.trim()==""||name.trim().toLowerCase()=="undefined")
+    if (name.trim() == "" || name.trim().toLowerCase() == "undefined")
         $("#MnameError").html("请输入公司名称");
     else
         $("#MnameError").html("");
@@ -31,8 +30,7 @@ function SendMessage() {
         $("#MmessageError").html("");
     if (tel.trim() == "" || tel.trim().toLowerCase() == "undefined")
         $("#MemailError").html("请输入邮箱地址");
-    else
-    {
+    else {
         var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
         if (!reg.test(email))
             $("#MemailError").html("请输入正确的邮箱地址");
@@ -40,7 +38,8 @@ function SendMessage() {
             $("#MemailError").html("");
     }
     if ($("#MnameError").html().trim() == "" && $("#MemailError").html().trim() == "" && $("#MtelError").html().trim() == "" && $("#MnameError").html().trim() == "") {
-        var url = "/Home/SendMessage?name=" + name + "&tel=" + tel + "&email=" + email + "&message=" + message;
+        //var url = "/Home/SendMessage?name=" + name + "&tel=" + tel + "&email=" + email + "&message=" + message;
+        $("#contact-form").submit();
         $(".success").show();
         window.location.href = url;
     }

@@ -16,25 +16,27 @@
                         <div class="block-404">
                             <div class="box-404">
                                 <div class="div-formlogin">
-                                    <div>
-                                        <input type="text" id="useremail" name="useremail" placeholder="请输入您的邮箱" class="inputcss"/>
-                                        <span class="errinfo" id="emailError"><%:ViewBag.emailError??"" %></span>
-                                    </div>
-                                    <div>
-                                        <input type="password" id="userpwd" name="userpwd" placeholder="请输入您的密码" class="inputcss" />
-                                        <span class="errinfo" id="pwdError"><%:ViewBag.pwdError??"" %></span>
-                                    </div>
-                                    <div>
+                                    <form name="LoginForm" id="LoginForm" action="Login" method="post">
                                         <div>
-                                            <input type="checkbox" id="rememberme" name="rememberme" style="margin-top: -4px;" />
-                                            <span>记住我</span>
-                                            <a class="fogetpwd">忘记密码？</a>
+                                            <input type="text" id="useremail" name="useremail" placeholder="请输入您的邮箱" class="inputcss" />
+                                            <span class="errinfo" id="emailError"><%:ViewBag.emailError??"" %></span>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <a class="btnLogin" onclick="AccountLogin()">登录</a>
-                                        <span class="errinfo postitionError" id="loginError"><%:ViewBag.loginError??"" %></span>
-                                    </div>
+                                        <div>
+                                            <input type="password" id="userpwd" name="userpwd" placeholder="请输入您的密码" class="inputcss" />
+                                            <span class="errinfo" id="pwdError"><%:ViewBag.pwdError??"" %></span>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <input type="checkbox" id="rememberme" name="rememberme" style="margin-top: -4px;" />
+                                                <span>记住我</span>
+                                                <a class="fogetpwd">忘记密码？</a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a class="btnLogin" onclick="AccountLogin()">登录</a>
+                                            <span class="errinfo postitionError" id="loginError"><%:ViewBag.loginError??"" %></span>
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="div-btnregister">
                                     <div class="lalregister">您还没有注册吗？</div>

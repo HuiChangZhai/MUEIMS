@@ -21,7 +21,7 @@ function CheckExistEmail()
     }
     else
         $("#emailError").val("");
-    var url = "/Account/Login?email=" + email;
+    var url = "/Account/ExistEmail?email=" + email;
     $.ajax({
         type: "get",
         url: url,
@@ -43,11 +43,12 @@ function AccountLogin()
     var pwderror = $("#pwdError").html();
     var loginerror = $("#loginError").html();
     if (emailerror.trim() == "" && pwderror.trim() == "" && loginerror.trim() == "") {
-        var email = $("#useremail").val();
-        var remember = $('input[name=rememberme]').is(':checked');
-        var pwd = $("#userpwd").val();
-        var url = "/Account/Login?email=" + email + "&pwd=" + pwd + "&remember=" + remember;
-        window.location.href = url;
+        //var email = $("#useremail").val();
+        //var remember = $('input[name=rememberme]').is(':checked');
+        //var pwd = $("#userpwd").val();
+        //var url = "/Account/Login?email=" + email + "&pwd=" + pwd + "&remember=" + remember;
+        //window.location.href = url;
+        $("#LoginForm").submit();
         $("#emailError").html("");
         $("#pwdError").html("");
         $("#loginError").html("");

@@ -14,28 +14,28 @@ namespace EnterpriseSystemASPX.Controllers
         //
         // GET: /Account/
 
-        public ActionResult Login(string email, string pwd,bool? remember)
+        public ActionResult Login(string useremail, string userpwd, bool? rememberme)
         {
-            if (string.IsNullOrEmpty(email) && string.IsNullOrEmpty(pwd))
+            if (string.IsNullOrEmpty(useremail) && string.IsNullOrEmpty(userpwd))
                 return View();
             //服务端开始验证数据
-            if (string.IsNullOrWhiteSpace(email))
+            if (string.IsNullOrWhiteSpace(useremail))
                 ViewBag.emailError = "请输入您的邮箱";
             else
             {
                 Regex reg = new Regex(@"^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})");
-                if (!reg.IsMatch(email)) ViewBag.emailError = "请输入正确的邮箱地址";
+                if (!reg.IsMatch(useremail)) ViewBag.emailError = "请输入正确的邮箱地址";
             
                 //检查是否存在这个用户
-                Enterprise existEnterprise = BLLEnterprise.ExistEnterprise(email);
+                Enterprise existEnterprise = BLLEnterprise.ExistEnterprise(useremail);
                 if (existEnterprise == null) ViewBag.emailError = "该邮箱地址不存在";
             }
-            if (string.IsNullOrWhiteSpace(pwd))
+            if (string.IsNullOrWhiteSpace(userpwd))
                 ViewBag.pwdError = "请输入您的密码";
             if (!string.IsNullOrEmpty(ViewBag.emailError) || !string.IsNullOrEmpty(ViewBag.pwdError))
                 return View();
             //检查用户输入是否正确
-            bool islogin=BLLEnterprise.IsLogin(email,pwd);
+            bool islogin = BLLEnterprise.IsLogin(useremail, userpwd);
             if (!islogin)
             {
                 ViewBag.loginError = "邮箱密码错误";
