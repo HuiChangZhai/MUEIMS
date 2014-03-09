@@ -4,9 +4,9 @@ using System.Linq;
 using System.Net.Mail;
 using System.Web;
 
-namespace EnterpriseSystemASPX.BLL
+namespace EnterpriseSystemASPX.Common
 {
-    public static class CommonHelper
+    public static class EmailHelper
     {
         public static bool SendMail(string mailAddress, string subject, string body)
         {
