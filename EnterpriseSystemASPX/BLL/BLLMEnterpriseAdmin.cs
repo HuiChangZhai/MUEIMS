@@ -138,7 +138,6 @@ namespace EnterpriseSystemASPX.BLL
             EMSCookie.AddCookie("AdminCookie", adminName);
 
             bool isLoginSuccess = admin != null;
-            HttpContext.Current.Session["AdminSession"] = admin;
 
             return isLoginSuccess;
         }
@@ -146,12 +145,11 @@ namespace EnterpriseSystemASPX.BLL
         public static void Logout()
         {
             EMSCookie.DeleteCookie("AdminCookie");
-            HttpContext.Current.Session["AdminSession"] = null;
         }
 
-        public static MEnterpriseAdmin Current
+        public static string Current
         {
-            get { return HttpContext.Current.Session["AdminSession"] as MEnterpriseAdmin; }
+            get { return EMSCookie.ReadCookie("AdminCookie"); }
         }
 
     }
