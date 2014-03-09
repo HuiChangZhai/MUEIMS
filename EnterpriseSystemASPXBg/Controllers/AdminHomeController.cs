@@ -20,6 +20,7 @@ namespace EnterpriseSystemASPXBg.Controllers
             }
             else
             {
+                ViewBag.Current = BLLMEnterpriseAdmin.Current;
                 return View();
             }
         }

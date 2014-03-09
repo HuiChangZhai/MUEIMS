@@ -30,7 +30,8 @@
                 <td width="260">
                     <img height="56" src="/Content/Images/header_left.png" width="260">
                 </td>
-                <td style="font-weight: bold; color: #fff; padding-top: 20px" align="middle">当前用户:<asp:Label ID="LabelUser" runat="server" ForeColor="White"><%:HttpContext.Current.Request.Cookies["AdminCookie"].Value %></asp:Label>
+                <td style="font-weight: bold; color: #fff; padding-top: 20px" align="middle">
+                    当前用户:<asp:Label ID="LabelUser" runat="server" ForeColor="White"><%:((EnterpriseSystemASPX.Models.MEnterpriseAdmin)ViewBag.Current).AdminName %></asp:Label>
                     &nbsp;&nbsp;&nbsp; 
                 <a style="color: #fff" href="Admin_Change_Pwd.aspx" target="main">修改密码</a> &nbsp;&nbsp; 
                 <a style="color: #fff" onclick="if (confirm('确定要退出吗？')) return true; else return false;"
