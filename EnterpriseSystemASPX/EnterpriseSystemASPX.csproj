@@ -369,29 +369,23 @@
     <Content Include="Content\Images\marker-1.png" />
     <Content Include="Content\Images\marker.png" />
     <Content Include="Content\Images\next.png" />
-    <Content Include="Content\Images\page1-img1.jpg" />
-    <Content Include="Content\Images\page1-img10.jpg" />
-    <Content Include="Content\Images\page1-img11.jpg" />
-    <Content Include="Content\Images\page1-img12.jpg" />
-    <Content Include="Content\Images\page1-img13.jpg" />
-    <Content Include="Content\Images\page1-img14.jpg" />
-    <Content Include="Content\Images\page1-img15.jpg" />
-    <Content Include="Content\Images\page1-img16.jpg" />
-    <Content Include="Content\Images\page1-img17.jpg" />
-    <Content Include="Content\Images\page1-img2.jpg" />
-    <Content Include="Content\Images\page1-img3.jpg" />
-    <Content Include="Content\Images\page1-img4.jpg" />
+    <Content Include="uploadImages\page1-img1.jpg" />
+    <Content Include="uploadImages\logo-img10.jpg" />
+    <Content Include="uploadImages\logo-img11.jpg" />
+    <Content Include="uploadImages\logo-img12.jpg" />
+    <Content Include="uploadImages\logo-img13.jpg" />
+    <Content Include="uploadImages\logo-img14.jpg" />
+    <Content Include="uploadImages\logo-img15.jpg" />
+    <Content Include="uploadImages\logo-img16.jpg" />
+    <Content Include="uploadImages\logo-img17.jpg" />
+    <Content Include="uploadImages\page1-img2.jpg" />
+    <Content Include="uploadImages\page1-img3.jpg" />
+    <Content Include="uploadImages\page1-img4.jpg" />
     <Content Include="Content\Images\page1-img5.jpg" />
-    <Content Include="Content\Images\page1-img6.jpg" />
-    <Content Include="Content\Images\page1-img7.jpg" />
-    <Content Include="Content\Images\page1-img8.jpg" />
-    <Content Include="Content\Images\page1-img9.jpg" />
-    <Content Include="Content\Images\page2-img1.jpg" />
-    <Content Include="Content\Images\page2-img2.jpg" />
-    <Content Include="Content\Images\page2-img3.jpg" />
-    <Content Include="Content\Images\page2-img4.jpg" />
-    <Content Include="Content\Images\page2-img5.jpg" />
-    <Content Include="Content\Images\page2-img6.jpg" />
+    <Content Include="uploadImages\logo-img6.jpg" />
+    <Content Include="uploadImages\logo-img7.jpg" />
+    <Content Include="uploadImages\logo-img8.jpg" />
+    <Content Include="uploadImages\logo-img9.jpg" />
     <Content Include="Content\Images\page3-img1.jpg" />
     <Content Include="Content\Images\page3-img10.jpg" />
     <Content Include="Content\Images\page3-img11.jpg" />
@@ -525,6 +519,8 @@
     <Content Include="Scripts\WebSite\superfish.js" />
     <Content Include="Scripts\WebSite\touchTouch.jquery.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="uploadImages\page1-img5.jpg" />
+    <Content Include="uploadImages\page1-img6.jpg" />
     <Content Include="Views\Account\Login.aspx" />
     <Content Include="Views\Account\Register.aspx" />
     <Content Include="Views\EnterpriseBg\Index.aspx" />
@@ -556,7 +552,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Images\bgImages\BgImages\" />
-    <Folder Include="uploadImages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

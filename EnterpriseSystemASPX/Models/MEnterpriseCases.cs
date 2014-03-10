@@ -18,6 +18,9 @@ namespace EnterpriseSystemASPX.Models
         public int MEnterpriseID { get; set; }
         public string MEnterpriseCasesTitle { get; set; }
         public string MEnterpriseCasesContent { get; set; }
+        public string MEnterpriseCaseUrl { get; set; }
+        public bool MEnterpriseCaseShow { get; set; }
+        public string EnterprisUrl { get; set; }
     
         public virtual MEnterprise MEnterprise { get; set; }
     }

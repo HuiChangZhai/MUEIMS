@@ -19,6 +19,7 @@ namespace EnterpriseSystemASPX.BLL
             {
                 string email = EMSCookie.ReadCookie("EnterpriseCookie");
                 if (string.IsNullOrWhiteSpace(email)) return null;
+                Enterprise _enterprise = ExistEnterprise(email);
                 return ExistEnterprise(email);
             }
         }
@@ -38,6 +39,14 @@ namespace EnterpriseSystemASPX.BLL
         {
             EMSCookie.DeleteCookie("EnterpriseCookie");
             //HttpContext.Current.Session["AdminSession"] = null;
+        }
+
+        public static List<Enterprise> GetEnterprise()
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+            List<Enterprise> list = _DAL.GetEnterprise();
+
+            return list;
         }
 
         public static Enterprise GetEnterprise(string enterpriseemail, string enterprisepwd)

@@ -18,14 +18,19 @@ namespace EnterpriseSystemASPX.Controllers
         public ActionResult Index()
         {
             ViewBag.Menu = "IX";
-
+            List<MEnterpriseCases> MElist = BLLMEnterpriseCases.GetMEnterpriseCases();
+            ViewBag.MEnterprseList = MElist;
+            List<Enterprise> Elist = BLLEnterprise.GetEnterprise();
+            ViewBag.EnterprseList = Elist;
             return View();
         }
 
         public ActionResult AchieveCase()
         {
             ViewBag.Menu = "AC";
-            return View();
+            List<MEnterpriseCases> list = BLLMEnterpriseCases.GetMEnterpriseCases();
+
+            return View(list);
         }
 
         public ActionResult ManagementBrief()
@@ -43,6 +48,8 @@ namespace EnterpriseSystemASPX.Controllers
         public ActionResult AboutUs()
         {
             ViewBag.Menu = "AU";
+            MEnterprise Menterprise = BLLMEnterprise.GetMEnterprise();
+            ViewBag.MInfo = Menterprise;
             return View();
         }
 
@@ -72,6 +79,7 @@ namespace EnterpriseSystemASPX.Controllers
                  || !string.IsNullOrEmpty(ViewBag.MmessageEorror) || !string.IsNullOrEmpty(ViewBag.MemailEorror))
                 return View("AboutUs");
             BLLMEnterpriseMessage.SetMEnterriseMessage(message);
+            
             return View("AboutUs");
 
         }

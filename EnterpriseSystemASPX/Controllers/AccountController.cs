@@ -35,12 +35,14 @@ namespace EnterpriseSystemASPX.Controllers
             if (!string.IsNullOrEmpty(ViewBag.emailError) || !string.IsNullOrEmpty(ViewBag.pwdError))
                 return View();
             //检查用户输入是否正确
-            bool islogin = BLLEnterprise.IsLogin(useremail, userpwd);
-            if (!islogin)
-            {
-                ViewBag.loginError = "邮箱密码错误";
+            Enterprise _enterprise = BLLEnterprise.GetEnterprise(useremail, userpwd);
+            string loginError = string.Empty;
+            if (_enterprise == null)
+                loginError = "邮箱密码错误";
+            else if(!_enterprise.EnterpriseActive.HasValue || !_enterprise.EnterpriseActive.Value)
+                loginError = "您的账户未激活，请联系网站内部人员";
+            if (!string.IsNullOrEmpty(loginError))
                 return View();
-            }
             return Redirect("~/Home/Index");
         }
 

@@ -33,7 +33,12 @@
                     <div class="block-slogan">
                         <h2>Welcome!</h2>
                         <div>
-                            <p><a href="http://www.cssmoban.com/ " target="_blank" class="link-1">Click here</a> for more info about this free website template created by TemplateMonster.com. This is a Bootstrap template that goes with several layout options (for desktop, tablet, smartphone landscape and portrait) to fit all popular screen resolutions. The PSD source files of this template are available for free for the registered members of TemplateMonster.com. Feel free to get them!</p>
+                            <p>
+                                如何方便快捷的建一个企业站，并且减少消耗的成本以及便捷维护管理呢？多用户企业信息展示系统帮你节约开支、
+                                节省时间、充分企业的整体展示美感。将当前网络中流行的企业站模板集成到该系统中，此系统为企业提供了许多
+                                展示功能模块，企业可以根据自己的风格创建自己的网站，可以根据自己的需求管理自己的展示信息，大大的减少
+                                成本消耗，管理维护起来也方便快捷了许多，提高了建站的快捷性和管理的效率性。
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -46,50 +51,25 @@
                 <div class="container">
                     <div class="row">
                         <ul class="thumbnails thumbnails-1">
+                            <%List<MEnterpriseCases> MEList = ViewBag.MEnterprseList as List<MEnterpriseCases>;
+                              if (MEList == null) return;
+                              int tempCount = 0;
+                              foreach (MEnterpriseCases item in MEList)
+                              {
+                                  if (tempCount == 4) break;%>
                             <li class="span3">
                                 <div class="thumbnail thumbnail-1">
-                                    <h3>Fashion</h3>
-                                    <img src="/Content/Images/page1-img1.jpg" alt="">
+                                    <h3 style="font-size: 20px;"><%:item.MEnterpriseCasesTitle %></h3>
+                                    <img src="<%:item.MEnterpriseCaseUrl %>" alt="" style="height: 146px;">
                                     <section>
-                                        <strong>At vero eos et accusamus et iusto </strong>
-                                        <p>Odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
-                                        <a href="#" class="btn btn-1">Read More</a>
+                                        <strong><%:item.MEnterpriseCasesTitle %></strong>
+                                        <p><%:item.MEnterpriseCasesContent %></p>
+                                        <a href="/Enterprise/<%:item.EnterprisUrl%>/Index" class="btn btn-1">详情更多</a>
                                     </section>
                                 </div>
                             </li>
-                            <li class="span3">
-                                <div class="thumbnail thumbnail-1">
-                                    <h3>Nature</h3>
-                                    <img src="/Content/Images/page1-img2.jpg" alt="">
-                                    <section>
-                                        <strong>Deleniti atque corrupti quos</strong>
-                                        <p>Dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                                        <a href="#" class="btn btn-1">Read More</a>
-                                    </section>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail thumbnail-1">
-                                    <h3>Love story</h3>
-                                    <img src="/Content/Images/page1-img3.jpg" alt="">
-                                    <section>
-                                        <strong>Similique sunt in culpa qui officia </strong>
-                                        <p>Deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                                        <a href="#" class="btn btn-1">Read More</a>
-                                    </section>
-                                </div>
-                            </li>
-                            <li class="span3">
-                                <div class="thumbnail thumbnail-1">
-                                    <h3 class="title-1 extra">Fine art</h3>
-                                    <img src="/Content/Images/page1-img4.jpg" alt="">
-                                    <section>
-                                        <strong>Similique sunt in culpa qui officia</strong>
-                                        <p>Deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                                        <a href="#" class="btn btn-1">Read More</a>
-                                    </section>
-                                </div>
-                            </li>
+                            <%++tempCount;
+                              }%>
                         </ul>
                     </div>
                 </div>
@@ -97,58 +77,51 @@
             <div class="container">
                 <div class="row">
                     <article class="span6">
-                        <h3>Shortly about me</h3>
+                        <h3>简介</h3>
                         <div class="wrapper">
                             <figure class="img-indent">
-                                <img src="/Content/Images/page1-img5.jpg " alt="" /></figure>
+                                <img src="/Content/Images/page1-img5.jpg " alt="" />
+                            </figure>
                             <div class="inner-1 overflow extra">
-                                <div class="txt-1">Sed ut perspictis unde omnis natus error volupatem accusantium doloue laudantium, totam rem.</div>
-                                Aperiam, eaque ipsa quae ab illo  veritatis et beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
-                  <div class="border-horiz"></div>
+                                <div class="txt-1">
+                                    我们多用户企业管理系统是一个模板最华丽，样式最丰富，排版更巧妙的能让您方便快捷、
+                                    易于维护、便于管理的多网站亮点于一身的系统
+                                </div>
+                                <div style="font-size: 12px;">
+                                    系统于2014年二月开始开发，并于2014年三月飞测试完成，并上线使用。在这短短的时间内，有将近百万的企业注册我们的账号，
+                                并投入使用。轻松边界的网站维护，节约而不简单，简洁而不失华丽，多样式的网站模板，让您忍不住。快来加入我们吧！
+                                </div>
+                                <div class="more-info"><a href="/Home/ManagementBrief">更多详情&nbsp;>>></a></div>
+                                <div class="border-horiz"></div>
+
                                 <div class="overflow">
                                     <ul class="list list-pad">
-                                        <li><a href="#">Campaigns</a></li>
-                                        <li><a href="#">Portraits</a></li>
-                                        <li><a href="#">Fashion</a></li>
-                                        <li><a href="#">Fine Art</a></li>
+                                        <li><a href="/Home/ManagementBrief">关于我们</a></li>
+                                        <li><a href="/Home/AboutUs">联系我们</a></li>
                                     </ul>
                                     <ul class="list">
-                                        <li><a href="#">Advertising</a></li>
-                                        <li><a href="#">Lifestyle</a></li>
-                                        <li><a href="#">Love story</a></li>
-                                        <li><a href="#">Landscapes</a></li>
+                                        <li><a href="/Home/AchieveCase">成功案例</a></li>
+                                        <li><a href="/Home/HelpMessage">帮助文档</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </article>
                     <article class="span6">
-                        <h3>Latest photoshoots</h3>
+                        <h3>注册伙伴</h3>
                         <ul class="list-photo">
-                            <li><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img6.jpg " alt="" /></a></li>
-                            <li><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img7.jpg " alt="" /></a></li>
-                            <li><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img8.jpg " alt="" /></a></li>
-                            <li class="last"><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img9.jpg " alt="" /></a></li>
-                            <li><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img10.jpg " alt="" /></a></li>
-                            <li><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img11.jpg " alt="" /></a></li>
-                            <li><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img12.jpg " alt="" /></a></li>
-                            <li class="last"><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img13.jpg " alt="" /></a></li>
-                            <li><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img14.jpg " alt="" /></a></li>
-                            <li><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img15.jpg " alt="" /></a></li>
-                            <li><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img16.jpg " alt="" /></a></li>
-                            <li class="last"><a href="/Content/Images/image-blank.png" class="magnifier">
-                                <img src="/Content/Images/page1-img17.jpg " alt="" /></a></li>
+                            <%List<Enterprise> _EList = ViewBag.EnterprseList as List<Enterprise>;
+                              int tempCountLogo = 0;
+                              if (_EList != null)
+                              {
+                                  foreach (Enterprise item in _EList)
+                                  {
+                                      if (tempCountLogo == 12) break;%>
+                            <li><a href="/Enterprise/<%:item.EnterpriseUrl %>" class="magnifier">
+                                <img src="<%:item.EnterpriseLogo %>" alt="" title="<%:item.EnterpriseName %>"/></a></li>
+                            <%++tempCountLogo;
+                                  }
+                              }%>
                         </ul>
                     </article>
                 </div>
