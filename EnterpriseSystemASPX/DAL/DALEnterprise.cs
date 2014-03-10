@@ -9,6 +9,14 @@ namespace EnterpriseSystemASPX.DAL
     [Serializable]
     public class DALEnterprise
     {
+        public List<Enterprise> GetEnterprise()
+        {
+            EMSEntities entity = new EMSEntities();
+            List<Enterprise> list = entity.Enterprise.Where(m=>m.EnterpriseStatus.Value).ToList();
+
+            return list;
+        }
+
         public Enterprise GetEnterprise(int enterpriseid)
         {
             EMSEntities entity = new EMSEntities();

@@ -63,7 +63,7 @@
                 <%}else{ %>
                 <a title="欢迎<%:islogin.EnterpriseName %>回来">
                     <%:islogin.EnterpriseEmail %></a>&nbsp;|&nbsp;
-                <a href="/EnterpriseBg/Index">后台管理</a>
+                <a href="/EnterpriseBg/Index" target="_blank">后台管理</a>&nbsp;|&nbsp;
                 <a href="/Account/Logout">退出</a>
                 <%} %>
             </div>
@@ -101,13 +101,15 @@
     <!--============================== footer begin=================================-->
     <footer>
         <div class="container clearfix">
-            <ul class="list-social pull-right">
+           <%-- <ul class="list-social pull-right">
                 <li><a class="icon-1" href="#"></a></li>
                 <li><a class="icon-2" href="#"></a></li>
                 <li><a class="icon-3" href="#"></a></li>
                 <li><a class="icon-4" href="#"></a></li>
-            </ul>
-            <div class="privacy pull-left">Website Template Collect from  <a href="http://www.cssmoban.com/" target="_blank">网页模板</a> </div>
+            </ul>--%>
+            <div class="privacy" style="text-align:center">
+                多用户企业管理系统&nbsp;
+            Copyright &copy; 2014, 河北师范大学软件学院</div>
         </div>
     </footer>
     <!--============================== footer end=================================-->

@@ -102,6 +102,9 @@
           <Property Name="MEnterpriseID" Type="int" Nullable="false" />
           <Property Name="MEnterpriseCasesTitle" Type="text" />
           <Property Name="MEnterpriseCasesContent" Type="text" />
+          <Property Name="MEnterpriseCaseUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="MEnterpriseCaseShow" Type="bit" Nullable="false" />
+          <Property Name="EnterprisUrl" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="MEnterpriseMessage">
           <Key>
@@ -257,6 +260,9 @@
           <Property Name="MEnterpriseCasesTitle" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
           <Property Name="MEnterpriseCasesContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="MEnterprise" Relationship="EMSModel.FK_MEnterpriseCases_MEnterprise" FromRole="MEnterpriseCases" ToRole="MEnterprise" />
+          <Property Type="String" Name="MEnterpriseCaseUrl" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="MEnterpriseCaseShow" Nullable="false" />
+          <Property Type="String" Name="EnterprisUrl" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_EnterpriseCases_Enterprise">
           <End Role="Enterprise" Type="EMSModel.Enterprise" Multiplicity="1" />
@@ -387,6 +393,9 @@
           <EntitySetMapping Name="MEnterpriseCases">
             <EntityTypeMapping TypeName="EMSModel.MEnterpriseCases">
               <MappingFragment StoreEntitySet="MEnterpriseCases">
+                <ScalarProperty Name="EnterprisUrl" ColumnName="EnterprisUrl" />
+                <ScalarProperty Name="MEnterpriseCaseShow" ColumnName="MEnterpriseCaseShow" />
+                <ScalarProperty Name="MEnterpriseCaseUrl" ColumnName="MEnterpriseCaseUrl" />
                 <ScalarProperty Name="MEnterpriseCasesID" ColumnName="MEnterpriseCasesID" />
                 <ScalarProperty Name="MEnterpriseID" ColumnName="MEnterpriseID" />
                 <ScalarProperty Name="MEnterpriseCasesTitle" ColumnName="MEnterpriseCasesTitle" />

@@ -5,74 +5,29 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
     <div class="bg-content">
-
         <!--============================== content =================================-->
-
         <div id="content">
-            <div class="ic">More Website Templates at <a href="http://www.cssmoban.com/">Website Template</a></div>
             <div class="container">
                 <div class="row">
                     <article class="span12">
-                        <h3>Services</h3>
+                        <h3>成功案例</h3>
                     </article>
                     <div class="clear"></div>
                     <ul class="thumbnails thumbnails-1 list-services">
+                        <%if (Model == null) return;
+                          foreach (MEnterpriseCases item in Model)
+                          {%>
                         <li class="span4">
                             <div class="thumbnail thumbnail-1">
-                                <img src="/Content/Images/page2-img1.jpg" alt="">
+                                <img src="<%:item.MEnterpriseCaseUrl %>" style="width:350px;">
                                 <section>
-                                    <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
-                                    <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
+                                    <a href="/Enterprise/<%:item.EnterprisUrl%>/Index" target="_blank" class="link-1"><%:item.MEnterpriseCasesTitle %></a>
+                                    <p><%:item.MEnterpriseCasesContent %></p>
                                 </section>
                             </div>
                         </li>
-                        <li class="span4">
-                            <div class="thumbnail thumbnail-1">
-                                <img src="/Content/Images/page2-img2.jpg" alt="">
-                                <section>
-                                    <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
-                                    <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
-                                </section>
-                            </div>
-                        </li>
-                        <li class="span4">
-                            <div class="thumbnail thumbnail-1">
-                                <img src="/Content/Images/page2-img3.jpg" alt="">
-                                <section>
-                                    <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
-                                    <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
-                                </section>
-                            </div>
-                        </li>
-                        <li class="span4">
-                            <div class="thumbnail thumbnail-1">
-                                <img src="/Content/Images/page2-img4.jpg" alt="">
-                                <section>
-                                    <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
-                                    <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
-                                </section>
-                            </div>
-                        </li>
-                        <li class="span4">
-                            <div class="thumbnail thumbnail-1">
-                                <img src="/Content/Images/page2-img5.jpg" alt="">
-                                <section>
-                                    <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
-                                    <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
-                                </section>
-                            </div>
-                        </li>
-                        <li class="span4">
-                            <div class="thumbnail thumbnail-1">
-                                <img src="/Content/Images/page2-img6.jpg" alt="">
-                                <section>
-                                    <a href="#" class="link-1">At vero eos et accusamus et iusto </a>
-                                    <p>Deleniti atque corrupti quos dolores molestias excepturi sint occaecati cupiditate nonprovident similique sunt in culpa.</p>
-                                </section>
-                            </div>
-                        </li>
+                        <%} %>
                     </ul>
                 </div>
             </div>
