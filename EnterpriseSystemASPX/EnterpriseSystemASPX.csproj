@@ -137,6 +137,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EnterpriseBgController.cs" />
     <Compile Include="Controllers\EnterpriseController.cs" />
+    <Compile Include="Controllers\EnterpriseInfoEditController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\DALEnterprise.cs" />
     <Compile Include="DAL\DALEnterpriseCases.cs" />
@@ -517,6 +518,8 @@
     <Content Include="Scripts\WebSite\bootstrap.js" />
     <Content Include="Scripts\WebSite\forms.js" />
     <Content Include="Scripts\WebSite\HomeAboutus.js" />
+    <Content Include="Scripts\WebSite\jquery-1.10.2.js" />
+    <Content Include="Scripts\WebSite\jquery-ui-1.10.4.custom.min.js" />
     <Content Include="Scripts\WebSite\jquery.easing.1.3.js" />
     <Content Include="Scripts\WebSite\jquery.flexslider-min.js" />
     <Content Include="Scripts\WebSite\jquery.js" />
@@ -528,6 +531,7 @@
     <Content Include="Views\Account\Login.aspx" />
     <Content Include="Views\Account\Register.aspx" />
     <Content Include="Views\EnterpriseBg\Index.aspx" />
+    <Content Include="Views\EnterpriseInfoEdit\Index.aspx" />
     <Content Include="Views\Enterprise\EPAboutUs.aspx" />
     <Content Include="Views\Enterprise\EPAchieveCase.aspx" />
     <Content Include="Views\Enterprise\EPBrief.aspx" />

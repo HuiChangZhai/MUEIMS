@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CKEditor.NET">
+      <HintPath>Libs\CKEditor.NET.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -389,6 +392,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Commom\" />
     <Folder Include="Content\Images\BgImages\" />
+    <Folder Include="Libs\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -55,5 +55,13 @@ namespace EnterpriseSystemASPX.BLL
 
             return enterprise;
         }
+
+        public static List<Enterprise> GetEnterpriseList(int page, int pageSize)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+            List<Enterprise> enterpriseList = _DAL.GetEnterpriseList(page, pageSize);
+
+            return enterpriseList;
+        }
     }
 }

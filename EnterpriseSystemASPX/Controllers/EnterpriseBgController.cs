@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EnterpriseSystemASPX.BLL;
+using EnterpriseSystemASPX.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,11 +12,14 @@ namespace EnterpriseSystemASPX.Controllers
     {
         //
         // GET: /EnterpriseBg/
+        private int PageSize = 10;
 
-        public ActionResult Index()
+        public ActionResult Index(int? pageCount)
         {
+            pageCount = pageCount ?? 0;
+            List<Enterprise> enterpriseList = BLLEnterprise.GetEnterpriseList(0, PageSize);
+            ViewBag.EnterpriseList = enterpriseList;
             return View();
         }
-
     }
 }
