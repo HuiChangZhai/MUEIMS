@@ -24,15 +24,13 @@ namespace EnterpriseSystemASPX.BLL
             }
         }
 
-        public static bool IsLogin(string email, string pwd)
+        public static Enterprise IsLogin(string email, string pwd)
         {
             Enterprise enterprise = BLLEnterprise.GetEnterprise(email, pwd);
-            if (enterprise == null) return false;
+            if (enterprise == null) return null;
             EMSCookie.AddCookie("EnterpriseCookie", email);
 
-            bool isLoginSuccess = enterprise != null;
-
-            return isLoginSuccess;
+            return enterprise;
         }
 
         public static void Logout()
