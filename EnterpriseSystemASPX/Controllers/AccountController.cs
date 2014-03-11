@@ -35,7 +35,7 @@ namespace EnterpriseSystemASPX.Controllers
             if (!string.IsNullOrEmpty(ViewBag.emailError) || !string.IsNullOrEmpty(ViewBag.pwdError))
                 return View();
             //检查用户输入是否正确
-            Enterprise _enterprise = BLLEnterprise.GetEnterprise(useremail, userpwd);
+            Enterprise _enterprise = BLLEnterprise.IsLogin(useremail, userpwd);
             string loginError = string.Empty;
             if (_enterprise == null)
                 loginError = "邮箱密码错误";

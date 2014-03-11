@@ -48,5 +48,13 @@ namespace EnterpriseSystemASPX.DAL
 
             return enterprise;
         }
+
+        public List<Enterprise> GetEnterpriseList(int page, int pageSize)
+        {
+            EMSEntities entity = new EMSEntities();
+            List<Enterprise> enterpriseList = entity.Enterprise.OrderBy(m=>m.EnterpriseID).Skip(page * pageSize).Take(pageSize).ToList();
+
+            return enterpriseList;
+        }
     }
 }

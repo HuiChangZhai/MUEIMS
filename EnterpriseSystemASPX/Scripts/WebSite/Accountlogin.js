@@ -1,5 +1,4 @@
-﻿function AjaxMethod(url,divid,postmethod)
-{
+﻿function AjaxMethod(url, divid, postmethod) {
     $.ajax({
         type: postmethod,
         url: url,
@@ -10,12 +9,10 @@
     });
 }
 
-function CheckExistEmail()
-{
+function CheckExistEmail() {
     var email = $("#useremail").val();
     var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
-    if (!reg.test(email))
-    {
+    if (!reg.test(email)) {
         $("#emailError").val("请输入正确的邮箱地址");
         return;
     }
@@ -37,8 +34,10 @@ function Logout() {
     window.location.href = url;
 }
 
-function AccountLogin()
-{
+function AccountLogin() {
+    $("#emailError").html("");
+    $("#pwdError").html("");
+    $("#loginError").html("");
     var emailerror = $("#emailError").html();
     var pwderror = $("#pwdError").html();
     var loginerror = $("#loginError").html();
@@ -49,9 +48,7 @@ function AccountLogin()
         //var url = "/Account/Login?email=" + email + "&pwd=" + pwd + "&remember=" + remember;
         //window.location.href = url;
         $("#LoginForm").submit();
-        $("#emailError").html("");
-        $("#pwdError").html("");
-        $("#loginError").html("");
+
         //AjaxMethod(url,)
     }
 }
