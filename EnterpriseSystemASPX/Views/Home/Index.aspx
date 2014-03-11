@@ -60,7 +60,9 @@
                             <li class="span3">
                                 <div class="thumbnail thumbnail-1">
                                     <h3 style="font-size: 20px;"><%:item.MEnterpriseCasesTitle %></h3>
-                                    <img src="<%:item.MEnterpriseCaseUrl %>" alt="" style="height: 146px;">
+                                    <a href="/Enterprise/<%:item.EnterprisUrl%>/Index" title="<%:item.MEnterpriseCasesTitle %>">
+                                        <img src="<%:item.MEnterpriseCaseUrl %>" alt="" style="height: 146px;">
+                                    </a>
                                     <section>
                                         <strong><%:item.MEnterpriseCasesTitle %></strong>
                                         <p><%:item.MEnterpriseCasesContent %></p>
@@ -117,7 +119,7 @@
                                   foreach (Enterprise item in _EList)
                                   {
                                       if (tempCountLogo == 12) break;%>
-                            <li><a href="/Enterprise/<%:item.EnterpriseUrl %>" class="magnifier">
+                            <li><a href="/Enterprise/<%:item.EnterpriseUrl %>" title="<%:item.EnterpriseName %>" class="magnifier">
                                 <img src="<%:item.EnterpriseLogo %>" alt="" title="<%:item.EnterpriseName %>"/></a></li>
                             <%++tempCountLogo;
                                   }

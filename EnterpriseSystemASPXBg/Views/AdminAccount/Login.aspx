@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>多企业用户管理系统|管理员登录</title>
     <link href="/Content/CSS/login.css" rel="stylesheet" />
-    <script src="../../Scripts/jquery-1.7.1.min.js"></script>
+    <script src="/Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript">
         $(function () {
             $("#adminname").focus();

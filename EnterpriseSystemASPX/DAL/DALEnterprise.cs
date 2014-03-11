@@ -20,7 +20,7 @@ namespace EnterpriseSystemASPX.DAL
         public Enterprise GetEnterprise(int enterpriseid)
         {
             EMSEntities entity = new EMSEntities();
-            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseID == enterpriseid);
+            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseID == enterpriseid && m.EnterpriseStatus.Value);
 
             return enterprise;
         }
@@ -28,7 +28,7 @@ namespace EnterpriseSystemASPX.DAL
         public Enterprise GetEnterprise(string enterpriseemail)
         {
             EMSEntities entity = new EMSEntities();
-            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseEmail == enterpriseemail);
+            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseEmail == enterpriseemail && m.EnterpriseStatus.Value);
 
             return enterprise;
         }
@@ -44,7 +44,7 @@ namespace EnterpriseSystemASPX.DAL
         public Enterprise ExistEnterprise(string enterpriseemail)
         {
             EMSEntities entity = new EMSEntities();
-            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseEmail == enterpriseemail);
+            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseEmail == enterpriseemail && m.EnterpriseStatus.Value);
 
             return enterprise;
         }

@@ -15,14 +15,9 @@ namespace EnterpriseSystemASPXBg.Controllers
         public ActionResult Index()
         {
             if (!BLLMEnterpriseAdmin.IsLogin())
-            {
                 return Redirect("~/AdminAccount/Login");
-            }
-            else
-            {
-                ViewBag.Current = BLLMEnterpriseAdmin.Current;
-                return View();
-            }
+            ViewBag.MenuTitle = "企业列表";
+            return View();
         }
 
     }

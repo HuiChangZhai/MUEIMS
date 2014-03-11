@@ -369,6 +369,7 @@
     <Content Include="Content\Images\marker-1.png" />
     <Content Include="Content\Images\marker.png" />
     <Content Include="Content\Images\next.png" />
+    <Content Include="Scripts\WebSite\AccountChangepwd.js" />
     <Content Include="uploadImages\page1-img1.jpg" />
     <Content Include="uploadImages\logo-img10.jpg" />
     <Content Include="uploadImages\logo-img11.jpg" />

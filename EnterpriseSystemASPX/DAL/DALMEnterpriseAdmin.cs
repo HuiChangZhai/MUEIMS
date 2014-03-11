@@ -20,7 +20,7 @@ namespace EnterpriseSystemASPX.DAL
         public MEnterpriseAdmin GetMEnterpriseAdmin(string adminName)
         {
             EMSEntities entity = new EMSEntities();
-            MEnterpriseAdmin admin = entity.MEnterpriseAdmin.SingleOrDefault(m => (m.AdminName.ToString() == adminName));
+            MEnterpriseAdmin admin = entity.MEnterpriseAdmin.SingleOrDefault(m => (m.AdminName == adminName));
 
             return admin;
         }
@@ -31,6 +31,16 @@ namespace EnterpriseSystemASPX.DAL
             MEnterpriseAdmin admin =  entity.MEnterpriseAdmin.SingleOrDefault(m => m.AdminName == adminName && m.MEnterpriseAdminPassword == password );
 
             return admin;
+        }
+
+        public bool ChangeAdminPwd(string admin,string newpwd)
+        {
+            EMSEntities entity = new EMSEntities();
+            MEnterpriseAdmin _admin = entity.MEnterpriseAdmin.SingleOrDefault(m => m.AdminName == admin);
+            if (_admin == null) return false;
+            _admin.MEnterpriseAdminPassword = newpwd;
+            entity.SaveChanges();
+            return true;
         }
     }
 }
