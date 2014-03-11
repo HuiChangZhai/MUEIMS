@@ -1,0 +1,38 @@
+﻿.changepwd
+{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -150px;
+    margin-left: -100px;
+    line-height: 36px;
+}
+
+    .changepwd div
+    {
+        font-size: 16px;
+        text-align: left;
+    }
+
+.btnChange
+{
+    width: 80px;
+    text-align: center;
+    margin-left: 96px;
+    cursor:pointer;
+}
+
+.changepwd div input[type=text], .changepwd div input[type=password]
+{
+    font-size: 16px;
+    height: 20px;
+    width: 200px;
+}
+
+.changepwd .errorInfo
+{
+    font-size: 14px;
+    color: #d9534f;
+}
