@@ -15,5 +15,13 @@ namespace EnterpriseSystemASPX.BLL
             
             _DAL.SetMEnterriseMessage(message);
         }
+
+        public static List<MEnterpriseMessage> GetMEnterriseMessage()
+        {
+            DALMEnterpriseMessage _DAL = new DALMEnterpriseMessage();
+
+            return _DAL.GetMEnterriseMessage();
+        }
     }
+
 }
