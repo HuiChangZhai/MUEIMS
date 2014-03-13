@@ -31,7 +31,8 @@
             });
         });
     </script>
-    <asp:ContentPlaceHolder ID="ScriptAndStyleContent" runat="server" />
+    <asp:ContentPlaceHolder ID="ScriptAndStyleContent" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <div>
@@ -70,11 +71,11 @@
                             <tr>
                                 <td width="100%" valign="top">
                                     <div id="container">
-                                        <h1 class="type"><a href="javascript:void(0)">礼品管理</a></h1>
+                                        <h1 class="type"><a href="javascript:void(0)">企业用户管理</a></h1>
                                         <div class="content">
                                             <ul class="MM">
-                                                <li><a href="ProductList.aspx" target="main">管理礼品</a></li>
-                                                <li><a href="Product_Add.aspx" target="main">增加礼品</a></li>
+                                                <li><a href="/EnterpriseBg/EnterpriseInfos">企业信息</a></li>
+                                                <li><a href="Product_Add.aspx">增加礼品</a></li>
                                             </ul>
                                         </div>
                                         <h1 class="type"><a href="javascript:void(0)">礼品分类</a></h1>

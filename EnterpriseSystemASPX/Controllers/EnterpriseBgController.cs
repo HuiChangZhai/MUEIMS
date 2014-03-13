@@ -14,11 +14,32 @@ namespace EnterpriseSystemASPX.Controllers
         // GET: /EnterpriseBg/
         private int PageSize = 10;
 
-        public ActionResult Index(int? pageCount)
+        public ActionResult Index()
         {
-            pageCount = pageCount ?? 0;
             List<Enterprise> enterpriseList = BLLEnterprise.GetEnterpriseList(0, PageSize);
             ViewBag.EnterpriseList = enterpriseList;
+            return View("~/Views/EnterpriseBg/EnterpriseInfos.aspx");
+        }
+
+        public ActionResult EnterpriseInfos(int? pageCount)
+        {
+            pageCount = pageCount ?? 0;
+            List<Enterprise> enterpriseList = BLLEnterprise.GetEnterpriseList(pageCount.Value, PageSize);
+            ViewBag.EnterpriseList = enterpriseList;
+            ViewBag.CurrentPage = pageCount.Value;
+            return View();
+        }
+
+        public ActionResult EnterpriseInfoDetail(int? EnterpriseID)
+        {
+            return View();
+        }
+
+        public ActionResult EnterpriseInfoEdit(int? EnterpriseID)
+        {
+            EnterpriseID = EnterpriseID ?? 0;
+            ViewBag.EnterpriseID = EnterpriseID.Value;
+            
             return View();
         }
     }
