@@ -777,9 +777,14 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Account\Login.aspx" />
     <Content Include="Views\Account\Register.aspx" />
-    <Content Include="Views\EnterpriseBg\EnterpriseInfoDetail.aspx" />
+    <Content Include="Views\EnterpriseBg\EnterpriseBrief.aspx" />
+    <Content Include="Views\EnterpriseBg\EnterpriseCaseAdd.aspx" />
+    <Content Include="Views\EnterpriseBg\EnterpriseCaseList.aspx" />
+    <Content Include="Views\EnterpriseBg\EnterpriseDynamicAdd.aspx" />
+    <Content Include="Views\EnterpriseBg\EnterpriseDynamicEdit.aspx" />
+    <Content Include="Views\EnterpriseBg\EnterpriseDynamicList.aspx" />
+    <Content Include="Views\EnterpriseBg\EnterpriseInfo.aspx" />
     <Content Include="Views\EnterpriseBg\EnterpriseInfoEdit.aspx" />
-    <Content Include="Views\EnterpriseBg\EnterpriseInfos.aspx" />
     <Content Include="Views\EnterpriseBg\Index.aspx" />
     <Content Include="Views\Enterprise\EPAboutUs.aspx" />
     <Content Include="Views\Enterprise\EPAchieveCase.aspx" />

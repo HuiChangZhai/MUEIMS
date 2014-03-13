@@ -22,13 +22,31 @@
     <script src="/Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            $(".content:first").slideDown();
-            $(".content:gt(0)").slideUp();
+            <%
+                string MenuGroup = ViewBag.MenuGroup;
+            %>
+            var MenuGroup = '<%:MenuGroup %>';
+
             $(".type").click(function () {
                 $(this).prevAll(".content").slideUp();
                 $(this).next(".content").slideDown();
                 $(this).nextAll(".content:gt(0)").slideUp();
             });
+
+            switch (MenuGroup) {
+                case "Info":
+                    $($(".type")[0]).click();
+                    break;
+                case "Dynamic":
+                    $($(".type")[1]).click();
+                    break;
+                case "Case":
+                    $($(".type")[2]).click();
+                    break;
+                default:
+                    $($(".type")[0]).click();
+                    break;
+            }
         });
     </script>
     <asp:ContentPlaceHolder ID="ScriptAndStyleContent" runat="server">
@@ -74,21 +92,23 @@
                                         <h1 class="type"><a href="javascript:void(0)">企业用户管理</a></h1>
                                         <div class="content">
                                             <ul class="MM">
-                                                <li><a href="/EnterpriseBg/EnterpriseInfos">企业信息</a></li>
-                                                <li><a href="Product_Add.aspx">增加礼品</a></li>
+                                                <li><a href="/EnterpriseBg/EnterpriseInfo">企业信息</a></li>
+                                                <li><a href="/EnterpriseBg/EnterpriseInfoEdit">编辑企业信息</a></li>
+                                                <li><a href="/EnterpriseBg/EnterpriseBrief">编辑企业简介</a></li>
                                             </ul>
                                         </div>
-                                        <h1 class="type"><a href="javascript:void(0)">礼品分类</a></h1>
+                                        <h1 class="type"><a href="javascript:void(0)">企业动态</a></h1>
                                         <div class="content">
                                             <ul class="MM">
-                                                <li><a href="Classify.aspx" target="main">分类管理</a></li>
-                                                <li><a href="AddClassify.aspx" target="main">添加分类</a></li>
+                                                <li><a href="/EnterpriseBg/EnterpriseDynamicList">企业动态</a></li>
+                                                <li><a href="/EnterpriseBg/EnterpriseDynamicAdd"">添加企业动态</a></li>
                                             </ul>
                                         </div>
-                                        <h1 class="type"><a href="javascript:void(0)">留言管理</a></h1>
+                                        <h1 class="type"><a href="javascript:void(0)">成功案例</a></h1>
                                         <div class="content">
                                             <ul class="MM">
-                                                <li><a href="MsgList.aspx" target="main">留言列表</a></li>
+                                                <li><a href="/EnterpriseBg/EnterpriseCaseList">成功案例</a></li>
+                                                <li><a href="/EnterpriseBg/EnterpriseCaseAdd">添加成功案例</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -98,8 +118,8 @@
                     </div>
                 </div>
             </td>
-            <td>
-                <div style="width: 100%;">
+            <td style="width:80%;">
+                <div style="width:100%;">
                     <div>
                         <table class="contentHeader" width="100%">
                             <tr>
@@ -110,7 +130,7 @@
                                     <table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
                                         <tr>
                                             <td height="31">
-                                                <div class="titlebt">添加文章</div>
+                                                <div class="titlebt" style="line-height:30px;"><%:(string)ViewBag.PageTitle %></div>
                                             </td>
                                         </tr>
                                     </table>
