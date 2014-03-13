@@ -21,5 +21,45 @@ namespace EnterpriseSystemASPX.Controllers
             ViewBag.EnterpriseList = enterpriseList;
             return View();
         }
+
+        public ActionResult EnterpriseInfo()
+        {
+            return View();
+        }
+
+        public ActionResult EnterpriseInfoEdit()
+        {
+            return View();
+        }
+
+        public ActionResult EnterpriseCaseList()
+        {
+            return View();
+        }
+
+        public ActionResult EnterpriseCaseEdit()
+        {
+            return View();
+        }
+
+        public ActionResult EnterpriseCaseAdd()
+        {
+            return View();
+        }
+
+        public ActionResult EnterpriseDynamicList()
+        {
+            return View();
+        }
+
+        public ActionResult EnterpriseDynamicEdit()
+        {
+            return View();
+        }
+
+        public ActionResult EnterpriseDynamicAdd()
+        {
+            return View();
+        }
     }
 }
