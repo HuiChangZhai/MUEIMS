@@ -134,8 +134,8 @@
     <Compile Include="BLL\BLLMEnterpriseMessage.cs" />
     <Compile Include="Common\EmailHelper.cs" />
     <Compile Include="Common\EMSCookie.cs" />
-    <Compile Include="Content\ueditor1_3_6-utf8-net\net\Config.cs" />
-    <Compile Include="Content\ueditor1_3_6-utf8-net\net\Uploader.cs" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\net\Config.cs" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\net\Uploader.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EnterpriseBgController.cs" />
     <Compile Include="Controllers\EnterpriseController.cs" />
@@ -777,9 +777,11 @@
     <Content Include="Scripts\WebSite\jquery.preloader.js" />
     <Content Include="Scripts\WebSite\superfish.js" />
     <Content Include="Scripts\WebSite\touchTouch.jquery.js" />
+    <Content Include="Scripts\WebSite\WebSite.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Account\Login.aspx" />
     <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\EnterpriseBg\ChangePassword.aspx" />
     <Content Include="Views\EnterpriseBg\EnterpriseBrief.aspx" />
     <Content Include="Views\EnterpriseBg\EnterpriseCaseAdd.aspx" />
     <Content Include="Views\EnterpriseBg\EnterpriseCaseList.aspx" />

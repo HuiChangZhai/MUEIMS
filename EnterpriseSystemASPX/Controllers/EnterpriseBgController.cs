@@ -16,8 +16,10 @@ namespace EnterpriseSystemASPX.Controllers
 
         public ActionResult Index()
         {
-            List<Enterprise> enterpriseList = BLLEnterprise.GetEnterpriseList(0, PageSize);
-            ViewBag.EnterpriseList = enterpriseList;
+            ViewBag.MenuGroup = "Info";
+            ViewBag.PageTitle = "企业信息";
+            ViewBag.CurrentEnterprise = BLLEnterprise.Current;
+
             return View("~/Views/EnterpriseBg/EnterpriseInfo.aspx");
         }
         
@@ -25,21 +27,34 @@ namespace EnterpriseSystemASPX.Controllers
         {
             ViewBag.MenuGroup = "Info";
             ViewBag.PageTitle = "企业信息";
+            ViewBag.CurrentEnterprise = BLLEnterprise.Current;
 
             return View();
         }
 
-        public ActionResult EnterpriseInfoEdit()
+        public ActionResult EnterpriseInfoEdit(string enterpriseName, string enterpriseUrl, string enterpriseAddress, string enterpriseTelphoneNumber, string enterpriseEmail, string enterpriseRight, string EnterpriseLogo)
         {
-            ViewBag.EnterpriseID = BLLEnterprise.Current.EnterpriseID;
             ViewBag.MenuGroup = "Info";
             ViewBag.PageTitle = "编辑企业信息";
+
+            if (true)
+            {
+                BLLEnterprise.SaveEnterpriseInfoChanges(BLLEnterprise.Current.EnterpriseID,enterpriseName, enterpriseUrl,enterpriseAddress,enterpriseTelphoneNumber,enterpriseEmail,enterpriseRight,EnterpriseLogo);
+            }
+
+            if (!BLLEnterprise.IsLogin())
+                return Redirect("~/Home");
+
+            ViewBag.CurrentEnterprise = BLLEnterprise.Current;
 
             return View();
         }
 
         public ActionResult EnterpriseBrief(string action,string brief)
         {
+            if (!BLLEnterprise.IsLogin())
+                return Redirect("~/Home");
+
             ViewBag.MenuGroup = "Info";
             ViewBag.PageTitle = "企业简介";
 
@@ -47,7 +62,6 @@ namespace EnterpriseSystemASPX.Controllers
             {
                 brief = (brief == null ? "" : brief);
                 BLLEnterprise.SetEnterpriseBrief(BLLEnterprise.Current.EnterpriseID, brief);
-                BLLEnterprise.SaveChanges();
             }
 
             ViewBag.CurrentEnterprise = BLLEnterprise.Current;
@@ -94,6 +108,11 @@ namespace EnterpriseSystemASPX.Controllers
         {
             ViewBag.MenuGroup = "Dynamic";
             ViewBag.PageTitle = "添加企业动态";
+            return View();
+        }
+
+        public ActionResult ChangePassword(string password)
+        {
             return View();
         }
     }

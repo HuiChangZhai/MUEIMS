@@ -33,6 +33,11 @@ namespace EnterpriseSystemASPX.BLL
             return enterprise;
         }
 
+        public static bool IsLogin() 
+        {
+            return BLLEnterprise.Current != null;
+        }
+
         public static void Logout()
         {
             EMSCookie.DeleteCookie("EnterpriseCookie");
@@ -85,9 +90,10 @@ namespace EnterpriseSystemASPX.BLL
             return enterpriseList;
         }
 
-        public static int SaveChanges()
+        public static bool SaveEnterpriseInfoChanges(int enterpriseID,string enterpriseName, string enterpriseUrl, string enterpriseAddress, string enterpriseTelphoneNumber, string enterpriseEmail, string enterpriseRight, string EnterpriseLogo)
         {
-            return DALEnterprise.SaveChanges();
+            DALEnterprise _DAL = new DALEnterprise();
+            return _DAL.SaveEnterpriseInfoChanges(enterpriseID, enterpriseName, enterpriseUrl, enterpriseAddress, enterpriseTelphoneNumber, enterpriseEmail, enterpriseRight, EnterpriseLogo);
         }
     }
 }

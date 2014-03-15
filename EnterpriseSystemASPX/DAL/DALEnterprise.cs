@@ -57,10 +57,36 @@ namespace EnterpriseSystemASPX.DAL
             return enterpriseList;
         }
 
-        public static int SaveChanges()
+        public bool SaveEnterpriseInfoChanges(int enterpriseID,string enterpriseName,string enterpriseUrl,string enterpriseAddress,string enterpriseTelphoneNumber,string enterpriseEmail,string enterpriseRight,string EnterpriseLogo)
         {
             EMSEntities entity = new EMSEntities();
-            return entity.SaveChanges();
+            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseID == enterpriseID);
+            if (enterprise != null)
+            {
+                if (enterpriseName != null) 
+                    enterprise.EnterpriseName = enterpriseName;
+
+                if (enterpriseUrl != null) 
+                    enterprise.EnterpriseUrl = enterpriseUrl;
+
+                if (enterpriseAddress != null) 
+                    enterprise.EnterpriseAddress = enterpriseAddress;
+
+                if (enterpriseTelphoneNumber != null) 
+                    enterprise.EnterpriseTelphoneNumber = enterpriseTelphoneNumber;
+
+                if (enterpriseEmail != null) 
+                    enterprise.EnterpriseEmail = enterpriseEmail;
+
+                if (enterpriseRight != null) 
+                    enterprise.EnterpriseRight = enterpriseRight;
+
+                if (EnterpriseLogo != null)
+                    enterprise.EnterpriseLogo = EnterpriseLogo;
+
+                return entity.SaveChanges() != 0;
+            }
+            return false;
         }
 
         public bool SetEnterpriseBrief(int enterpriseID, string brief) 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnterpriseSystemASPX.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,5 +24,21 @@ namespace EnterpriseSystemASPX
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Application_BeginRequest(Object sender, EventArgs e)
+        {
+            bool isEnterpriseBg = false;
+
+            if (Request.Url.ToString().IndexOf("http://" + Request.Url.Host + ":" + Request.Url.Port + "/EnterpriseBg") > -1)
+                isEnterpriseBg = true;
+            if (Request.Url.ToString().IndexOf("http://" + Request.Url.Host + "/EnterpriseBg") > -1)
+                isEnterpriseBg = true;
+
+            if (!BLLEnterprise.IsLogin() && isEnterpriseBg)
+            {
+                Response.Redirect("~/Home");
+            }
+        }
+
     }
 }
