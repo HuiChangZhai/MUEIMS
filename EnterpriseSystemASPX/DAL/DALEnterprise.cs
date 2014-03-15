@@ -56,5 +56,23 @@ namespace EnterpriseSystemASPX.DAL
 
             return enterpriseList;
         }
+
+        public static int SaveChanges()
+        {
+            EMSEntities entity = new EMSEntities();
+            return entity.SaveChanges();
+        }
+
+        public bool SetEnterpriseBrief(int enterpriseID, string brief) 
+        {
+            EMSEntities entity = new EMSEntities();
+            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m=> m.EnterpriseID==enterpriseID);
+            if(enterprise != null)
+            {
+                enterprise.EnterpriseBrief = brief;
+                return entity.SaveChanges() != 0;
+            }
+            return false;
+        }
     }
 }

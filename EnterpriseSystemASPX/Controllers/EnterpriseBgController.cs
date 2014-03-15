@@ -38,15 +38,22 @@ namespace EnterpriseSystemASPX.Controllers
             return View();
         }
 
-        public ActionResult EnterpriseBrief()
+        public ActionResult EnterpriseBrief(string action,string brief)
         {
             ViewBag.MenuGroup = "Info";
             ViewBag.PageTitle = "企业简介";
 
+            if (action == "Save")
+            {
+                brief = (brief == null ? "" : brief);
+                BLLEnterprise.SetEnterpriseBrief(BLLEnterprise.Current.EnterpriseID, brief);
+                BLLEnterprise.SaveChanges();
+            }
+
+            ViewBag.CurrentEnterprise = BLLEnterprise.Current;
+
             return View();
         }
-
-        
 
         public ActionResult EnterpriseCaseList()
         {

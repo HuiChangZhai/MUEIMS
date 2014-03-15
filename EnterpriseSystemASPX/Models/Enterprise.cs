@@ -23,6 +23,7 @@ namespace EnterpriseSystemASPX.Models
         public int EnterpriseID { get; set; }
         public string EnterpriseName { get; set; }
         public string EnterprisePassword { get; set; }
+        public string EnterpriseUrl { get; set; }
         public string EnterpriseAddress { get; set; }
         public string EnterpriseTelphoneNumber { get; set; }
         public string EnterpriseBriefShort { get; set; }
@@ -33,7 +34,6 @@ namespace EnterpriseSystemASPX.Models
         public Nullable<System.DateTime> EnterpriseRegistTime { get; set; }
         public Nullable<bool> EnterpriseActive { get; set; }
         public Nullable<bool> EnterpriseStatus { get; set; }
-        public string EnterpriseUrl { get; set; }
     
         public virtual ICollection<EnterpriseCases> EnterpriseCases { get; set; }
         public virtual ICollection<EnterpriseDynamic> EnterpriseDynamic { get; set; }

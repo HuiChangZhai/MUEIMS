@@ -113,21 +113,21 @@ H1
     line-height: 20px;
 }
 
-    H1 a
-    {
-        display: block;
-        width: 202px;
-        color: #000;
-        height: 30px;
-        text-decoration: none;
-        moz-outline-style: none;
-        background-image: url(/Content/Images/bgImages/menu_bgS.gif);
-        background-repeat: no-repeat;
-        line-height: 30px;
-        text-align: center;
-        margin: 0px;
-        padding: 0px;
-    }
+H1 a
+{
+    display: block;
+    width: 202px;
+    color: #000;
+    height: 30px;
+    text-decoration: none;
+    -moz-outline-style: none;
+    background-image: url(/Content/Images/bgImages/menu_bgS.gif);
+    background-repeat: no-repeat;
+    line-height: 30px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
 
 .content
 {
@@ -242,4 +242,8 @@ H1
 .contentHeader{
     border-spacing:0px;
     border-collapse:collapse;
+}
+
+.SubmitButton{
+    padding:3px 20px;
 }

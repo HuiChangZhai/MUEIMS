@@ -55,6 +55,20 @@ namespace EnterpriseSystemASPX.BLL
             return enterprise;
         }
 
+        public static Enterprise GetEnterprise(int enterpriseID)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+            Enterprise enterprise = _DAL.GetEnterprise(enterpriseID);
+
+            return enterprise;
+        }
+
+        public static bool SetEnterpriseBrief(int enterpriseID,string brief)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+            return _DAL.SetEnterpriseBrief(enterpriseID, brief);
+        }
+
         public static Enterprise ExistEnterprise(string enterpriseemail)
         {
             DALEnterprise _DAL = new DALEnterprise();
@@ -69,6 +83,11 @@ namespace EnterpriseSystemASPX.BLL
             List<Enterprise> enterpriseList = _DAL.GetEnterpriseList(page, pageSize);
 
             return enterpriseList;
+        }
+
+        public static int SaveChanges()
+        {
+            return DALEnterprise.SaveChanges();
         }
     }
 }
