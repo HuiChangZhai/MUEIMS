@@ -380,7 +380,11 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\AdminAccount\ChangePassword.aspx" />
     <Content Include="Views\AdminAccount\Login.aspx" />
+    <Content Include="Views\AdminHome\AddCases.aspx" />
+    <Content Include="Views\AdminHome\CasesList.aspx" />
     <Content Include="Views\AdminHome\Index.aspx" />
+    <Content Include="Views\AdminHome\MEnterpriseBiref.aspx" />
+    <Content Include="Views\AdminHome\MEnterpriseInfo.aspx" />
     <Content Include="Views\AdminHome\MessageDetail.aspx" />
     <Content Include="Views\AdminHome\MessageList.aspx" />
     <Content Include="Web.config">

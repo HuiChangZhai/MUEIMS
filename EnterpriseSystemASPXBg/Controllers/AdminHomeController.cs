@@ -15,6 +15,7 @@ namespace EnterpriseSystemASPXBg.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.MenuGroup = "EI";
             if (!BLLMEnterpriseAdmin.IsLogin())
                 return Redirect("~/AdminAccount/Login");
             ViewBag.MenuTitle = "企业列表";
@@ -23,6 +24,7 @@ namespace EnterpriseSystemASPXBg.Controllers
 
         public ActionResult MessageList(int? pageindex)
         {
+            ViewBag.MenuGroup = "MI";
             if (!BLLMEnterpriseAdmin.IsLogin())
                 return Redirect("~/AdminAccount/Login");
             ViewBag.MenuTitle = "留言列表";
@@ -40,6 +42,8 @@ namespace EnterpriseSystemASPXBg.Controllers
 
         public ActionResult MessageDetail(int id, string read)
         {
+            ViewBag.MenuGroup = "MI";
+            ViewBag.MenuTitle = "留言详情";
             if (id <= 0) return null;            
             if (!string.IsNullOrEmpty(read))
             {
@@ -52,8 +56,38 @@ namespace EnterpriseSystemASPXBg.Controllers
 
         public ActionResult MessageDelete(int id)
         {
+            ViewBag.MenuGroup = "ML";
+            ViewBag.MenuTitle = "留言列表";
             BLLMEnterpriseMessage.DeleteMEnterriseMessage(id);
             return RedirectToAction("MessageList");
+        }
+
+        public ActionResult MEnterpriseInfo()
+        {
+            ViewBag.MenuGroup = "SI";
+            ViewBag.MenuTitle = "系统说明";
+            return View();
+        }
+
+        public ActionResult MEnterpriseBiref()
+        {
+            ViewBag.MenuGroup = "SI";
+            ViewBag.MenuTitle = "系统简介";
+            return View();
+        }
+
+        public ActionResult CasesList()
+        {
+            ViewBag.MenuGroup = "AC";
+            ViewBag.MenuTitle = "案例列表";
+            return View();
+        }
+
+        public ActionResult AddCases()
+        {
+            ViewBag.MenuGroup = "AC";
+            ViewBag.MenuTitle = "添加案例";
+            return View();
         }
     }
 }
