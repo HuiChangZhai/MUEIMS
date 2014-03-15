@@ -190,6 +190,9 @@
     <Compile Include="Models\MEnterpriseMessage.cs">
       <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -717,6 +720,17 @@
     <Content Include="Content\ueditor1_3_6-utf8-net\ueditor.parse.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\net\fileUp.ashx" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\net\getContent.ashx" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\net\getMovie.ashx" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\net\getRemoteImage.ashx" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\net\imageManager.ashx" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\net\imageUp.ashx" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\net\scrawlUp.ashx" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\net\Web.config" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\third-party\video-js\font\vjs.eot" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\third-party\video-js\font\vjs.ttf" />
+    <Content Include="Content\ueditor1_3_6-utf8-net\third-party\video-js\font\vjs.woff" />
     <EntityDeploy Include="Models\EMSModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EMSModel.Designer.cs</LastGenOutput>
@@ -734,17 +748,6 @@
       <DependentUpon>EMSModel.edmx</DependentUpon>
       <LastGenOutput>EMSModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Content\ueditor1_3_6-utf8-net\net\fileUp.ashx" />
-    <Content Include="Content\ueditor1_3_6-utf8-net\net\getContent.ashx" />
-    <Content Include="Content\ueditor1_3_6-utf8-net\net\getMovie.ashx" />
-    <Content Include="Content\ueditor1_3_6-utf8-net\net\getRemoteImage.ashx" />
-    <Content Include="Content\ueditor1_3_6-utf8-net\net\imageManager.ashx" />
-    <Content Include="Content\ueditor1_3_6-utf8-net\net\imageUp.ashx" />
-    <Content Include="Content\ueditor1_3_6-utf8-net\net\scrawlUp.ashx" />
-    <Content Include="Content\ueditor1_3_6-utf8-net\net\Web.config" />
-    <Content Include="Content\ueditor1_3_6-utf8-net\third-party\video-js\font\vjs.eot" />
-    <Content Include="Content\ueditor1_3_6-utf8-net\third-party\video-js\font\vjs.ttf" />
-    <Content Include="Content\ueditor1_3_6-utf8-net\third-party\video-js\font\vjs.woff" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
