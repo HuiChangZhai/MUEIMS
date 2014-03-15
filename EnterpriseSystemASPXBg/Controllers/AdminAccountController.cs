@@ -39,6 +39,7 @@ namespace EnterpriseSystemASPXBg.Controllers
 
         public ActionResult ChangePassword(string username, string newpwd, string comfirmpwd)
         {
+            ViewBag.MenuGroup = "AI";
             ViewBag.MenuTitle = "修改密码"; 
             if (string.IsNullOrWhiteSpace(newpwd) && string.IsNullOrWhiteSpace(comfirmpwd))
                 return View();

@@ -127,7 +127,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminAccountController.cs" />
     <Compile Include="Controllers\AdminHomeController.cs" />
-    <Compile Include="Controllers\EnterpriseController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -135,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\CSS\ChangePwd.css" />
+    <Content Include="Content\CSS\HomeMessage.css" />
     <Content Include="Content\CSS\login.css" />
     <Content Include="Content\CSS\SiteBg.css" />
     <Content Include="Content\Images\!.gif" />
@@ -143,6 +143,7 @@
     <Content Include="Content\Images\admin_p.gif" />
     <Content Include="Content\Images\back.gif" />
     <Content Include="Content\Images\bg.gif" />
+    <Content Include="Content\Images\BgImages\bg.gif" />
     <Content Include="Content\Images\bigsize.jpg" />
     <Content Include="Content\Images\bootnbg.jpg" />
     <Content Include="Content\Images\btn-delete-off.png" />
@@ -375,10 +376,17 @@
     <Content Include="Scripts\Website\jquery.easing.js" />
     <Content Include="Scripts\Website\jquery.js" />
     <Content Include="Scripts\Website\js.js" />
+    <Content Include="Scripts\Website\Message.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\AdminAccount\ChangePassword.aspx" />
     <Content Include="Views\AdminAccount\Login.aspx" />
+    <Content Include="Views\AdminHome\AddCases.aspx" />
+    <Content Include="Views\AdminHome\CasesList.aspx" />
     <Content Include="Views\AdminHome\Index.aspx" />
+    <Content Include="Views\AdminHome\MEnterpriseBiref.aspx" />
+    <Content Include="Views\AdminHome\MEnterpriseInfo.aspx" />
+    <Content Include="Views\AdminHome\MessageDetail.aspx" />
+    <Content Include="Views\AdminHome\MessageList.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -395,7 +403,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Commom\" />
-    <Folder Include="Content\Images\BgImages\" />
     <Folder Include="Libs\" />
     <Folder Include="Models\" />
   </ItemGroup>

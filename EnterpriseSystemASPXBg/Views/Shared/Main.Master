@@ -13,13 +13,34 @@
     <script src="/Scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            $(".content:first").slideDown().children("table").show("10");
-            $(".content:gt(0)").slideUp().children("table").hide("10");
+            var MenuGroup = '<%:ViewBag.MenuGroup %>';
+
             $(".type").click(function () {
-                $(this).prevAll(".content").slideUp().children("table").hide("10");
-                $(this).next(".content").slideDown().children("table").show("10");
-                $(this).nextAll(".content:gt(0)").slideUp().children("table").hide("10");
+                $(this).prevAll(".content").slideUp();
+                $(this).next(".content").slideDown();
+                $(this).nextAll(".content:gt(0)").slideUp();
             });
+
+            switch (MenuGroup) {
+                case "EI":
+                    $($(".type")[0]).click();
+                    break;
+                case "SI":
+                    $($(".type")[1]).click();
+                    break;
+                case "AC":
+                    $($(".type")[2]).click();
+                    break;
+                case "MI":
+                    $($(".type")[3]).click();
+                    break;
+                case "AI":
+                    $($(".type")[4]).click();
+                    break;
+                default:
+                    $($(".type")[0]).click();
+                    break;
+            }
         });
     </script>
 </head>
@@ -53,27 +74,27 @@
                                 <h1 class="type"><a href="javascript:void(0)">企业信息</a></h1>
                                 <div class="content">
                                     <ul class="MM">
-                                        <li><a href="/AdminHome/Index" target="main">企业列表</a></li>
+                                        <li><a href="/AdminHome/Index">企业列表</a></li>
                                     </ul>
                                 </div>
                                 <h1 class="type"><a href="javascript:void(0)">系统信息</a></h1>
                                 <div class="content">
                                     <ul class="MM">
-                                        <li><a href="Classify.aspx" target="main">系统说明</a></li>
-                                        <li><a href="AddClassify.aspx" target="main">系统简介</a></li>
+                                        <li><a href="/AdminHome/MEnterpriseInfo">系统说明</a></li>
+                                        <li><a href="/AdminHome/MEnterpriseBiref">系统简介</a></li>
                                     </ul>
                                 </div>
                                 <h1 class="type"><a href="javascript:void(0)">成功案例</a></h1>
                                 <div class="content">
                                     <ul class="MM">
-                                        <li><a href="/AdminHome/Index" target="main">案例列表</a></li>
-                                        <li><a href="/AdminHome/Index" target="main">添加案例</a></li>
+                                        <li><a href="/AdminHome/CasesList">案例列表</a></li>
+                                        <li><a href="/AdminHome/AddCases">添加案例</a></li>
                                     </ul>
                                 </div>
                                 <h1 class="type"><a href="javascript:void(0)">留言管理</a></h1>
                                 <div class="content">
                                     <ul class="MM">
-                                        <li><a href="MsgList.aspx" target="main">留言列表</a></li>
+                                        <li><a href="/AdminHome/MessageList">留言列表</a></li>
                                     </ul>
                                 </div>
                                 <h1 class="type"><a href="javascript:void(0)">管理员信息</a></h1>

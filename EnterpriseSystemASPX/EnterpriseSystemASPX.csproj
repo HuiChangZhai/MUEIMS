@@ -190,6 +190,7 @@
     <Compile Include="Models\MEnterpriseMessage.cs">
       <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PageHelper.cs" />
     <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
@@ -397,6 +398,7 @@
     <Content Include="Content\Images\page2-img4.jpg" />
     <Content Include="Content\Images\page2-img5.jpg" />
     <Content Include="Content\Images\page2-img6.jpg" />
+    <Content Include="Scripts\WebSite\AccountChangepwd.js" />
     <Content Include="Content\Images\page3-img1.jpg" />
     <Content Include="Content\Images\page3-img10.jpg" />
     <Content Include="Content\Images\page3-img11.jpg" />
