@@ -111,6 +111,12 @@
                                                 <li><a href="/EnterpriseBg/EnterpriseCaseAdd">添加成功案例</a></li>
                                             </ul>
                                         </div>
+                                        <h1 class="type"><a href="javascript:void(0)">修改密码</a></h1>
+                                        <div class="content">
+                                            <ul class="MM">
+                                                <li><a href="/EnterpriseBg/ChangePassword">修改密码</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>

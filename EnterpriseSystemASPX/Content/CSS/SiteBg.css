@@ -1,7 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 .bodyBg
 {
     background-color:#fff;
 }
+
 .div-login
 {
     background-position: center;
@@ -82,12 +88,6 @@ A.menuParent:hover
 {
     color: #f60;
     text-decoration: none;
-}
-
-*
-{
-    margin: 0px;
-    padding: 0px;
 }
 
 body
@@ -246,4 +246,36 @@ H1 a
 
 .SubmitButton{
     padding:3px 20px;
+}
+
+.MainContentDiv {
+    width:95%;
+    margin:0 auto;
+}
+
+.MainContentDiv .TableInfo {
+    width:80%;
+    margin:0 auto;
+    border-collapse:collapse;
+    border-spacing:0px;
+}
+
+.MainContentDiv .TableInfo td{
+    border:1px solid grey;
+    line-height:24px;
+    padding:3px 20px;
+}
+
+.MainContentDiv .TableInfo td.lable {
+    width:200px;
+    text-align:right;
+}
+
+.FieldError {
+    border:1px solid red;
+}
+
+input {
+    line-height:24px;
+    height:24px;
 }
