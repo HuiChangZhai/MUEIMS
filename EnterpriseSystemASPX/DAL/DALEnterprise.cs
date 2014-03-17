@@ -49,6 +49,14 @@ namespace EnterpriseSystemASPX.DAL
             return enterprise;
         }
 
+        public Enterprise GetEnterpriseByEmailOnly(string enterpriseemail)
+        {
+            EMSEntities entity = new EMSEntities();
+            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseEmail == enterpriseemail);
+
+            return enterprise;
+        }
+
         public List<Enterprise> GetEnterpriseList(int page, int pageSize)
         {
             EMSEntities entity = new EMSEntities();
@@ -100,5 +108,25 @@ namespace EnterpriseSystemASPX.DAL
             }
             return false;
         }
+
+        public bool RegisterEnterprise(string enterpriseName, string enterpriseEmail , string password, string enterpriseAddress, string enterpriseTel)
+        {
+            EMSEntities entity = new EMSEntities();
+            Enterprise enterprise = new Enterprise
+            {
+                EnterpriseName = enterpriseName,
+                EnterpriseEmail = enterpriseEmail,
+                EnterprisePassword = password,
+                EnterpriseAddress = enterpriseAddress,
+                EnterpriseTelphoneNumber = enterpriseTel,
+                EnterpriseRegistTime = DateTime.Now,
+                EnterpriseActive = false,
+                EnterpriseStatus = false
+            };
+            entity.Enterprise.Add(enterprise);
+            return entity.SaveChanges() != 0;
+        }
+        
+        
     }
 }

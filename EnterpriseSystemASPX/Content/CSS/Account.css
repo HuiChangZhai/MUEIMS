@@ -30,13 +30,27 @@
 {
     width: auto;
     float: right;
+    height:100%;
+    vertical-align:middle;
 }
 
-    .box-404 .div-btnlogin .btn-login
-    {
-        margin-right: 190px;
-        margin-top: 30px;
-    }
+.div-btnlogin a {
+    width: 129px;
+    height: 29px;
+    border: 1px solid #ef7b18;
+    background-color: #f2aa20;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    text-align: center;
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    padding-top: 8px;
+    margin-bottom: 44px;
+    margin-right: 102px;
+    margin-top: 10px;
+}
 
 .inputcss
 {

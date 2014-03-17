@@ -43,6 +43,9 @@
                 case "Case":
                     $($(".type")[2]).click();
                     break;
+                case "Password":
+                    $($(".type")[3]).click();
+                    break;
                 default:
                     $($(".type")[0]).click();
                     break;

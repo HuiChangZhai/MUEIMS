@@ -44,6 +44,12 @@ namespace EnterpriseSystemASPX.BLL
             //HttpContext.Current.Session["AdminSession"] = null;
         }
 
+        public static bool RegisterEnterprise(string enterpriseName, string enterpriseEmail, string password, string enterpriseAddress, string enterpriseTel)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+            return _DAL.RegisterEnterprise(enterpriseName, enterpriseEmail, password, enterpriseAddress, enterpriseTel);
+        }
+
         public static List<Enterprise> GetEnterprise()
         {
             DALEnterprise _DAL = new DALEnterprise();
@@ -78,6 +84,14 @@ namespace EnterpriseSystemASPX.BLL
         {
             DALEnterprise _DAL = new DALEnterprise();
             Enterprise enterprise = _DAL.ExistEnterprise(enterpriseemail);
+
+            return enterprise;
+        }
+
+        public static Enterprise GetEnterpriseByEmailOnly(string enterpriseemail)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+            Enterprise enterprise = _DAL.GetEnterpriseByEmailOnly(enterpriseemail);
 
             return enterprise;
         }
