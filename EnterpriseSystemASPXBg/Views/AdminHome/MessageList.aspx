@@ -54,7 +54,7 @@
                   { %>
                 <td><a href="/AdminHome/MessageList?pageindex=<%:page.PageCurrent-1 %>">上一页</a></td>
                 <%} %>
-                <%for (int i = 0; i < page.TotalCount / page.PageSize + 1; ++i)
+                <%for (int i = 0; i < page.TotalCount / page.PageSize; ++i)
                   { %>
                 <td><a href="/AdminHome/MessageList?pageindex=<%:i+1 %>">|&nbsp;<%:i+1 %>&nbsp;|</a></td>
                 <%} %>

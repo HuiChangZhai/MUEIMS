@@ -24,6 +24,17 @@ namespace EnterpriseSystemASPX.BLL
             }
         }
 
+        public static string ServerDns
+        {
+            get
+            {
+                string strUri = System.Web.HttpContext.Current.Request.Url.AbsoluteUri;
+                strUri = strUri.Substring(strUri.IndexOf(":") + 3);
+                strUri = strUri.Substring(0, strUri.IndexOf("/"));
+                return strUri;
+            }
+        }
+
         public static Enterprise IsLogin(string email, string pwd)
         {
             Enterprise enterprise = BLLEnterprise.GetEnterprise(email, pwd);
@@ -63,6 +74,14 @@ namespace EnterpriseSystemASPX.BLL
             return enterprise;
         }
 
+        public static Enterprise GetBgEnterprise(int id)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+            Enterprise enterprise = _DAL.GetBgEnterprise(id);
+
+            return enterprise;
+        }
+
         public static bool SetEnterpriseBrief(int enterpriseID,string brief)
         {
             DALEnterprise _DAL = new DALEnterprise();
@@ -88,6 +107,20 @@ namespace EnterpriseSystemASPX.BLL
         public static int SaveChanges()
         {
             return DALEnterprise.SaveChanges();
+        }
+
+        public static void DeleteEnterprise(int id)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+
+            _DAL.DeleteEnterprise(id);
+        }
+
+        public static bool SetEnterpriseStatus(int id, bool status)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+
+            return _DAL.SetEnterpriseStatus(id, status);
         }
     }
 }

@@ -25,6 +25,14 @@ namespace EnterpriseSystemASPX.DAL
             return enterprise;
         }
 
+        public Enterprise GetBgEnterprise(int id)
+        {
+            EMSEntities entity = new EMSEntities();
+            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseID == id);
+
+            return enterprise;
+        }
+
         public Enterprise GetEnterprise(string enterpriseemail)
         {
             EMSEntities entity = new EMSEntities();
@@ -70,6 +78,26 @@ namespace EnterpriseSystemASPX.DAL
             if(enterprise != null)
             {
                 enterprise.EnterpriseBrief = brief;
+                return entity.SaveChanges() != 0;
+            }
+            return false;
+        }
+
+        public void DeleteEnterprise(int id)
+        {
+            EMSEntities entity = new EMSEntities();
+            Enterprise item = entity.Enterprise.SingleOrDefault(m => m.EnterpriseID == id);
+            entity.Enterprise.Remove(item);
+            entity.SaveChanges();
+        }
+
+        public bool SetEnterpriseStatus(int id, bool status)
+        {
+            EMSEntities entity = new EMSEntities();
+            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseID == id);
+            if (enterprise != null)
+            {
+                enterprise.EnterpriseStatus = status;
                 return entity.SaveChanges() != 0;
             }
             return false;
