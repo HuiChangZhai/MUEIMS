@@ -39,7 +39,10 @@ namespace EnterpriseSystemASPX.Controllers
 
             if (true)
             {
-                BLLEnterprise.SaveEnterpriseInfoChanges(BLLEnterprise.Current.EnterpriseID,enterpriseName, enterpriseUrl,enterpriseAddress,enterpriseTelphoneNumber,enterpriseEmail,enterpriseRight,EnterpriseLogo);
+                if (BLLEnterprise.SaveEnterpriseInfoChanges(BLLEnterprise.Current.EnterpriseID, enterpriseName, enterpriseUrl, enterpriseAddress, enterpriseTelphoneNumber, enterpriseEmail, enterpriseRight, EnterpriseLogo))
+                {
+                    return Redirect("~/EnterpriseBg/EnterpriseInfo");
+                }
             }
 
             if (!BLLEnterprise.IsLogin())

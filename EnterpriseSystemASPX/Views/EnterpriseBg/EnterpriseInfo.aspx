@@ -39,12 +39,14 @@
             </tr>
             <tr>
                 <td class="lable" style="height:160px;">LOGO</td>
-                <td><img class="EnterpriseLogo" src="<%:(string)enterpsise.EnterpriseLogo %>"/></td>
+                <td>
+                    <img style="max-width:300px; max-height:300px;" class="EnterpriseLogo" src="/uploadImages/<%:(string)enterpsise.EnterpriseLogo %>" />
+                </td>
             </tr>
             <tr>
                 <td class="lable"></td>
                 <td>
-                    <input id="SubmitButton" class="SubmitButton" type="button" value="编辑"/>
+                    <input id="SubmitButton" class="SubmitButton" type="button" onclick="window.location.href='/EnterpriseBg/EnterpriseInfoEdit'" value="编辑"/>
                 </td>
             </tr>
         </table>

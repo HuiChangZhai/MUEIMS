@@ -134,11 +134,13 @@
     <Compile Include="BLL\BLLMEnterpriseMessage.cs" />
     <Compile Include="Common\EmailHelper.cs" />
     <Compile Include="Common\EMSCookie.cs" />
+    <Content Include="Content\CSS\FileInput.css" />
     <Content Include="Content\ueditor1_3_6-utf8-net\net\Config.cs" />
     <Content Include="Content\ueditor1_3_6-utf8-net\net\Uploader.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EnterpriseBgController.cs" />
     <Compile Include="Controllers\EnterpriseController.cs" />
+    <Compile Include="Controllers\FileUploaderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\DALEnterprise.cs" />
     <Compile Include="DAL\DALEnterpriseCases.cs" />
@@ -745,6 +747,7 @@
     <Content Include="Scripts\WebSite\Accountlogin.js" />
     <Content Include="Scripts\WebSite\AccountRegister.js" />
     <Content Include="Scripts\WebSite\bootstrap.js" />
+    <Content Include="Scripts\WebSite\FileInput.js" />
     <Content Include="Scripts\WebSite\FixedTable.js" />
     <Content Include="Scripts\WebSite\forms.js" />
     <Content Include="Scripts\WebSite\HomeAboutus.js" />
