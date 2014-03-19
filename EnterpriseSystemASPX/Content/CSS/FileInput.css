@@ -1,0 +1,57 @@
+﻿.FileInput {
+    display: inline-block;
+    height: 25px !important;
+    border: 1px #cccccc solid;
+    background:#ffffff;
+}
+
+.FileInput input {
+    height: 25px !important;
+}
+
+.FileInput .FileInputText {
+    border:0px none;
+    background:transparent;
+}
+.FileInputContainer {
+    position: relative;
+}
+
+.FileInputContainer .FileInputButton {
+    position: relative;
+    border-right: 1px #b0b1b1 solid;
+    border-top: 0px none;
+    border-bottom: 0px none;
+    border-left: 0px none;
+    margin-right: 0px !important;
+    z-index: 0;
+    color: #000000;
+    /*background: #cccccc url(../../images/ButtonBg.png);*/
+    font-size: 13px;
+    height: 25px !important;
+    width: auto !important;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.FileInputContainer span {
+    position: absolute;
+    display: block;
+    top: -2px;
+    overflow: hidden;
+    z-index: 1;
+    width: 75px;
+    height: 25px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.FileInputContainer span input {
+    position: absolute;
+    left: -140px;
+    cursor: pointer;
+    border-spacing: 2px;
+    border-color: gray;
+}

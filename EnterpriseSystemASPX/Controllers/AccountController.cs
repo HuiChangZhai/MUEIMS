@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using EnterpriseSystemASPX.BLL;
 using EnterpriseSystemASPX.Models;
+using EnterpriseSystemASPX.Common;
 
 namespace EnterpriseSystemASPX.Controllers
 {
@@ -46,9 +47,61 @@ namespace EnterpriseSystemASPX.Controllers
             return Redirect("~/Home/Index");
         }
 
-        public ActionResult Register()
+        public ActionResult Register(string enterpriseName, string enterpriseEmail, string password, string enterpriseAddress, string enterpriseTel)
         {
+            if(!string.IsNullOrEmpty(enterpriseName) &&
+                !string.IsNullOrEmpty(enterpriseEmail)　&&
+                !string.IsNullOrEmpty(password)　&&
+                !string.IsNullOrEmpty(enterpriseAddress)　&&
+                !string.IsNullOrEmpty(enterpriseTel) &&
+                BLLEnterprise.GetEnterpriseByEmailOnly(enterpriseEmail) == null)
+            {
+                bool isSuccess = BLLEnterprise.RegisterEnterprise(enterpriseName, enterpriseEmail, password, enterpriseAddress, enterpriseTel);
+
+                if (isSuccess)
+                {
+                    //发送邮件，等待审核
+                    EmailHelper.SendMail(enterpriseEmail,"企业信息管理系统激活","请激活");
+
+                    Response.Write("Success");
+                    Response.Flush();
+                    Response.End();
+                }
+                else
+                {
+                    Response.Write("Fail");
+                }
+            }
+
             return View();
+        }
+
+        public ActionResult CheckEmailIsAvailable(string email)
+        {
+            Regex reg = new Regex(@"^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})");
+            bool available = true;
+            if (!reg.IsMatch(email)) 
+            {
+                available = false;
+            }
+            else if (BLLEnterprise.GetEnterpriseByEmailOnly(email) != null)
+            {
+                available = false;
+            }
+
+
+            if (available)
+            {
+                Response.Write("Yes");
+            }
+            else {
+                Response.Write("No");
+            }
+
+            Response.Flush();
+            Response.End();
+
+            return null;
         }
 
         public ActionResult Logout()

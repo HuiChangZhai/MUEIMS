@@ -41,3 +41,14 @@ function checkRequiredFields(Form) {
         return false;
     }, 100);
 }
+
+function checkFieldWithPatern(inputObj,pattern){
+    if (inputOb) {
+        var val = $(inputObj).val();
+        var regexp = new RegExp(pattern);
+        return regexp.test(val);
+    }
+    else {
+        return false;
+    }
+}

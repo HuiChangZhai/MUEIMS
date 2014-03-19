@@ -39,7 +39,10 @@ namespace EnterpriseSystemASPX.Controllers
 
             if (true)
             {
-                BLLEnterprise.SaveEnterpriseInfoChanges(BLLEnterprise.Current.EnterpriseID,enterpriseName, enterpriseUrl,enterpriseAddress,enterpriseTelphoneNumber,enterpriseEmail,enterpriseRight,EnterpriseLogo);
+                if (BLLEnterprise.SaveEnterpriseInfoChanges(BLLEnterprise.Current.EnterpriseID, enterpriseName, enterpriseUrl, enterpriseAddress, enterpriseTelphoneNumber, enterpriseEmail, enterpriseRight, EnterpriseLogo))
+                {
+                    return Redirect("~/EnterpriseBg/EnterpriseInfo");
+                }
             }
 
             if (!BLLEnterprise.IsLogin())
@@ -73,6 +76,7 @@ namespace EnterpriseSystemASPX.Controllers
         {
             ViewBag.MenuGroup = "Case";
             ViewBag.PageTitle = "成功案例";
+
             return View();
         }
 
@@ -80,6 +84,7 @@ namespace EnterpriseSystemASPX.Controllers
         {
             ViewBag.MenuGroup = "Case";
             ViewBag.PageTitle = "编辑成功案例";
+
             return View();
         }
 
@@ -87,6 +92,7 @@ namespace EnterpriseSystemASPX.Controllers
         {
             ViewBag.MenuGroup = "Case";
             ViewBag.PageTitle = "添加成功案例";
+
             return View();
         }
 
@@ -94,6 +100,7 @@ namespace EnterpriseSystemASPX.Controllers
         {
             ViewBag.MenuGroup = "Dynamic";
             ViewBag.PageTitle = "企业动态";
+
             return View();
         }
 
@@ -101,6 +108,7 @@ namespace EnterpriseSystemASPX.Controllers
         {
             ViewBag.MenuGroup = "Dynamic";
             ViewBag.PageTitle = "编辑企业动态";
+
             return View();
         }
 
@@ -108,11 +116,15 @@ namespace EnterpriseSystemASPX.Controllers
         {
             ViewBag.MenuGroup = "Dynamic";
             ViewBag.PageTitle = "添加企业动态";
+
             return View();
         }
 
         public ActionResult ChangePassword(string password)
         {
+            ViewBag.MenuGroup = "Password";
+            ViewBag.PageTitle = "修改密码";
+
             return View();
         }
     }
