@@ -9,13 +9,13 @@ function DeleteDetail(index) {
 }
 
 function changeBgcolor(index) {
-    var count = index % 2;
-    if (count == 0) {
+    //var count = index % 2;
+    //if (count == 0) {
         $("#tr" + index).css("background-color", "#ccf");
-    }
-    if (count == 1) {
-        $("#tr" + index).css("background-color", "");
-    }
+    //}
+    //if (count == 1) {
+    //    $("#tr" + index).css("background-color", "");
+    //}
 }
 
 function clearBgcolor(index) {
@@ -35,7 +35,6 @@ function DeleteCDetail() {
 }
 
 function addCases() {
-    debugger;
     var select = $("#caseslist").val();
     if (select == "0") {
         alert("请选择企业用户");

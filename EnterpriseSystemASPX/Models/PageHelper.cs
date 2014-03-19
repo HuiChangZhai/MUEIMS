@@ -9,7 +9,7 @@ namespace EnterpriseSystemASPX.Models
     {
         public PageHelper()
         {
-            this.PageSize = 2;
+            this.PageSize = 4;
             this.IsFirstPage = true;
             this.IsLastPage = false;
             this.PageNext = 2;

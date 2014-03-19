@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using EnterpriseSystemASPX.Models;
 using System.Text;
+using EnterpriseSystemASPX.Common;
 
 namespace EnterpriseSystemASPXBg.Controllers
 {
@@ -97,18 +98,51 @@ namespace EnterpriseSystemASPXBg.Controllers
             BLLMEnterpriseMessage.DeleteMEnterriseMessage(id);
             return RedirectToAction("MessageList");
         }
-
         public ActionResult MEnterpriseInfo()
         {
             ViewBag.MenuGroup = "SI";
             ViewBag.MenuTitle = "系统说明";
-            return View();
+            MEnterprise menterprise = BLLMEnterprise.GetMEnterprise();
+            if (menterprise == null)
+                menterprise = new MEnterprise();
+            return View(menterprise);
         }
 
-        public ActionResult MEnterpriseBiref()
+        [HttpPost]
+        public ActionResult MEnterpriseInfo(string id, string name, string tel, string email, string copy, string address, string shortbrief, string logo)
+        {
+            ViewBag.MenuGroup = "SI";
+            ViewBag.MenuTitle = "系统说明";
+            MEnterprise menterprise = new MEnterprise();
+            if (!string.IsNullOrEmpty(id))
+                menterprise.MEnterpriseID = int.Parse(id);
+            else
+                menterprise.MEnterpriseID = 0;
+            menterprise.MEnterpriseName = name;
+            menterprise.MEnterpriseTelphoneNumber = tel;
+            menterprise.MEnterpriseRight = copy;
+            menterprise.MEnterpriseEmail = email;
+            menterprise.MEnterpriseAddress = address;
+            menterprise.MEnterpriseBriefShort = shortbrief;
+            //menterprise.MEnterpriseLogo = logo;
+            BLLMEnterprise.UpdateMEnterprise(menterprise);
+            ViewBag.Result = "success";
+            return View(menterprise);
+        }
+
+        public ActionResult MEnterpriseBiref(string action, string brief)
         {
             ViewBag.MenuGroup = "SI";
             ViewBag.MenuTitle = "系统简介";
+            if (action == "Save")
+            {
+                brief = (brief == null ? "" : brief);
+                MEnterprise enterprise=BLLMEnterprise.GetMEnterprise();
+                BLLMEnterprise.SetMEnterpriseBiref(enterprise == null ? 0 : enterprise.MEnterpriseID, brief);
+            }
+
+            ViewBag.CurrentMEnterprise = BLLMEnterprise.GetMEnterprise();
+
             return View();
         }
 
@@ -129,7 +163,7 @@ namespace EnterpriseSystemASPXBg.Controllers
             return View(casesList);
         }
 
-        public ActionResult CasesDetail(int id,string show)
+        public ActionResult CasesDetail(int id, string show)
         {
             ViewBag.MenuGroup = "AC";
             ViewBag.MenuTitle = "案例详情";
@@ -152,7 +186,7 @@ namespace EnterpriseSystemASPXBg.Controllers
             return RedirectToAction("CasesList");
         }
 
-        public ActionResult AddCases(string ename,string eshort,string eurl,string show)
+        public ActionResult AddCases(string ename, string eshort, string eurl, string show)
         {
             ViewBag.MenuGroup = "AC";
             ViewBag.MenuTitle = "添加案例";
@@ -188,12 +222,12 @@ namespace EnterpriseSystemASPXBg.Controllers
             builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>企业说明</td><td class='tdContent'>" + enterprise.EnterpriseBriefShort ?? "" + "</td></tr>");
             builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>企业简介</td><td class='tdContent'>" + enterprise.EnterpriseBrief ?? "" + "</td></tr>");
 
-            builder.Append("<input type='hidden' name='ename' value='"+enterprise.EnterpriseName+"' />");
+            builder.Append("<input type='hidden' name='ename' value='" + enterprise.EnterpriseName + "' />");
             builder.Append("<input type='hidden' name='eshort' value='" + enterprise.EnterpriseBriefShort + "' />");
             builder.Append("<input type='hidden' name='eurl' value='" + enterprise.EnterpriseUrl + "' />");
             //builder.Append("<input type='hidden' name='imgurl' value='" + BLLEnterprise.ServerDns + enterprise. + "' />");
 
-       
+
             return builder.ToString();
         }
     }

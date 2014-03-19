@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using EnterpriseSystemASPX.BLL;
 
 namespace EnterpriseSystemASPXBg
 {
@@ -22,6 +23,19 @@ namespace EnterpriseSystemASPXBg
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        protected void Application_BeginRequest(Object sender, EventArgs e)
+        {
+            if (Request.Url.ToString().Contains("/AdminAccount/Login") && !Request.Url.ToString().Contains("?"))
+            { }
+            else
+            {
+                if (!BLLMEnterpriseAdmin.IsLogin() || BLLMEnterpriseAdmin.Current == null)
+                {
+                    Response.Redirect("/AdminAccount/Login");
+                }
+            }
         }
     }
 }
