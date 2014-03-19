@@ -1,0 +1,90 @@
+﻿.fixHeaderTableDiv
+{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    clear: both;
+}
+
+.ItemFixedTable
+{
+    width: 90%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    background: #ffd800;
+    margin: 0 auto;
+}
+
+.ItemListTable
+{
+    width: 90%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+    .ItemListTable td, .ItemListTable th, .ItemFixedTable th
+    {
+        text-align: center;
+        padding: 0px 5px;
+        height: 30px;
+    }
+
+    .ItemListTable td, .ItemFixedTable th
+    {
+        height: 30px;
+        border: 1px solid grey;
+    }
+
+.Fixed_Table_Header
+{
+    background: url("/Content/Images/BgImages/bg.gif");
+}
+
+.handle a
+{
+    cursor: pointer;
+    color: #0081ce;
+}
+
+.pagetable
+{
+    margin: 0 auto;
+    margin-right: 55px;
+    margin-top: 20px;
+}
+    .pagetable tr td
+    {
+        font-size:16px;
+    }
+#tableDetail .tdContent input[type=text]
+{
+    width:200px;
+    height:26px;
+}
+
+#tableDetail .tdContent input[type=radio]
+{
+    margin-right:24px;
+}
+#tableDetail .tdContent
+{
+    text-align:left;
+    margin-left:12px;
+}
+#tableDetail tr
+{
+    height:40px;
+}
+.tdContent textarea
+{
+    width:500px;
+    height:150px;
+}
+.btnDetail
+{
+    width:80px;
+    height:30px;
+    cursor:pointer;
+}
