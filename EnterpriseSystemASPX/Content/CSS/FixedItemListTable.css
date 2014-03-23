@@ -1,0 +1,48 @@
+﻿.ItemListTable{
+    width:100%;
+    border-collapse:collapse;
+    border-spacing:0px;
+    margin:0 auto;
+    /*table-layout:fixed;*/
+}
+
+.Fixed_Table_Header
+{
+    background: url("/Content/Images/BgImages/bg.gif");
+    height:30px;
+    line-height:30px;
+    border:1px solid grey;
+}
+.ItemListTable td {
+    height:30px;
+    line-height:30px;
+    border:1px solid grey;
+    text-overflow:ellipsis;
+}
+
+.ItemListTable td.TitleColumn {
+    height:30px;
+    line-height:30px;
+    border:1px solid grey;
+    width:200px !important;
+}
+
+.ItemListTable tr.hover {
+    background:#ccf;
+}
+
+.ItemListTable .IDColumn {
+    text-align:center;
+    padding:0px;
+    width:50px !important;
+}
+
+.ItemListTable .OptionColumn {
+    text-align:center;
+    font-weight:bold;
+    width:100px !important;
+}
+
+.TableFooterDiv {
+    text-align:center;
+}

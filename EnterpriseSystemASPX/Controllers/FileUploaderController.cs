@@ -10,7 +10,7 @@ namespace EnterpriseSystemASPX.Controllers
     public class FileUploaderController : Controller
     {
         [HttpPost]
-        public ActionResult Index(HttpPostedFileBase file, HttpPostedFileBase enterpriseLogo)
+        public string Index(HttpPostedFileBase file, HttpPostedFileBase enterpriseLogo)
         {
             string now = "";//DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + (new Random().Next(1000,10000));
             if (file != null && file.ContentLength > 0)
@@ -20,9 +20,7 @@ namespace EnterpriseSystemASPX.Controllers
                 // store the file inside ~/App_Data/uploads folder
                 var path = Path.Combine(Server.MapPath("~/uploadImages"), fileName);
                 file.SaveAs(path);
-                Response.Write(fileName);
-                Response.Flush();
-                Response.End();
+                return fileName;
             }
             else if (enterpriseLogo != null && enterpriseLogo.ContentLength > 0)
             {
@@ -31,18 +29,10 @@ namespace EnterpriseSystemASPX.Controllers
                 // store the file inside ~/App_Data/uploads folder
                 var path = Path.Combine(Server.MapPath("~/uploadImages"), fileName);
                 enterpriseLogo.SaveAs(path);
-                Response.Write(fileName);
-                Response.Flush();
-                Response.End();
-            }
-            else
-            {
-                Response.Write("");
-                Response.Flush();
-                Response.End();
+                return fileName;
             }
 
-            return null;
+            return "";
         }
     }
 }

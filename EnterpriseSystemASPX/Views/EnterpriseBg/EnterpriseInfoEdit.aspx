@@ -105,12 +105,13 @@
                             <input type="file" id="enterpriseLogo" name="enterpriseLogo" multiple />
                         </div>
                         <input class="SubmitButton" id="enterpriseLogoSubit" type="button" value="上传" />
+                        <div class="BreakLine"></div>
                         <img id="imgEnterpriseLogo" style="max-width:300px; max-height:300px;" class="EnterpriseLogo" src="/uploadImages/<%:(string)enterpsise.EnterpriseLogo %>" />
                     </td>
                 </tr>
             </table>
         </form>
-        <div style="text-align: center; padding-bottom: 30px;">
+        <div class="TableFooterDiv" style="text-align: center; padding-bottom: 30px;">
             <input id="SubmitButton" class="SubmitButton" type="button" value="提交" />
         </div>
     </div>

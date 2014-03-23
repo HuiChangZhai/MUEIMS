@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/EnterpriseBg.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    EnterpriseDynamicEdit
+    EnterpriseCaseEdit
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptAndStyleContent" runat="server">
@@ -19,10 +19,10 @@
             });
             editor.ready(function () {
                 <%
-                EnterpriseDynamic enterpriseDynamic = Model as EnterpriseDynamic;
-                if (enterpriseDynamic != null)
+                EnterpriseCases enterpriseCases = Model as EnterpriseCases;
+                if (enterpriseCases != null)
                 {%>
-                    editor.setContent(HTMLEncoding.Coding2Txt("<%:enterpriseDynamic.EnterpriseDynamicContent %>"));
+                editor.setContent(HTMLEncoding.Coding2Txt("<%:enterpriseCases.EnterpriseContent %>"));
                 <%}%>
             });
 
@@ -33,11 +33,8 @@
             var Saving = false;
             function Summit() {
                 if (!Saving) {
-                    Saving = true;
-                    $("#enterpriseDynamicTitle").val($("#enterpriseDynamicVal").val());
-                    var enterpriseBrief = UE.getEditor('editor').getContent();
-                    $("#enterpriseDynamicContent").val(HTMLEncoding.Encoding(enterpriseBrief));
-
+                    $("#enterpriseCaseTitle").val($("#enterpriseCaseTitleVal").val());
+                    $("#enterpriseCaseContent").val(HTMLEncoding.Encoding(editor.getContent()));
                     $("#EditorForm").submit();
                 }
             }
@@ -45,26 +42,25 @@
     </script>
 </asp:Content>
 
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="MainContentDiv">
         <%
-            EnterpriseDynamic enterpriseDynamic = Model as EnterpriseDynamic;
-            if (enterpriseDynamic == null)
+            EnterpriseCases enterpriseCases = Model as EnterpriseCases;
+            if (enterpriseCases == null)
             {%>
         <div style="text-align: center; color: red; padding: 10px;"><%:(string)ViewBag.ErrorMessage %></div>
         <%}
             else
             {%>
-        <form id="EditorForm" name="EditorForm" action="EnterpriseDynamicEdit" method="post">
-            <input name="EnterpriseDynamicID" id="EnterpriseDynamicID" type="hidden" value="<%:enterpriseDynamic.EnterpriseDynamicID %>"/>
-            <input name="enterpriseDynamicTitle" id="enterpriseDynamicTitle" type="hidden" value=""/>
-            <input id="enterpriseDynamicContent" name="enterpriseDynamicContent" type="hidden" value=""/>
+        <form id="EditorForm" name="EditorForm" action="EnterpriseCaseEdit" method="post">
+            <input name="EnterpriseCaseID" id="EnterpriseCaseID" type="hidden" value="<%:enterpriseCases.EnterpriseCasesID %>"/>
+            <input name="enterpriseCaseTitle" id="enterpriseCaseTitle" type="hidden" value=""/>
+            <input id="enterpriseCaseContent" name="enterpriseCaseContent" type="hidden" value=""/>
         </form>
         <table class="TableInfo">
             <tr>
                 <td class="lable">标题</td>
-                <td><input class="Title" id="enterpriseDynamicVal" value="<%:enterpriseDynamic.EnterpriseDynamicTitle %>"/></td>
+                <td><input class="Title" id="enterpriseCaseTitleVal" value="<%:enterpriseCases.EnterpriseTitle %>"/></td>
             </tr>
             <tr>
                 <td class="lable">内容</td>
@@ -82,3 +78,4 @@
         %>
     </div>
 </asp:Content>
+

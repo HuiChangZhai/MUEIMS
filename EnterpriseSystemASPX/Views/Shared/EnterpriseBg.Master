@@ -28,9 +28,9 @@
             var MenuGroup = '<%:MenuGroup %>';
 
             $(".type").click(function () {
-                $(this).prevAll(".content").slideUp();
-                $(this).next(".content").slideDown();
-                $(this).nextAll(".content:gt(0)").slideUp();
+                $(this).prevAll(".contentMenu").slideUp();
+                $(this).next(".contentMenu").slideDown();
+                $(this).nextAll(".contentMenu:gt(0)").slideUp();
             });
 
             switch (MenuGroup) {
@@ -71,8 +71,8 @@
                       else
                       {%>当前用户:<%:enterprise.EnterpriseEmail%>
                     &nbsp;&nbsp;&nbsp; 
-                <a>修改密码</a> &nbsp;&nbsp; 
-                <a>退出系统</a>
+                <a href="ChangePassword" style="color:white;">修改密码</a> &nbsp;&nbsp; 
+                <a href="/Home" style="color:white;">退出系统</a>
                     <% }%>
                     
                 </td>
@@ -93,7 +93,7 @@
                                 <td width="100%" valign="top">
                                     <div id="container">
                                         <h1 class="type"><a href="javascript:void(0)">企业用户管理</a></h1>
-                                        <div class="content">
+                                        <div class="contentMenu">
                                             <ul class="MM">
                                                 <li><a href="/EnterpriseBg/EnterpriseInfo">企业信息</a></li>
                                                 <li><a href="/EnterpriseBg/EnterpriseInfoEdit">编辑企业信息</a></li>
@@ -101,21 +101,21 @@
                                             </ul>
                                         </div>
                                         <h1 class="type"><a href="javascript:void(0)">企业动态</a></h1>
-                                        <div class="content">
+                                        <div class="contentMenu">
                                             <ul class="MM">
                                                 <li><a href="/EnterpriseBg/EnterpriseDynamicList">企业动态</a></li>
                                                 <li><a href="/EnterpriseBg/EnterpriseDynamicAdd"">添加企业动态</a></li>
                                             </ul>
                                         </div>
                                         <h1 class="type"><a href="javascript:void(0)">成功案例</a></h1>
-                                        <div class="content">
+                                        <div class="contentMenu">
                                             <ul class="MM">
                                                 <li><a href="/EnterpriseBg/EnterpriseCaseList">成功案例</a></li>
                                                 <li><a href="/EnterpriseBg/EnterpriseCaseAdd">添加成功案例</a></li>
                                             </ul>
                                         </div>
                                         <h1 class="type"><a href="javascript:void(0)">修改密码</a></h1>
-                                        <div class="content">
+                                        <div class="contentMenu">
                                             <ul class="MM">
                                                 <li><a href="/EnterpriseBg/ChangePassword">修改密码</a></li>
                                             </ul>

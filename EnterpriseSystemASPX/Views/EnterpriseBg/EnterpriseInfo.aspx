@@ -43,13 +43,10 @@
                     <img style="max-width:300px; max-height:300px;" class="EnterpriseLogo" src="/uploadImages/<%:(string)enterpsise.EnterpriseLogo %>" />
                 </td>
             </tr>
-            <tr>
-                <td class="lable"></td>
-                <td>
-                    <input id="SubmitButton" class="SubmitButton" type="button" onclick="window.location.href='/EnterpriseBg/EnterpriseInfoEdit'" value="编辑"/>
-                </td>
-            </tr>
         </table>
+        <div class="TableFooterDiv" style="text-align: center; padding-bottom: 30px;">
+            <input id="SubmitButton" class="SubmitButton" type="button" onclick="window.location.href = '/EnterpriseBg/EnterpriseInfoEdit'" value="编辑"/>
+        </div>
     </div>
 </asp:Content>
 

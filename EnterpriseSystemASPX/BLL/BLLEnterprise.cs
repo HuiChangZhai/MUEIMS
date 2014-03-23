@@ -142,5 +142,12 @@ namespace EnterpriseSystemASPX.BLL
 
             return _DAL.SetEnterpriseStatus(id, status);
         }
+
+        public static bool ChangePassword(int EnterpriseID, string password)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+
+            return _DAL.ChangePassword(EnterpriseID, password);
+        }
     }
 }

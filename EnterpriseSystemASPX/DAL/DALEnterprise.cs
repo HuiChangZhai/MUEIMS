@@ -116,7 +116,8 @@ namespace EnterpriseSystemASPX.DAL
             }
             return false;
         }
-public void DeleteEnterprise(int id)
+
+        public void DeleteEnterprise(int id)
         {
             EMSEntities entity = new EMSEntities();
             Enterprise item = entity.Enterprise.SingleOrDefault(m => m.EnterpriseID == id);
@@ -134,7 +135,9 @@ public void DeleteEnterprise(int id)
                 return entity.SaveChanges() != 0;
             }
             return false;
-        }public bool RegisterEnterprise(string enterpriseName, string enterpriseEmail , string password, string enterpriseAddress, string enterpriseTel)
+        }
+        
+        public bool RegisterEnterprise(string enterpriseName, string enterpriseEmail , string password, string enterpriseAddress, string enterpriseTel)
         {
             EMSEntities entity = new EMSEntities();
             Enterprise enterprise = new Enterprise
@@ -150,5 +153,18 @@ public void DeleteEnterprise(int id)
             };
             entity.Enterprise.Add(enterprise);
             return entity.SaveChanges() != 0;
-        }    }
+        }
+        public bool ChangePassword(int EnterpriseID, string password)
+        {
+            EMSEntities entity = new EMSEntities();
+            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseID == EnterpriseID);
+            if (null != enterprise)
+            {
+                enterprise.EnterprisePassword = password;
+                return entity.SaveChanges() != 0;
+            }
+
+            return false;
+        }
+    }
 }
