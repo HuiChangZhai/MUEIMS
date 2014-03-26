@@ -69,7 +69,7 @@
                                         </fieldset>
                                     </form>
                                 </div>
-                                <div class="div-btnlogin" style="display:none;">
+                                <div class="div-btnlogin" style="">
                                     <div class="clearfix">
                                         已经注册？
                                     </div>

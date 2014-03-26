@@ -129,6 +129,7 @@
     <Compile Include="Content\ueditor1_3_6-utf8-net\net\Uploader.cs" />
     <Compile Include="Controllers\AdminAccountController.cs" />
     <Compile Include="Controllers\AdminHomeController.cs" />
+    <Compile Include="Controllers\FileUploaderBgController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\CSS\ChangePwd.css" />
+    <Content Include="Content\CSS\FileInput.css" />
     <Content Include="Content\CSS\HomeMessage.css" />
     <Content Include="Content\CSS\login.css" />
     <Content Include="Content\CSS\SiteBg.css" />
@@ -618,6 +620,7 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\Website\chili-1.7.pack.js" />
+    <Content Include="Scripts\Website\FileInput.js" />
     <Content Include="Scripts\Website\jquery.accordion.js" />
     <Content Include="Scripts\Website\jquery.dimensions.js" />
     <Content Include="Scripts\Website\jquery.easing.js" />
@@ -654,6 +657,7 @@
     <Folder Include="Commom\" />
     <Folder Include="Libs\" />
     <Folder Include="Models\" />
+    <Folder Include="uploadImages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

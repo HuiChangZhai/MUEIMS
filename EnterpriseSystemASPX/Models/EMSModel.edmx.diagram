@@ -7,13 +7,13 @@
       <Diagram DiagramId="fd5842ffb49845ec99d208c69cbc5b40" Name="关系图1">
         <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.Enterprise" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.EnterpriseCases" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.EnterpriseDynamic" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.MEnterprise" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.MEnterpriseAdmin" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.MEnterpriseAdvertising" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.MEnterpriseCases" Width="1.5" PointX="8" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.MEnterpriseMessage" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.EnterpriseDynamic" Width="1.5" PointX="2.875" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.MEnterprise" Width="1.5" PointX="4.875" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.MEnterpriseAdmin" Width="1.5" PointX="4.875" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.MEnterpriseAdvertising" Width="1.5" PointX="8.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.MEnterpriseCases" Width="1.5" PointX="6.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.MEnterpriseMessage" Width="1.5" PointX="8.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.sysdiagrams" Width="1.5" PointX="6.75" PointY="3.875" IsExpanded="true" />
         <AssociationConnector Association="EnterpriseInfoManagementSysModel.FK_EnterpriseCases_Enterprise" ManuallyRouted="false" />
         <AssociationConnector Association="EnterpriseInfoManagementSysModel.FK_EnterpriseDynamic_Enterprise" ManuallyRouted="false" />
         <AssociationConnector Association="EnterpriseInfoManagementSysModel.FK_MEnterpriseCases_MEnterprise" ManuallyRouted="false" />

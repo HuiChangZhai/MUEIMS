@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using EnterpriseSystemASPX.Models;
 using System.Text;
 using EnterpriseSystemASPX.Common;
+using System.IO;
 
 namespace EnterpriseSystemASPXBg.Controllers
 {
@@ -109,7 +110,7 @@ namespace EnterpriseSystemASPXBg.Controllers
         }
 
         [HttpPost]
-        public ActionResult MEnterpriseInfo(string id, string name, string tel, string email, string copy, string address, string shortbrief, string logo)
+        public ActionResult MEnterpriseInfo(string id, string name, string tel, string email, string copy, string address, string shortbrief, string enterpriseLogo)
         {
             ViewBag.MenuGroup = "SI";
             ViewBag.MenuTitle = "系统说明";
@@ -124,7 +125,7 @@ namespace EnterpriseSystemASPXBg.Controllers
             menterprise.MEnterpriseEmail = email;
             menterprise.MEnterpriseAddress = address;
             menterprise.MEnterpriseBriefShort = shortbrief;
-            //menterprise.MEnterpriseLogo = logo;
+            menterprise.MEnterpriseLogo = enterpriseLogo;
             BLLMEnterprise.UpdateMEnterprise(menterprise);
             ViewBag.Result = "success";
             return View(menterprise);
