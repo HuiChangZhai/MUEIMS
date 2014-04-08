@@ -6,7 +6,7 @@ using System.Web;
 
 namespace EnterpriseSystemASPX.Common
 {
-    public static class EmailHelper
+    public static class EmailHelper   
     {
         public static bool SendMail(string mailAddress, string subject, string body)
         {
