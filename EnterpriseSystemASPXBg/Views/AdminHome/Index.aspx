@@ -7,6 +7,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <link href="/Content/CSS/HomeMessage.css" rel="stylesheet" />
     <script src="/Scripts/Website/Message.js"></script>
+    <script src="/Scripts/Website/HTMLEncoding.js"></script>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $("td.content").each(function () {
+                 var content = HTMLEncoding.Coding2Txt($(this).attr("content"));
+                 //alert(content.trim());
+                 $(".content").html(content.length > 14 ? content.substring(0, 14) + "..." : $(".content").html());
+             });
+         });
+    </script>
     <div>
         <table class="ItemListTable Fixed">
             <thead>
@@ -40,7 +50,7 @@
                     <td><%:item.EnterpriseEmail %></td>
                     <td><%:item.EnterpriseAddress %></td>
                     <td><%:!string.IsNullOrWhiteSpace(item.EnterpriseBriefShort)&&item.EnterpriseBriefShort.Length>15?item.EnterpriseBriefShort.Substring(0,14)+" ... ":""%></td>
-                    <td><%:!string.IsNullOrWhiteSpace(item.EnterpriseBrief)&&item.EnterpriseBrief.Length>15?item.EnterpriseBrief.Substring(0,14)+" ... ":"" %></td>
+                    <td class="content" content="<%:item.EnterpriseBrief %>"><%:!string.IsNullOrWhiteSpace(item.EnterpriseBrief)&&item.EnterpriseBrief.Length>15?item.EnterpriseBrief.Substring(0,14)+" ... ":"" %></td>
                     <td><%:item.EnterpriseStatus.HasValue&&item.EnterpriseStatus.Value?"审核通过":"未通过审核" %></td>
                     <td><%:item.EnterpriseRegistTime.HasValue?item.EnterpriseRegistTime.Value.ToString("yyyy-MM-dd"):"" %></td>
                     <td class="handle"><a href="/AdminHome/EnterpriseDetail?id=<%:item.EnterpriseID.ToString() %>">查看</a>&nbsp;|&nbsp;

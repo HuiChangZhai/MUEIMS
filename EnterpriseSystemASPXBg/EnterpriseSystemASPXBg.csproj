@@ -621,6 +621,7 @@
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\Website\chili-1.7.pack.js" />
     <Content Include="Scripts\Website\FileInput.js" />
+    <Content Include="Scripts\Website\HTMLEncoding.js" />
     <Content Include="Scripts\Website\jquery.accordion.js" />
     <Content Include="Scripts\Website\jquery.dimensions.js" />
     <Content Include="Scripts\Website\jquery.easing.js" />

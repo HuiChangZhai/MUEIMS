@@ -5,15 +5,21 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<link href="/Content/CSS/HomeMessage.css" rel="stylesheet" />
+    <link href="/Content/CSS/HomeMessage.css" rel="stylesheet" />
+    <script src="/Scripts/Website/HTMLEncoding.js"></script>
     <script type="text/javascript">
         $(function () {
+            $(".detailTxt").each(function () {
+                var content = HTMLEncoding.Coding2Txt($(this).attr("contentdetail"));
+                //alert(content.trim());
+                $(".detailTxt").html(content);
+            });
             var result = $("#ReadResult").val();
             if (result == "success") {
                 alert("修改成功");
                 window.location.href = "/AdminHome/Index";
             }
-        })
+        });
     </script>
     <form action="EnterpriseDetail" method="post">
         <table class="ItemListTable Fixed" id="tableDetail">
@@ -54,8 +60,7 @@
             </tr>
             <tr>
                 <td>企业简介</td>
-                <td class="tdContent">
-                    <%:Model.EnterpriseBrief??"" %></td>
+                <td class="tdContent detailTxt" contentdetail="<%:Model.EnterpriseBrief %>"></td>
             </tr>
             <tr>
                 <td>是否通过审核</td>
