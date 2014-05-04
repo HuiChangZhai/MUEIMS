@@ -4,12 +4,11 @@
 }
 
 body{
-    background-color: #333333;
+    background-color: #0f5071;
     font-size: 10pt;
     font-family: Arial;
     margin: 0;
     padding: 0;
-    color: #FFFFFF;
     width:90%;
     margin:auto;
 }
@@ -26,9 +25,9 @@ body{
     border-radius:10px 10px;
     -moz-border-radius:10px 10px;
     -webkit-border-radius:10px 10px;
-    background:linear-gradient(top,#31adb9,#2b848b);
-    background:-webkit-linear-gradient(top,#31adb9,#2b848b);
-    background:-moz-linear-gradient(top,#31adb9,#2b848b);
+    background:linear-gradient(top,#3cd5e4,#1f5e63);
+    background:-webkit-linear-gradient(top,#3cd5e4,#1f5e63);/*#3cd5e4,#2b848b*/
+    background:-moz-linear-gradient(top,#3cd5e4,#1f5e63);
     margin:10px 0px;
     padding-left: 60px;
     padding-top: 35px;
@@ -46,6 +45,12 @@ body{
     color:#FFFFFF;
 }
 
+#mainarea {
+    background:#ffffff;
+    border-radius:10px 10px;
+    -moz-border-radius:10px 10px;
+    -webkit-border-radius:10px 10px;
+}
 
 #sidebarnav {
     background:#3171e4;
@@ -72,16 +77,12 @@ body{
     color:#FFFFFF;
 }
 
-#widget-h2 {
+#widget-h2, .widget {
     display:none;
-}
-
-.widget {
-    display:none;
+    padding:0px 10px;
 }
 
 #contentarea {
-    background:#5b5b5b;
     margin:0px;
     padding:10px;
     border-radius:0px 0px 10px 10px;

@@ -33,11 +33,15 @@
             <%
         }
     %>
+    <script src="../../Scripts/jquery-1.7.1.min.js"></script>
+    <script src="../../Scripts/WebSite/HTMLEncoding.js"></script>
+    <asp:ContentPlaceHolder ID="HeaderHolder" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <div id="page">
         <div id="header">
-            <h1><a href="#" class="CompanyName">COMPANY NAME</a></h1>
+            <h1><a href="#" class="CompanyName"><%:(ViewBag.Enterprise as Enterprise).EnterpriseName %></a></h1>
             <div class="description">COMPANY TAGLINE</div>
         </div>
         <div id="mainarea">
@@ -53,12 +57,12 @@
                 <h2 id="widget-h2">TESTIMONIALS</h2>
                 <div class="widget">
                     Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		<br />
+                    <br />
                     <strong>Joe Bloggs</strong>
                     <br />
                     <br />
                     Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		<br />
+                    <br />
                     <strong>Joe Bloggs</strong>
                 </div>
             </div>
@@ -68,7 +72,7 @@
             </div>
         </div>
         <div id="footer">
-            Designed by <a href="http://www.free-css-templates.com/">Free CSS Templates</a>,Thanks to <a href="http://www.openwebdesign.org/">Custom Web Design</a>download from  <a href="http://www.mianfeimoban.com.com/">mianfeimoban.com</a>
+                多用户企业管理系统 Copyright © 2014 河北师范大学软件学院</a>
         </div>
     </div>
 </body>
