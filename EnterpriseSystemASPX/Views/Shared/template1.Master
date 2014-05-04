@@ -8,12 +8,36 @@
     <title>
         <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
     </title>
-    <link href="/Content/CSS/template.css" rel="stylesheet" />
+    <%
+        Enterprise enterprise = ViewBag.Enterprise as Enterprise;
+        if (enterprise != null)
+        {
+            Templates template = BLLTemplate.GetTemplate(enterprise.TemplateID);
+            if (template != null)
+            {
+                %>
+                <link href="<%:"/Content/CSS/" + template.Template + ".css" %>" rel="stylesheet" />
+                <%
+            }
+            else
+            {
+                %>
+                <link href="/Content/CSS/template.css" rel="stylesheet" />
+                <%
+            }
+        }
+        else
+        {
+            %>
+            <link href="/Content/CSS/template.css" rel="stylesheet" />
+            <%
+        }
+    %>
 </head>
 <body>
     <div id="page">
         <div id="header">
-            <h1><a href="#">COMPANY NAME</a></h1>
+            <h1><a href="#" class="CompanyName">COMPANY NAME</a></h1>
             <div class="description">COMPANY TAGLINE</div>
         </div>
         <div id="mainarea">
@@ -26,7 +50,7 @@
                     <a class="<%:ViewBag.EPmenu=="EPAU"?"active":"" %>" href="/Enterprise/<%:ViewBag.title %>/EPAboutUs">联系我们</a>
                 </div>
 
-                <h2>TESTIMONIALS</h2>
+                <h2 id="widget-h2">TESTIMONIALS</h2>
                 <div class="widget">
                     Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 		<br />

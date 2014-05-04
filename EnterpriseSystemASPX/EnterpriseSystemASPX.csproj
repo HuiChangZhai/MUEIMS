@@ -132,11 +132,13 @@
     <Compile Include="BLL\BLLMEnterpriseAdvertising.cs" />
     <Compile Include="BLL\BLLMEnterpriseCases.cs" />
     <Compile Include="BLL\BLLMEnterpriseMessage.cs" />
+    <Compile Include="BLL\BLLTemplate.cs" />
     <Compile Include="Common\EmailHelper.cs" />
     <Compile Include="Common\EMSCookie.cs" />
     <Content Include="Content\CSS\ChangePassword.css" />
     <Content Include="Content\CSS\FileInput.css" />
     <Content Include="Content\CSS\FixedItemListTable.css" />
+    <Content Include="Content\CSS\template2.css" />
     <Content Include="Content\ueditor1_3_6-utf8-net\net\Config.cs" />
     <Content Include="Content\ueditor1_3_6-utf8-net\net\Uploader.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -152,6 +154,7 @@
     <Compile Include="DAL\DALMEnterpriseAdvertising.cs" />
     <Compile Include="DAL\DALMEnterpriseCases.cs" />
     <Compile Include="DAL\DALMEnterpriseMessage.cs" />
+    <Compile Include="DAL\DALTemplate.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -196,6 +199,9 @@
     </Compile>
     <Compile Include="Models\PageHelper.cs" />
     <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>EMSModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Templates.cs">
       <DependentUpon>EMSModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -787,6 +793,7 @@
     <Content Include="Views\Enterprise\EPBrief.aspx" />
     <Content Include="Views\Enterprise\EPDynamic.aspx" />
     <Content Include="Views\Enterprise\Index.aspx" />
+    <Content Include="Views\Enterprise\NotExists.aspx" />
     <Content Include="Views\Home\AboutUs.aspx" />
     <Content Include="Views\Home\AchieveCase.aspx" />
     <Content Include="Views\Home\HelpMessage.aspx" />

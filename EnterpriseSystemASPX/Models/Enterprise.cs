@@ -34,6 +34,7 @@ namespace EnterpriseSystemASPX.Models
         public Nullable<System.DateTime> EnterpriseRegistTime { get; set; }
         public Nullable<bool> EnterpriseActive { get; set; }
         public Nullable<bool> EnterpriseStatus { get; set; }
+        public int TemplateID { get; set; }
     
         public virtual ICollection<EnterpriseCases> EnterpriseCases { get; set; }
         public virtual ICollection<EnterpriseDynamic> EnterpriseDynamic { get; set; }

@@ -1,0 +1,104 @@
+﻿* {
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color: #333333;
+    font-size: 10pt;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    width:90%;
+    margin:auto;
+}
+
+#page{
+    width: 100%;
+    margin: auto;
+}
+
+#header{
+    clear: both;
+    width: 100%;
+    height: 109px;
+    border-radius:10px 10px;
+    -moz-border-radius:10px 10px;
+    -webkit-border-radius:10px 10px;
+    background:linear-gradient(top,#31adb9,#2b848b);
+    background:-webkit-linear-gradient(top,#31adb9,#2b848b);
+    background:-moz-linear-gradient(top,#31adb9,#2b848b);
+    margin:10px 0px;
+    padding-left: 60px;
+    padding-top: 35px;
+    color:#FFFFFF;
+    box-sizing:border-box;
+}
+
+#header a.CompanyName{
+    text-decoration:none;
+    color:#FFFFFF;
+}
+
+#header a.CompanyName:hover {
+    text-decoration:underline;
+    color:#FFFFFF;
+}
+
+
+#sidebarnav {
+    background:#3171e4;
+    border-radius:10px 10px 0px 0px;
+    -moz-border-radius:10px 10px 0px 0px;
+    -webkit-border-radius:10px 10px 0px 0px;
+    padding:10px 0px 10px 0px;
+    border-bottom:#ffd800 1px solid;
+}
+#sidebarnav a{
+    display:inline-block;
+    margin:0px;
+    padding:0px;
+    width:19%;
+    text-align:center;
+    color:#FFFFFF;
+    text-decoration:none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#sidebarnav a:hover {
+    text-decoration:underline;
+    color:#FFFFFF;
+}
+
+#widget-h2 {
+    display:none;
+}
+
+.widget {
+    display:none;
+}
+
+#contentarea {
+    background:#5b5b5b;
+    margin:0px;
+    padding:10px;
+    border-radius:0px 0px 10px 10px;
+    -moz-border-radius:0px 0px 10px 10px;
+    -webkit-border-radius:0px 0px 10px 10px;
+}
+
+#footer {
+    margin:10px 0px;
+    padding:10px;
+    text-align:center;
+    border-radius:10px 10px;
+    -moz-border-radius:10px 10px;
+    -webkit-border-radius:10px 10px;
+    background:linear-gradient(top,#31adb9,#2b848b);
+    background:-webkit-linear-gradient(top,#31adb9,#2b848b);
+    background:-moz-linear-gradient(top,#31adb9,#2b848b);
+}
+
+

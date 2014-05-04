@@ -17,6 +17,7 @@
         <AssociationConnector Association="EnterpriseInfoManagementSysModel.FK_EnterpriseCases_Enterprise" ManuallyRouted="false" />
         <AssociationConnector Association="EnterpriseInfoManagementSysModel.FK_EnterpriseDynamic_Enterprise" ManuallyRouted="false" />
         <AssociationConnector Association="EnterpriseInfoManagementSysModel.FK_MEnterpriseCases_MEnterprise" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EnterpriseInfoManagementSysModel.Templates" Width="1.5" PointX="0.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

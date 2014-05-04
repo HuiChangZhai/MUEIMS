@@ -93,6 +93,14 @@ namespace EnterpriseSystemASPX.BLL
             return enterprise;
         }
 
+        public static Enterprise GetEnterprise(string enterpriseUrl)
+        {
+            DALEnterprise _DAL = new DALEnterprise();
+            Enterprise enterprise = _DAL.GetBgEnterprise(enterpriseUrl);
+
+            return enterprise;
+        }
+
         public static bool SetEnterpriseBrief(int enterpriseID,string brief)
         {
             DALEnterprise _DAL = new DALEnterprise();
@@ -149,5 +157,6 @@ namespace EnterpriseSystemASPX.BLL
 
             return _DAL.ChangePassword(EnterpriseID, password);
         }
+
     }
 }

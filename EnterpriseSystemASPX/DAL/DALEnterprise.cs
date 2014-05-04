@@ -49,6 +49,14 @@ namespace EnterpriseSystemASPX.DAL
             return enterprise;
         }
 
+        public Enterprise GetBgEnterprise(string enterpriseUrl)
+        {
+            EMSEntities entity = new EMSEntities();
+            Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseUrl == enterpriseUrl);
+
+            return enterprise;
+        }
+
         public Enterprise ExistEnterprise(string enterpriseemail)
         {
             EMSEntities entity = new EMSEntities();

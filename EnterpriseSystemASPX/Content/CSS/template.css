@@ -33,30 +33,30 @@
     background-color: #333333;
 }
 
-    #sidebarnav a
-    {
-        width: 215px;
-        display: block;
-        clear: both;
-        padding-right: 15px;
-        padding-top: 6px;
-        height: 25px;
-        color: #FFFFFF;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: bold;
-        background-color: #333333;
-        margin-top: 3px;
-        text-align: right;
-    }
+#sidebarnav a
+{
+    width: 215px;
+    display: block;
+    clear: both;
+    padding-right: 15px;
+    padding-top: 6px;
+    height: 25px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #333333;
+    margin-top: 3px;
+    text-align: right;
+}
 
 
-        #sidebarnav a:hover, #sidebarnav a.active
-        {
-            background-color: #5b5b5b;
-            text-decoration: none;
-            color: #FFFFFF;
-        }
+#sidebarnav a:hover, #sidebarnav a.active
+{
+    background-color: #5b5b5b;
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
 .widget
 {
@@ -103,10 +103,10 @@
     color: #FFFFFF;
 }
 
-    #footer a
-    {
-        color: #FFFFFF;
-    }
+#footer a
+{
+    color: #FFFFFF;
+}
 
 h1, h1 a
 {

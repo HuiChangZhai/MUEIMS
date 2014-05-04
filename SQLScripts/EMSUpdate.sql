@@ -28,6 +28,32 @@ ALTER TABLE MEnterpriseMessage ALTER COLUMN [Message] NVARCHAR(50)
 ALTER TABLE MEnterpriseMessage ALTER COLUMN [Message] NTEXT
 --update time #2014-03-15 12:32:42.793
 
+IF NOT EXISTS(SELECT * FROM SYS.TABLES WHERE NAME = 'Templates')
+BEGIN
+   CREATE TABLE Templates
+   (
+      TemplateID INT IDENTITY(1,1) PRIMARY KEY,
+      TemplateName NVARCHAR(50) NULL,
+      Template NVARCHAR(50) NOT NULL
+   )
+END
 
+IF NOT EXISTS( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'Enterprise' AND  COLUMN_NAME = 'TemplateID')
+BEGIN
+   ALTER TABLE Enterprise
+   ADD TemplateID INT NOT NULL DEFAULT(1)
+END
+
+IF NOT EXISTS(SELECT * FROM Templates WHERE TemplateName = N'模板一' AND Template = 'template')
+BEGIN
+   INSERT INTO Templates(TemplateName,Template) VALUES(N'模板一', 'template')
+END
+
+IF NOT EXISTS(SELECT * FROM Templates WHERE TemplateName = N'模板二' AND Template = 'template2')
+BEGIN
+   INSERT INTO Templates(TemplateName,Template) VALUES(N'模板二', 'template2')
+END
+
+--update time #2014-05-04 19:41:25.923
 
 --select GETDATE()
