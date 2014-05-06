@@ -82,6 +82,10 @@
     padding-top: 5px;
 }
 
+.dynamicItem {
+    background: #7e7e7e;
+}
+
 #sidebar
 {
     float: left;

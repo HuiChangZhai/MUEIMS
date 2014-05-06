@@ -52,7 +52,10 @@ namespace EnterpriseSystemASPX.Controllers
 
             ViewBag.EPmenu = "EPD";
             ViewBag.title = name == null ? "多企业用户管理系统" : name;
-            return View();
+
+            List<EnterpriseDynamic> list = BLLEnterpriseDynamic.EnterpriseDynamic(0, 10);
+
+            return View(list);
         }
 
         public ActionResult EPAchieveCase(string name)

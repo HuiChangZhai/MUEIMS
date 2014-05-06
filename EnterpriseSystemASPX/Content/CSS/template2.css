@@ -30,7 +30,7 @@ body{
     background:-moz-linear-gradient(top,#3cd5e4,#1f5e63);
     margin:10px 0px;
     padding-left: 60px;
-    padding-top: 35px;
+    padding-top: 15px;
     color:#FFFFFF;
     box-sizing:border-box;
 }
@@ -46,11 +46,28 @@ body{
 }
 
 #mainarea {
-    background:#ffffff;
+    background: #ffffff;
     border-radius:10px 10px;
     -moz-border-radius:10px 10px;
     -webkit-border-radius:10px 10px;
 }
+
+.dynamicItem {
+    background: #eeeeee;
+}
+
+
+/*@media screen and (min-width:1000px) {
+    #mainarea {
+        background: #ffffff;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    #mainarea {
+        background:#3cd5e4;
+    }
+}*/
 
 #sidebarnav {
     background:#3171e4;
@@ -100,6 +117,7 @@ body{
     background:linear-gradient(top,#31adb9,#2b848b);
     background:-webkit-linear-gradient(top,#31adb9,#2b848b);
     background:-moz-linear-gradient(top,#31adb9,#2b848b);
+    color:white;
 }
 
 

@@ -8,6 +8,9 @@
     <title>
         <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
     </title>
+    <link href="../../Content/CSS/bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-1.7.1.min.js"></script>
+    <script src="../../Scripts/WebSite/bootstrap.js"></script>
     <%
         Enterprise enterprise = ViewBag.Enterprise as Enterprise;
         if (enterprise != null)
@@ -33,7 +36,6 @@
             <%
         }
     %>
-    <script src="../../Scripts/jquery-1.7.1.min.js"></script>
     <script src="../../Scripts/WebSite/HTMLEncoding.js"></script>
     <asp:ContentPlaceHolder ID="HeaderHolder" runat="server">
     </asp:ContentPlaceHolder>
