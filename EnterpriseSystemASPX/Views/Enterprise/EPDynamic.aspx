@@ -9,12 +9,19 @@
         .row-fluid {
             margin-bottom:10px;
         }
+
         .dynamicItem {
             height:150px;
             border:1px solid #968989;
             border-radius:5px 5px;
             -moz-border-radius:5px 5px;
             -webkit-border-radius:5px 5px;
+            
+        }
+        .dynamicItemContent{
+            height:120px;
+            overflow:hidden;
+            text-overflow: ellipsis;
         }
         .dynamicItem:hover{
             border:1px solid #e8bf9d;

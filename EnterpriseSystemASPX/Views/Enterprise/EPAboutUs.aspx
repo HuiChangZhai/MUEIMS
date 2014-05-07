@@ -8,7 +8,22 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-<h2>EPAboutUs</h2>
-
+    <%
+        Enterprise enterprise = ViewBag.Enterprise as Enterprise;
+    %>
+    <div>
+    <%:enterprise.EnterpriseName %>
+    </div>
+    <div>
+    <%:enterprise.EnterpriseEmail %>
+    </div>
+    <div>
+    <%:enterprise.EnterpriseTelphoneNumber %>
+    </div>
+    <div>
+    <%:enterprise.EnterpriseAddress %>
+    </div>
+    <div>
+    <%:enterprise.EnterpriseUrl %>
+    </div>
 </asp:Content>
