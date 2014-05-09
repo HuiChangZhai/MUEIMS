@@ -13,7 +13,7 @@
              $("td.content").each(function () {
                  var content = HTMLEncoding.Coding2Txt($(this).attr("content"));
                  //alert(content.trim());
-                 $(".content").html(content.length > 14 ? content.substring(0, 14) + "..." : $(".content").html());
+                 $(this).html(content.length > 14 ? content.substring(0, 14) + "..." : $(this).html());
              });
          });
     </script>

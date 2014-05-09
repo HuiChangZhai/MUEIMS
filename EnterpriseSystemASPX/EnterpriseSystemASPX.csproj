@@ -139,6 +139,8 @@
     <Content Include="Content\CSS\FileInput.css" />
     <Content Include="Content\CSS\FixedItemListTable.css" />
     <Content Include="Content\CSS\template2.css" />
+    <Content Include="Content\Images\Help\Login.png" />
+    <Content Include="Content\Images\Help\register.png" />
     <Content Include="Content\ueditor1_3_6-utf8-net\net\Config.cs" />
     <Content Include="Content\ueditor1_3_6-utf8-net\net\Uploader.cs" />
     <Compile Include="Controllers\AccountController.cs" />
