@@ -33,7 +33,7 @@ namespace EnterpriseSystemASPX.Controllers
             return View();
         }
 
-        public ActionResult EnterpriseInfoEdit(string enterpriseName, string enterpriseUrl, string enterpriseAddress, string enterpriseTelphoneNumber, string enterpriseEmail, string enterpriseRight, string EnterpriseLogo)
+        public ActionResult EnterpriseInfoEdit(string enterpriseName, string enterpriseUrl, string enterpriseAddress, string enterpriseTelphoneNumber, string enterpriseEmail, string enterpriseRight, string enterpriseLogo_f)
         {
             ViewBag.MenuGroup = "Info";
             ViewBag.PageTitle = "编辑企业信息";
@@ -47,7 +47,7 @@ namespace EnterpriseSystemASPX.Controllers
             
             if (validData)
             {
-                if (BLLEnterprise.SaveEnterpriseInfoChanges(BLLEnterprise.Current.EnterpriseID, enterpriseName, enterpriseUrl, enterpriseAddress, enterpriseTelphoneNumber, enterpriseEmail, enterpriseRight, EnterpriseLogo))
+                if (BLLEnterprise.SaveEnterpriseInfoChanges(BLLEnterprise.Current.EnterpriseID, enterpriseName, enterpriseUrl, enterpriseAddress, enterpriseTelphoneNumber, enterpriseEmail, enterpriseRight, enterpriseLogo_f))
                 {
                     return Redirect("~/EnterpriseBg/EnterpriseInfo");
                 }

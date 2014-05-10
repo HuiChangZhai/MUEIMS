@@ -12,7 +12,7 @@ namespace EnterpriseSystemASPX.Controllers
         [HttpPost]
         public string Index(HttpPostedFileBase file, HttpPostedFileBase enterpriseLogo)
         {
-            string now = "";//DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + (new Random().Next(1000,10000));
+            string now = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + (new Random().Next(1000,10000));
             if (file != null && file.ContentLength > 0)
             {
                 // extract only the fielname
