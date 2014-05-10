@@ -22,10 +22,14 @@ namespace EnterpriseSystemASPX.Controllers
                 return Redirect("~/Enterprise/" + name + "/NotExists");
 
             ViewBag.EPmenu = "EPI";
-            
             ViewBag.title = name == null ? "多企业用户管理系统" : name;
-            ViewBag.template = "template1";
-            
+
+            List<EnterpriseCases> EnterpriseCaseList = BLLEnterpriseCases.GetEnterpriseCasesList(entreprise.EnterpriseID, 0, 10);
+            ViewBag.EnterpriseCaseList = EnterpriseCaseList;
+
+            List<EnterpriseDynamic> EnterpriseDynamicList = BLLEnterpriseDynamic.EnterpriseDynamic(entreprise.EnterpriseID, 0, 10);
+            ViewBag.EnterpriseDynamicList = EnterpriseDynamicList;
+
             return View();
         }
 
@@ -42,7 +46,7 @@ namespace EnterpriseSystemASPX.Controllers
             return View(); 
         }
 
-        public ActionResult EPDynamic(string name)
+        public ActionResult EPDynamic(string name, int? enterpriseDynamicID, int? currentPage)
         {
             Enterprise entreprise = BLLEnterprise.GetEnterprise(name);
             if (null != entreprise)
@@ -53,12 +57,34 @@ namespace EnterpriseSystemASPX.Controllers
             ViewBag.EPmenu = "EPD";
             ViewBag.title = name == null ? "多企业用户管理系统" : name;
 
-            List<EnterpriseDynamic> list = BLLEnterpriseDynamic.EnterpriseDynamic(0, 10);
+            if (enterpriseDynamicID != null)
+            {
+                EnterpriseDynamic dynamic =BLLEnterpriseDynamic.EnterpriseDynamicByEnterpriseDynamicID(enterpriseDynamicID.Value);
+                if (dynamic.Enterprise.EnterpriseID == entreprise.EnterpriseID)
+                {
+                    ViewBag.EnterpriseDynamic = dynamic;
+                }
+                
+                return View("/Views/Enterprise/EPDynamicDetail.aspx");
+            }
+
+            int page = 1;
+            if (currentPage != null)
+            {
+                page = currentPage.Value;
+            }
+
+            List<EnterpriseDynamic> dynamicList = BLLEnterpriseDynamic.EnterpriseDynamics(entreprise.EnterpriseID);
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPage = dynamicList.Count() / 9 + (dynamicList.Count() % 9 == 0 ? 0 : 1);
+
+            List<EnterpriseDynamic> list = BLLEnterpriseDynamic.EnterpriseDynamic(entreprise.EnterpriseID, 0, 9);
 
             return View(list);
         }
 
-        public ActionResult EPAchieveCase(string name)
+        public ActionResult EPAchieveCase(string name,int? enterpriseCaseID,int? currentPage)
         {
             Enterprise entreprise = BLLEnterprise.GetEnterprise(name);
             if (null != entreprise)
@@ -68,7 +94,31 @@ namespace EnterpriseSystemASPX.Controllers
 
             ViewBag.EPmenu = "EPAC";
             ViewBag.title = name == null ? "多企业用户管理系统" : name;
-            return View();
+
+            if (enterpriseCaseID != null)
+            {
+                EnterpriseCases enterpriseCase = BLLEnterpriseCases.EnterpriseCaseByEnterpriseCaseID(enterpriseCaseID.Value);
+                if (enterpriseCase.Enterprise.EnterpriseID == entreprise.EnterpriseID)
+                {
+                    ViewBag.EnterpriseCase = enterpriseCase;
+                }
+
+                return View("/Views/Enterprise/EPAchieveCaseDetail.aspx");
+            }
+            int page = 1;
+            if (currentPage != null)
+            {
+                page = currentPage.Value;
+            }
+
+            List<EnterpriseCases> caseList = BLLEnterpriseCases.EnterpriseCases(entreprise.EnterpriseID);
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPage = caseList.Count() / 9 + (caseList.Count() % 9 == 0 ? 0 : 1);
+
+            List<EnterpriseCases> list = BLLEnterpriseCases.GetEnterpriseCasesList(entreprise.EnterpriseID, page - 1, 9);
+
+            return View(list);
         }
 
         public ActionResult EPAboutUs(string name)

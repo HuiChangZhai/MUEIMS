@@ -8,10 +8,37 @@
     <script type="text/javascript">
         $(document).ready(function (){
             var content = "<%:(ViewBag.Enterprise as Enterprise).EnterpriseBrief %>";
-            $("#contentarea").html(HTMLEncoding.Coding2Txt(content));
+            $("div.content").each(function () {
+                $(this).html(HTMLEncoding.Coding2Txt($(this).html()));
+            });
         });
     </script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div>
+        <div class="EnterpriseBrief content"><%:(ViewBag.Enterprise as Enterprise).EnterpriseBriefShort %></div>
+        <div class="dynamicList">
+            <%
+                List<EnterpriseDynamic> EnterpriseDynamicList = ViewBag.EnterpriseDynamicList as List<EnterpriseDynamic>;
+                for (int i = 0; i < EnterpriseDynamicList.Count; i++)
+                {
+                    %>
+                    <div class="IndexArticleTitleDiv"><a href="EPDynamic?enterpriseDynamicID=<%:EnterpriseDynamicList[i].EnterpriseDynamicID %>"><%:EnterpriseDynamicList[i].EnterpriseDynamicTitle %></a></div>
+                    <%
+                }
+            %>
+        </div>
+        <div class="caseList">
+            <%
+                List<EnterpriseCases> EnterpriseCaseList = ViewBag.EnterpriseCaseList as List<EnterpriseCases>;
+                for (int i = 0; i < EnterpriseCaseList.Count; i++)
+                {
+                    %>
+                    <div class="IndexArticleTitleDiv"><a href="EPDynamic?enterpriseDynamicID=<%:EnterpriseCaseList[i].EnterpriseCasesID %>"><%:EnterpriseCaseList[i].EnterpriseTitle %></a></div>
+                    <%
+                }
+            %>
+        </div>
+    </div>
 </asp:Content>

@@ -25,10 +25,10 @@ namespace EnterpriseSystemASPX.BLL
             return _DAL.EnterpriseCaseByEnterpriseCaseID(EnterpriseID);
         }
 
-        public static List<EnterpriseCases> GetEnterpriseCasesList(int CurrentPage, int PageSize)
+        public static List<EnterpriseCases> GetEnterpriseCasesList(int enterpriseID,int CurrentPage, int PageSize)
         {
             DALEnterpriseCases _DAL = new DALEnterpriseCases();
-            List<EnterpriseCases> list = _DAL.GetEnterpriseCasesList(CurrentPage, PageSize);
+            List<EnterpriseCases> list = _DAL.GetEnterpriseCasesList(enterpriseID, CurrentPage, PageSize);
 
             return list;
         }

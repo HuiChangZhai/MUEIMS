@@ -769,6 +769,7 @@
     <Content Include="Scripts\WebSite\jquery.js" />
     <Content Include="Scripts\WebSite\jquery.kwicks-1.5.1.js" />
     <Content Include="Scripts\WebSite\jquery.preloader.js" />
+    <Content Include="Scripts\WebSite\PagingTools.js" />
     <Content Include="Scripts\WebSite\superfish.js" />
     <Content Include="Scripts\WebSite\touchTouch.jquery.js" />
     <Content Include="Scripts\WebSite\WebSite.js" />
@@ -792,8 +793,10 @@
     <Content Include="Views\EnterpriseBg\Index.aspx" />
     <Content Include="Views\Enterprise\EPAboutUs.aspx" />
     <Content Include="Views\Enterprise\EPAchieveCase.aspx" />
+    <Content Include="Views\Enterprise\EPAchieveCaseDetail.aspx" />
     <Content Include="Views\Enterprise\EPBrief.aspx" />
     <Content Include="Views\Enterprise\EPDynamic.aspx" />
+    <Content Include="Views\Enterprise\EPDynamicDetail.aspx" />
     <Content Include="Views\Enterprise\Index.aspx" />
     <Content Include="Views\Enterprise\NotExists.aspx" />
     <Content Include="Views\Home\AboutUs.aspx" />

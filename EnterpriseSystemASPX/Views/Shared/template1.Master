@@ -8,6 +8,9 @@
     <title>
         <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
     </title>
+    <meta charset="utf-8">
+    <link rel="icon" href="/Content/Images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/Content/Images/favicon.ico" type="image/x-icon" />
     <link href="../../Content/CSS/bootstrap.css" rel="stylesheet" />
     <script src="../../Scripts/jquery-1.7.1.min.js"></script>
     <script src="../../Scripts/WebSite/bootstrap.js"></script>
@@ -44,7 +47,6 @@
     <div id="page">
         <div id="header">
             <h1><a href="#" class="CompanyName"><%:(ViewBag.Enterprise as Enterprise).EnterpriseName %></a></h1>
-            <div class="description">COMPANY TAGLINE</div>
         </div>
         <div id="mainarea">
             <div id="sidebar">

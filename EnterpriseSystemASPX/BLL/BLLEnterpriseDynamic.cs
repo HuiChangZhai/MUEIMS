@@ -25,10 +25,10 @@ namespace EnterpriseSystemASPX.BLL
             return _DAL.EnterpriseDynamicByEnterpriseDynamicID(EnterpriseID);
         }
 
-        public static List<EnterpriseDynamic> EnterpriseDynamic(int CurrentPage, int PageSize)
+        public static List<EnterpriseDynamic> EnterpriseDynamic(int enterpriseID, int CurrentPage, int PageSize)
         {
             DALEnterpriseDynamic _DAL = new DALEnterpriseDynamic();
-            List<EnterpriseDynamic> list = _DAL.GetDALEnterpriseDynamicList(CurrentPage, PageSize);
+            List<EnterpriseDynamic> list = _DAL.GetDALEnterpriseDynamicList(enterpriseID, CurrentPage, PageSize);
 
             return list;
         }
