@@ -5,6 +5,22 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <style type="text/css">
+        <!--
+        #logoWall
+        {
+            overflow: hidden;
+            height: 220px;
+            width: 595px;
+        }
+
+        #logoWall img
+        {
+            border: 3px solid #F2F2F2;
+            display: block;
+        }
+        -->
+    </style>
     <div class="bg-content">
         <div class="container">
             <div class="row">
@@ -60,7 +76,7 @@
                             <li class="span3">
                                 <div class="thumbnail thumbnail-1">
                                     <h3 style="font-size: 20px;"><%:item.MEnterpriseCasesTitle %></h3>
-                                    <a href="/Enterprise/<%:item.EnterprisUrl%>/Index" title="<%:item.MEnterpriseCasesTitle %>">
+                                    <a target="_blank" href="/Enterprise/<%:item.EnterprisUrl%>/Index" title="<%:item.MEnterpriseCasesTitle %>">
                                         <img src="<%:item.MEnterpriseCaseUrl %>" alt="" style="height: 146px;">
                                     </a>
                                     <section>
@@ -82,7 +98,7 @@
                         <h3>简介</h3>
                         <div class="wrapper">
                             <figure class="img-indent">
-                                <img src="/Content/Images/page1-img5.jpg " alt="" />
+                                <%--<img src="/Content/Images/page1-img5.jpg " alt="" />--%>
                             </figure>
                             <div class="inner-1 overflow extra">
                                 <div class="txt-1">
@@ -99,10 +115,15 @@
                                 <div class="overflow">
                                     <ul class="list list-pad">
                                         <li><a href="/Home/ManagementBrief">关于我们</a></li>
+
+                                    </ul>
+                                    <ul class="list list-pad">
                                         <li><a href="/Home/AboutUs">联系我们</a></li>
                                     </ul>
-                                    <ul class="list">
+                                    <ul class="list list-pad">
                                         <li><a href="/Home/AchieveCase">成功案例</a></li>
+                                    </ul>
+                                    <ul class="list list-pad">
                                         <li><a href="/Home/HelpMessage">帮助文档</a></li>
                                     </ul>
                                 </div>
@@ -111,23 +132,47 @@
                     </article>
                     <article class="span6">
                         <h3>注册伙伴</h3>
-                        <ul class="list-photo">
-                            <%List<Enterprise> _EList = ViewBag.EnterprseList as List<Enterprise>;
-                              int tempCountLogo = 0;
-                              if (_EList != null)
-                              {
-                                  foreach (Enterprise item in _EList)
-                                  {
-                                      if (tempCountLogo == 12) break;%>
-                            <li><a href="/Enterprise/<%:item.EnterpriseUrl %>" title="<%:item.EnterpriseName %>" class="magnifier">
-                                <img src="<%:item.EnterpriseLogo %>" alt="" title="<%:item.EnterpriseName %>"/></a></li>
-                            <%++tempCountLogo;
-                                  }
-                              }%>
-                        </ul>
+                        <div id="logoWall">
+                            <div id="logoWall1">
+                                <ul class="list-photo">
+                                    <%List<Enterprise> _EList = ViewBag.EnterprseList as List<Enterprise>;
+                                      int tempCountLogo = 0;
+                                      if (_EList != null)
+                                      {
+                                          foreach (Enterprise item in _EList)
+                                          {%>
+                                    <li class="imglogo"><a target="_blank" href="/Enterprise/<%:item.EnterpriseUrl %>" title="<%:item.EnterpriseName %>">
+                                        <img src="<%:item.EnterpriseLogo %>" alt="" title="<%:item.EnterpriseName %>" /></a></li>
+                                    <%++tempCountLogo;
+                                          }
+                                      }%>
+                                </ul>
+                            </div>
+                            <div id="logoWall2"></div>
+                        </div>
+
                     </article>
                 </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+    var speed = 20; 
+    var tab = document.getElementById("logoWall");
+    var tab1 = document.getElementById("logoWall1");
+    var tab2 = document.getElementById("logoWall2");
+    tab2.innerHTML = tab1.innerHTML;
+    function Marquee() {
+        if ($("#logoWall1").height() - tab.scrollTop <= 0) {
+            //alert(tab.scrollTop +"-"+ tab1.offsetHeight);
+            tab.scrollTop -= tab1.offsetHeight;
+        }
+        else {
+            tab.scrollTop++;
+        }
+    }
+    var MyMar = setInterval(Marquee, speed);
+    tab.onmouseover = function () { clearInterval(MyMar) };
+    tab.onmouseout = function () { MyMar = setInterval(Marquee, speed) };
+    </script>
 </asp:Content>

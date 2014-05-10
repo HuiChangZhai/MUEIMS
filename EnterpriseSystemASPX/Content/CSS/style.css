@@ -657,7 +657,14 @@ p
     {
         opacity: 0.7;
     }
-
+    .imglogo:hover
+    {
+        opacity: 0.7;
+    }
+    .imglogo:hover:after
+    {
+        opacity: 0.6;
+    }
     .magnifier:after
     {
         content: '';
