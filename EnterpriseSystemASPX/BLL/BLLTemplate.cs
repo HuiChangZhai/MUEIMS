@@ -17,5 +17,14 @@ namespace EnterpriseSystemASPX.BLL
 
             return template;
         }
+
+        public static List<Templates> GetTemplateList()
+        {
+            DALTemplate _template = new DALTemplate();
+
+            List<Templates> list = _template.GetTemplateList();
+
+            return list;
+        }
     }
 }

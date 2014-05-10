@@ -8,6 +8,12 @@
     <link href="/Content/CSS/FileInput.css" rel="stylesheet" />
     <script src="/Scripts/WebSite/FileInput.js"></script>
     <script src="/Scripts/WebSite/WebSite.js"></script>
+    <style type="text/css">
+        #EnterpriseBriefShort {
+            width:500px;
+            height:150px;
+        }
+    </style>
     <script type="text/javascript">
         function Submit() {
             checkRequiredFields($("#EnterpriseInfoForm"));
@@ -57,7 +63,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="MainContentDiv">
         <%
-            Enterprise enterpsise = (Enterprise)ViewBag.CurrentEnterprise;
+            Enterprise enterpsise = ViewBag.CurrentEnterprise as Enterprise;
+            Templates template = ViewBag.Template as Templates;
         %>
         <form id="EnterpriseInfoForm" name="EnterpriseInfoForm" method="post">
             <table class="TableInfo">
@@ -71,6 +78,32 @@
                     <td class="lable">企业URL</td>
                     <td>
                         <input id="enterpriseUrl" name="enterpriseUrl" value="<%:(string)enterpsise.EnterpriseUrl %>" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lable">企业模板</td>
+                    <td>
+                        <select name="templateID">
+                            <%
+                                List<Templates> list = ViewBag.TemplatesList as List<Templates>;
+                                foreach (Templates item in list)
+                                {
+                                    if (item.TemplateID == enterpsise.TemplateID)
+                                    {
+                                        %>
+                                        <option value="<%:item.TemplateID %>" selected="selected"><%:item.TemplateName %></option>
+                                        <%
+                                    }
+                                    else 
+                                    {
+                                        %>
+                                        <option value="<%:item.TemplateID %>"><%:item.TemplateName %></option>
+                                        <%
+                                    }
+                                    
+                                }
+                            %>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -92,9 +125,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="lable">版权</td>
+                    <td class="lable">公司说明</td>
                     <td>
-                        <input id="enterpriseRight" name="enterpriseRight" encreq="true" alias="版权信息不能为空" value="<%:(string)enterpsise.EnterpriseRight %>" />
+                        <textarea id="EnterpriseBriefShort" name="EnterpriseBriefShort" encreq="true" alias="公司说明不能为空"><%:(string)enterpsise.EnterpriseBriefShort %></textarea>
                     </td>
                 </tr>
 

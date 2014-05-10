@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/template1.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    EPAboutUs
+    联系我们
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="HeaderHolder" runat="server">

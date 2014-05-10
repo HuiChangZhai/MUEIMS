@@ -15,5 +15,13 @@ namespace EnterpriseSystemASPX.DAL
 
             return template;
         }
+
+        public List<Templates> GetTemplateList()
+        {
+            EMSEntities entity = new EMSEntities();
+            List<Templates> list = entity.Templates.ToList();
+
+            return list;
+        }
     }
 }

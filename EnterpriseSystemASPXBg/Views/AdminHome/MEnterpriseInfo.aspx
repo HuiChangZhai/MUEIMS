@@ -21,7 +21,7 @@
                 var formData = new FormData($("#EnterpriseInfoForm")[0]);
 
                 $.ajax({
-                    url: '/FileUploaderBg/Index',  //server script to process data
+                    url: '/FileUploaderBg',  //server script to process data
                     type: 'POST',
                     xhr: function () {  // custom xhr
                         myXhr = $.ajaxSettings.xhr();

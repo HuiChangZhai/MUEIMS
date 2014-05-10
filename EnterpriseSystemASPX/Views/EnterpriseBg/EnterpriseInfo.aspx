@@ -10,7 +10,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="MainContentDiv">
         <%
-            Enterprise enterpsise = (Enterprise)ViewBag.CurrentEnterprise;
+            Enterprise enterpsise = ViewBag.CurrentEnterprise as Enterprise;
+            Templates template =  ViewBag.Template as Templates;
         %>
         <table class="TableInfo">
             <tr>
@@ -20,6 +21,10 @@
             <tr>
                 <td class="lable">企业URL</td>
                 <td><%:(string)enterpsise.EnterpriseUrl %></td>
+            </tr>
+            <tr>
+                <td class="lable">企业模板</td>
+                <td><%:(string)template.TemplateName %></td>
             </tr>
             <tr>
                 <td class="lable">企业地址</td>
@@ -34,8 +39,8 @@
                 <td><%:(string)enterpsise.EnterpriseEmail %></td>
             </tr>
             <tr>
-                <td class="lable">版权</td>
-                <td><%:(string)enterpsise.EnterpriseRight %></td>
+                <td class="lable">企业说明</td>
+                <td><%:(string)enterpsise.EnterpriseBriefShort %></td>
             </tr>
             <tr>
                 <td class="lable" style="height:160px;">LOGO</td>

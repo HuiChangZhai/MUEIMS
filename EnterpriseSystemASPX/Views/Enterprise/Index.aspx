@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/template1.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    主页
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="HeaderHolder" runat="server">
@@ -16,7 +16,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="IndexMain">
-        <div class="EnterpriseBrief content"><%:(ViewBag.Enterprise as Enterprise).EnterpriseBriefShort %></div>
+        <div class="EnterpriseBrief">
+            <div class="EnterpriseBriefContent content"><%:(ViewBag.Enterprise as Enterprise).EnterpriseBriefShort %></div>
+        </div>
         <div class="dynamicList">
             <%
                 List<EnterpriseDynamic> EnterpriseDynamicList = ViewBag.EnterpriseDynamicList as List<EnterpriseDynamic>;
@@ -34,7 +36,7 @@
                 for (int i = 0; i < EnterpriseCaseList.Count; i++)
                 {
                     %>
-                    <div class="IndexArticleTitleDiv"><a href="EPDynamic?enterpriseDynamicID=<%:EnterpriseCaseList[i].EnterpriseCasesID %>"><%:EnterpriseCaseList[i].EnterpriseTitle %></a></div>
+                    <div class="IndexArticleTitleDiv"><a href="EPAchieveCase?enterpriseCaseID=<%:EnterpriseCaseList[i].EnterpriseCasesID %>"><%:EnterpriseCaseList[i].EnterpriseTitle %></a></div>
                     <%
                 }
             %>

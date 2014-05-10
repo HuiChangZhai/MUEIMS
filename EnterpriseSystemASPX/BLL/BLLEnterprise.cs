@@ -131,10 +131,10 @@ namespace EnterpriseSystemASPX.BLL
             return enterpriseList;
         }
 
-        public static bool SaveEnterpriseInfoChanges(int enterpriseID,string enterpriseName, string enterpriseUrl, string enterpriseAddress, string enterpriseTelphoneNumber, string enterpriseEmail, string enterpriseRight, string EnterpriseLogo)
+        public static bool SaveEnterpriseInfoChanges(int enterpriseID, string enterpriseName, string enterpriseUrl, int templateID, string enterpriseAddress, string enterpriseTelphoneNumber, string enterpriseEmail, string EnterpriseBriefShort, string EnterpriseLogo)
         {
             DALEnterprise _DAL = new DALEnterprise();
-            return _DAL.SaveEnterpriseInfoChanges(enterpriseID, enterpriseName, enterpriseUrl, enterpriseAddress, enterpriseTelphoneNumber, enterpriseEmail, enterpriseRight, EnterpriseLogo);
+            return _DAL.SaveEnterpriseInfoChanges(enterpriseID, enterpriseName, enterpriseUrl, templateID, enterpriseAddress, enterpriseTelphoneNumber, enterpriseEmail, EnterpriseBriefShort, EnterpriseLogo);
         }
 
         public static void DeleteEnterprise(int id)

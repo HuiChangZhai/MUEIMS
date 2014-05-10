@@ -115,17 +115,23 @@ namespace EnterpriseSystemASPXBg.Controllers
             ViewBag.MenuGroup = "SI";
             ViewBag.MenuTitle = "系统说明";
             MEnterprise menterprise = new MEnterprise();
+            int mid = 0;
             if (!string.IsNullOrEmpty(id))
-                menterprise.MEnterpriseID = int.Parse(id);
-            else
-                menterprise.MEnterpriseID = 0;
+                mid = int.Parse(id);
+            menterprise = BLLMEnterprise.GetMEnterprise();
             menterprise.MEnterpriseName = name;
-            menterprise.MEnterpriseTelphoneNumber = tel;
-            menterprise.MEnterpriseRight = copy;
-            menterprise.MEnterpriseEmail = email;
-            menterprise.MEnterpriseAddress = address;
-            menterprise.MEnterpriseBriefShort = shortbrief;
-            menterprise.MEnterpriseLogo = enterpriseLogo_f;
+            if (!string.IsNullOrEmpty(tel))
+                menterprise.MEnterpriseTelphoneNumber = tel;
+            if (!string.IsNullOrEmpty(copy))
+                menterprise.MEnterpriseRight = copy;
+            if (!string.IsNullOrEmpty(email))
+                menterprise.MEnterpriseEmail = email;
+            if (!string.IsNullOrEmpty(address))
+                menterprise.MEnterpriseAddress = address;
+            if (!string.IsNullOrEmpty(shortbrief))
+                menterprise.MEnterpriseBriefShort = shortbrief;
+            if (!string.IsNullOrEmpty(enterpriseLogo_f))
+                menterprise.MEnterpriseLogo = enterpriseLogo_f;
             BLLMEnterprise.UpdateMEnterprise(menterprise);
             ViewBag.Result = "success";
             return View(menterprise);
@@ -138,7 +144,7 @@ namespace EnterpriseSystemASPXBg.Controllers
             if (action == "Save")
             {
                 brief = (brief == null ? "" : brief);
-                MEnterprise enterprise=BLLMEnterprise.GetMEnterprise();
+                MEnterprise enterprise = BLLMEnterprise.GetMEnterprise();
                 BLLMEnterprise.SetMEnterpriseBiref(enterprise == null ? 0 : enterprise.MEnterpriseID, brief);
             }
 

@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
-    <title>NotExists</title>
+    <title>未找到</title>
     <style type="text/css">
         body{
             background-color: #333333;

@@ -21,6 +21,9 @@ namespace EnterpriseSystemASPX.Controllers
             ViewBag.PageTitle = "企业信息";
             ViewBag.CurrentEnterprise = BLLEnterprise.Current;
 
+            Templates Template = BLLTemplate.GetTemplate(BLLEnterprise.Current.TemplateID);
+            ViewBag.Template = Template;
+
             return View("~/Views/EnterpriseBg/EnterpriseInfo.aspx");
         }
         
@@ -30,10 +33,13 @@ namespace EnterpriseSystemASPX.Controllers
             ViewBag.PageTitle = "企业信息";
             ViewBag.CurrentEnterprise = BLLEnterprise.Current;
 
+            Templates Template =BLLTemplate.GetTemplate(BLLEnterprise.Current.TemplateID);
+            ViewBag.Template = Template;
+
             return View();
         }
 
-        public ActionResult EnterpriseInfoEdit(string enterpriseName, string enterpriseUrl, string enterpriseAddress, string enterpriseTelphoneNumber, string enterpriseEmail, string enterpriseRight, string enterpriseLogo_f)
+        public ActionResult EnterpriseInfoEdit(string enterpriseName, string enterpriseUrl, int? templateID, string enterpriseAddress, string enterpriseTelphoneNumber, string enterpriseEmail, string EnterpriseBriefShort, string enterpriseLogo_f)
         {
             ViewBag.MenuGroup = "Info";
             ViewBag.PageTitle = "编辑企业信息";
@@ -47,7 +53,10 @@ namespace EnterpriseSystemASPX.Controllers
             
             if (validData)
             {
-                if (BLLEnterprise.SaveEnterpriseInfoChanges(BLLEnterprise.Current.EnterpriseID, enterpriseName, enterpriseUrl, enterpriseAddress, enterpriseTelphoneNumber, enterpriseEmail, enterpriseRight, enterpriseLogo_f))
+                if (templateID == null)
+                    templateID = 0;
+
+                if (BLLEnterprise.SaveEnterpriseInfoChanges(BLLEnterprise.Current.EnterpriseID, enterpriseName, enterpriseUrl, templateID.Value, enterpriseAddress, enterpriseTelphoneNumber, enterpriseEmail, EnterpriseBriefShort, enterpriseLogo_f))
                 {
                     return Redirect("~/EnterpriseBg/EnterpriseInfo");
                 }
@@ -57,6 +66,8 @@ namespace EnterpriseSystemASPX.Controllers
                 return Redirect("~/Home");
 
             ViewBag.CurrentEnterprise = BLLEnterprise.Current;
+            List<Templates> TemplatesList = BLLTemplate.GetTemplateList();
+            ViewBag.TemplatesList = TemplatesList;
 
             return View();
         }

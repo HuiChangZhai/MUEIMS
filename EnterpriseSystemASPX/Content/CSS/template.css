@@ -82,6 +82,80 @@
     padding-top: 5px;
 }
 
+.IndexMain {
+}
+
+
+.EnterpriseBrief:before{
+    content:"企业介绍";
+    display:block;
+    padding:10px 20px;
+    color:#ffffff;
+    height:20px;
+    background: #979797;
+}
+
+.EnterpriseBrief {
+    font-size:14px;
+    border:1px solid #979797;
+    border-top:0px;
+    margin:10px 0px;
+    border-radius:5px 5px 5px 5px;
+    -moz-border-radius:5px 5px 5px 5px;
+    -webkit-border-radius:5px 5px 5px 5px;
+}
+
+.EnterpriseBriefContent {
+    text-indent:2em;
+    padding:10px 10px 30px 10px;
+}
+
+.enterpriseBriefMain {
+    padding:10px 30px;
+}
+
+.caseList:before {
+    content:"成功案例";
+}
+
+.dynamicList:before {
+    content:"企业动态";
+}
+
+.caseList:before,.dynamicList:before{
+    display:block;
+    padding:10px 20px;
+    color:#ffffff;
+    height:20px;
+    background: #979797;
+    border-radius:5px 5px 0px 0px;
+    -moz-border-radius:5px 5px 0px 0px;
+    -webkit-border-radius:5px 5px 0px 0px;
+}
+
+.caseList,.dynamicList {
+    border:1px solid #979797;
+    border-top:0px;
+    margin:10px 0px;
+    border-radius:5px 5px 5px 5px;
+    -moz-border-radius:5px 5px 5px 5px;
+    -webkit-border-radius:5px 5px 5px 5px;
+}
+
+.IndexArticleTitleDiv {
+    padding:3px 20px;
+    background:#ebebeb;
+    margin:5px;
+    border-radius:5px 5px 5px 5px;
+    -moz-border-radius:5px 5px 5px 5px;
+    -webkit-border-radius:5px 5px 5px 5px;
+}
+
+.IndexArticleTitleDiv a:hover {
+    color:#3171e4;
+}
+/*-------------------------------*/
+
 .EPAchieveCaseMain, .EPDynamicMain {
     padding:10px;
 }

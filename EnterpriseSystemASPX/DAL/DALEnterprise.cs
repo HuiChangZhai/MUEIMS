@@ -81,7 +81,7 @@ namespace EnterpriseSystemASPX.DAL
             return enterpriseList;
         }
 
-        public bool SaveEnterpriseInfoChanges(int enterpriseID,string enterpriseName,string enterpriseUrl,string enterpriseAddress,string enterpriseTelphoneNumber,string enterpriseEmail,string enterpriseRight,string EnterpriseLogo)
+        public bool SaveEnterpriseInfoChanges(int enterpriseID, string enterpriseName, string enterpriseUrl, int templateID, string enterpriseAddress, string enterpriseTelphoneNumber, string enterpriseEmail, string EnterpriseBriefShort, string EnterpriseLogo)
         {
             EMSEntities entity = new EMSEntities();
             Enterprise enterprise = entity.Enterprise.SingleOrDefault(m => m.EnterpriseID == enterpriseID);
@@ -93,6 +93,9 @@ namespace EnterpriseSystemASPX.DAL
                 if (enterpriseUrl != null) 
                     enterprise.EnterpriseUrl = enterpriseUrl;
 
+                if (templateID != 0)
+                    enterprise.TemplateID = templateID;
+
                 if (enterpriseAddress != null) 
                     enterprise.EnterpriseAddress = enterpriseAddress;
 
@@ -102,10 +105,10 @@ namespace EnterpriseSystemASPX.DAL
                 if (enterpriseEmail != null) 
                     enterprise.EnterpriseEmail = enterpriseEmail;
 
-                if (enterpriseRight != null) 
-                    enterprise.EnterpriseRight = enterpriseRight;
+                if (EnterpriseBriefShort != null)
+                    enterprise.EnterpriseBriefShort = EnterpriseBriefShort;
 
-                if (EnterpriseLogo != null)
+                if (EnterpriseLogo != null && EnterpriseLogo != "")
                     enterprise.EnterpriseLogo = EnterpriseLogo;
 
                 return entity.SaveChanges() != 0;

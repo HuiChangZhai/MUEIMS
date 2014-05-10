@@ -54,7 +54,7 @@ function PagingTools(options) {
 
         function AppendToHTML(item) {
             if (HTML.html() !== "") {
-                HTML.append($("<" + _options.TagName + " style=\"display:inline-block;\">" + _Separat + "</" + _options.TagName + ">"));
+                HTML.append($(_item.supplant({ page: _Separat })).addClass(_options.NoFocusItem));
             }
 
             if (typeof item === "string") {
@@ -66,13 +66,13 @@ function PagingTools(options) {
         }
         if (_currentPage > 1) {
             // 上一页可用
-            AppendToHTML($(_item.supplant({ page: "第一页" })).addClass(_options.ItemClass).click((function (page) {
+            AppendToHTML($(_item.supplant({ page: "&laquo;" })).addClass(_options.ItemClass).click((function (page) {
                 var _page = page;
                 return function () {
                     _callBackFun(_page);
                 };
             })(1)));
-            AppendToHTML($(_item.supplant({ page: "上一页" })).addClass(_options.ItemClass).click((function (page) {
+            AppendToHTML($(_item.supplant({ page: "&lsaquo;" })).addClass(_options.ItemClass).click((function (page) {
                 var _page = page;
                 return function () {
                     _callBackFun(_page);
@@ -80,8 +80,8 @@ function PagingTools(options) {
             })(_currentPage - 1)));
         }
         else {
-            AppendToHTML($(_item.supplant({ page: "第一页" })).addClass(_options.NoFocusItem));
-            AppendToHTML($(_item.supplant({ page: "上一页" })).addClass(_options.NoFocusItem));
+            AppendToHTML($(_item.supplant({ page: "&laquo;" })).addClass(_options.NoFocusItem));
+            AppendToHTML($(_item.supplant({ page: "&lsaquo;" })).addClass(_options.NoFocusItem));
         }
 
 
@@ -128,13 +128,13 @@ function PagingTools(options) {
 
         if (_currentPage < _maxPage) {
             // 下一页可用
-            AppendToHTML($(_item.supplant({ page: "下一页" })).addClass(_options.ItemClass).click((function (page) {
+            AppendToHTML($(_item.supplant({ page: "&rsaquo;" })).addClass(_options.ItemClass).click((function (page) {
                 var _page = page;
                 return function () {
                     _callBackFun(_page);
                 };
             })(_currentPage + 1)));
-            AppendToHTML($(_item.supplant({ page: "最后一页" })).addClass(_options.ItemClass).click((function (page) {
+            AppendToHTML($(_item.supplant({ page: "&raquo;" })).addClass(_options.ItemClass).click((function (page) {
                 var _page = page;
                 return function () {
                     _callBackFun(_page);
@@ -142,11 +142,12 @@ function PagingTools(options) {
             })(_totalPages)));
         }
         else {
-            AppendToHTML($(_item.supplant({ page: "下一页" })).addClass(_options.NoFocusItem));
-            AppendToHTML($(_item.supplant({ page: "最后一页" })).addClass(_options.NoFocusItem));
+            AppendToHTML($(_item.supplant({ page: "&rsaquo;" })).addClass(_options.NoFocusItem));
+            AppendToHTML($(_item.supplant({ page: "&raquo;" })).addClass(_options.NoFocusItem));
         }
 
-        AppendToHTML($(_item.supplant({ page: "共" + _totalPages + "页" })).addClass(_options.NoFocusItem))
+        //AppendToHTML()
+        HTML.append($(_item.supplant({ page: "共" + _totalPages + "页" })).css("padding-left","20px").addClass(_options.NoFocusItem));
 
         HTML.appendTo(parentElement);
     }
