@@ -99,7 +99,7 @@ namespace EnterpriseSystemASPX.Controllers
             pageHelper.PageCurrent = page.Value;
             pageHelper.PagePre = page.Value - 1;
             ViewBag.pageHelper = pageHelper;
-            List<EnterpriseCases> EnterpriseCasesList = BLLEnterpriseCases.GetEnterpriseCasesList(pageHelper.PageCurrent - 1, pageHelper.PageSize);
+            List<EnterpriseCases> EnterpriseCasesList = BLLEnterpriseCases.GetEnterpriseCasesList(BLLEnterprise.Current.EnterpriseID, pageHelper.PageCurrent - 1, pageHelper.PageSize);
 
             return View(EnterpriseCasesList);
         }
@@ -225,7 +225,7 @@ namespace EnterpriseSystemASPX.Controllers
             pageHelper.PageCurrent = page.Value;
             pageHelper.PagePre = page.Value - 1;
             ViewBag.pageHelper = pageHelper;
-            List<EnterpriseDynamic> EnterpriseDynamicsList = BLLEnterpriseDynamic.EnterpriseDynamic(pageHelper.PageCurrent - 1, pageHelper.PageSize);
+            List<EnterpriseDynamic> EnterpriseDynamicsList = BLLEnterpriseDynamic.EnterpriseDynamic(BLLEnterprise.Current.EnterpriseID, pageHelper.PageCurrent - 1, pageHelper.PageSize);
 
             return View(EnterpriseDynamicsList);
         }

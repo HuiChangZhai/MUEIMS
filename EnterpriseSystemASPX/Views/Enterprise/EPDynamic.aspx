@@ -5,41 +5,36 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="HeaderHolder" runat="server">
-    <style type="text/css">
-        .row-fluid {
-            margin-bottom:10px;
-        }
-
-        .dynamicItem {
-            height:150px;
-            border:1px solid #968989;
-            border-radius:5px 5px;
-            -moz-border-radius:5px 5px;
-            -webkit-border-radius:5px 5px;
-            
-        }
-        .dynamicItemContent{
-            height:120px;
-            overflow:hidden;
-            text-overflow: ellipsis;
-        }
-        .dynamicItem:hover{
-            border:1px solid #e8bf9d;
-        }
-        .dynamicItemTitle {
-            border-bottom:1px solid #d5d5d5;
-        }
-    </style>
+    <script src="../../Scripts/WebSite/PagingTools.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("div.content").each(function () {
                 $(this).html(HTMLEncoding.Coding2Txt($(this).attr("content")));
             });
+
+            var pagingTools = new PagingTools({
+                TotalPage: "<%:ViewBag.TotalPage %>",
+                CurrentPage: "<%:ViewBag.CurrentPage %>",
+                CallBackFun: function (page) {
+                    window.location.href = "EPDynamic?currentPage=" + page;
+                    pagingTools.reander($("#PagingDiv"), { CurrentPage: page });
+                },
+                ItemClass: "-paging-PagingItens",
+                CurrentItemClass: "-paging-CurrentPageItem",
+                NoFocusItem: "-paging-NoFocusItem"
+            });
+
+            pagingTools.reander($("#PagingDiv"));
         });
+
+        function Nav(enterpriseDynamicID) {
+            window.location = "EPDynamic?enterpriseDynamicID=" + enterpriseDynamicID;
+        }
     </script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="EPDynamicMain">
     <%
         List<EnterpriseDynamic> list = Model as List<EnterpriseDynamic>;
         if (list != null && list.Count > 0) 
@@ -57,11 +52,11 @@
                         <%
                     }
                     %>
-                    <div class="row-fluid">
+                    <div class="row-fluid dynamicItemsLine">
                     <%
                 }
                 %>
-                <div class="span4 dynamicItem">
+                <div class="span4 dynamicItem" onclick="Nav(<%:list[i].EnterpriseDynamicID %>)">
                     <div class="dynamicItemTitle"><%:list[i].EnterpriseDynamicTitle %></div>
                     <div class="content dynamicItemContent" content="<%:list[i].EnterpriseDynamicContent %>"></div>
                 </div>
@@ -73,5 +68,7 @@
             
         }
     %>
+    </div>
+    <div id="PagingDiv"></div>
 </asp:Content>
 

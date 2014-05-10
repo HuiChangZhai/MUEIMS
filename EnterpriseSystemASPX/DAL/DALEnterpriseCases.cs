@@ -25,10 +25,24 @@ namespace EnterpriseSystemASPX.DAL
             return enterpriseCases;
         }
 
-        public List<EnterpriseCases> GetEnterpriseCasesList(int CurrentPage, int PageSize)
+        public List<EnterpriseCases> GetEnterpriseCasesList(int enterpriseID, int CurrentPage, int PageSize)
         {
             EMSEntities entity = new EMSEntities();
-            List<EnterpriseCases> list = entity.EnterpriseCases.OrderBy(m=>m.EnterpriseCasesID).Skip(CurrentPage * PageSize).Take(PageSize).ToList();
+            
+            List<EnterpriseCases> list;
+ 
+            if (enterpriseID != 0)
+            { 
+                list = entity.EnterpriseCases.Where(m=>m.EnterpriseID == enterpriseID).ToList();
+                if(list!= null)
+                {
+                    list = list.OrderByDescending(m=>m.EnterpriseCasesID).Skip(CurrentPage * PageSize).Take(PageSize).ToList();
+                }
+            }
+            else
+            {
+                list = entity.EnterpriseCases.OrderBy(m=>m.EnterpriseCasesID).Skip(CurrentPage * PageSize).Take(PageSize).ToList();
+            }
 
             return list;
         }

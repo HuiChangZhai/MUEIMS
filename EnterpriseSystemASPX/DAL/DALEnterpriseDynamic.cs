@@ -25,10 +25,23 @@ namespace EnterpriseSystemASPX.DAL
             return enterpriseDynamic;
         }
 
-        public List<EnterpriseDynamic> GetDALEnterpriseDynamicList(int CurrentPage, int PageSize)
+        public List<EnterpriseDynamic> GetDALEnterpriseDynamicList(int enterpriseID, int CurrentPage, int PageSize)
         {
             EMSEntities entity = new EMSEntities();
-            List<EnterpriseDynamic> list = entity.EnterpriseDynamic.OrderBy(m => m.EnterpriseDynamicID).Skip(CurrentPage * PageSize).Take(PageSize).ToList();
+            List<EnterpriseDynamic> list;
+            if (enterpriseID != 0)
+            {
+                list = entity.EnterpriseDynamic.Where(m => m.EnterpriseID == enterpriseID).ToList();
+                if (list != null)
+                {
+                    list = list.OrderBy(m => m.EnterpriseDynamicID).Skip(CurrentPage * PageSize).Take(PageSize).ToList();
+                }
+            }
+            else 
+            {
+                list = entity.EnterpriseDynamic.OrderByDescending(m => m.EnterpriseDynamicID).Skip(CurrentPage * PageSize).Take(PageSize).ToList();
+            }
+            
 
             return list;
         }
