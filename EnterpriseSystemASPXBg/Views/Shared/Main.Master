@@ -28,14 +28,17 @@
                 case "SI":
                     $($(".type")[1]).click();
                     break;
-                case "AC":
+                case "TL":
                     $($(".type")[2]).click();
                     break;
-                case "MI":
+                case "AC":
                     $($(".type")[3]).click();
                     break;
-                case "AI":
+                case "MI":
                     $($(".type")[4]).click();
+                    break;
+                case "AI":
+                    $($(".type")[5]).click();
                     break;
                 default:
                     $($(".type")[0]).click();
@@ -82,6 +85,13 @@
                                     <ul class="MM">
                                         <li><a href="/AdminHome/MEnterpriseInfo">系统说明</a></li>
                                         <li><a href="/AdminHome/MEnterpriseBiref">系统简介</a></li>
+                                    </ul>
+                                </div>
+                                <h1 class="type"><a href="javascript:void(0)">企业模板</a></h1>
+                                <div class="content">
+                                    <ul class="MM">
+                                        <li><a href="/AdminHome/TemplateList">模板列表</a></li>
+                                        <li><a href="/AdminHome/TemplateAdd">添加模板</a></li>
                                     </ul>
                                 </div>
                                 <h1 class="type"><a href="javascript:void(0)">成功案例</a></h1>

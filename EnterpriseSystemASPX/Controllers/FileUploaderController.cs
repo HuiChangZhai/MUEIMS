@@ -10,7 +10,7 @@ namespace EnterpriseSystemASPX.Controllers
     public class FileUploaderController : Controller
     {
         [HttpPost]
-        public string Index(HttpPostedFileBase file, HttpPostedFileBase enterpriseLogo)
+        public string Index(HttpPostedFileBase file, HttpPostedFileBase enterpriseLogo, HttpPostedFileBase templateFile)
         {
             string now = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString() + (new Random().Next(1000,10000));
             if (file != null && file.ContentLength > 0)
@@ -29,6 +29,15 @@ namespace EnterpriseSystemASPX.Controllers
                 // store the file inside ~/App_Data/uploads folder
                 var path = Path.Combine(Server.MapPath("~/uploadImages"), fileName);
                 enterpriseLogo.SaveAs(path);
+                return fileName;
+            }
+            else if (templateFile != null && templateFile.ContentLength > 0)
+            {
+                // extract only the fielname
+                var fileName = Path.GetFileName(templateFile.FileName);
+                // store the file inside ~/App_Data/uploads folder
+                var path = Path.Combine(Server.MapPath("~/Content/CSS"), fileName);
+                templateFile.SaveAs(path);
                 return fileName;
             }
 

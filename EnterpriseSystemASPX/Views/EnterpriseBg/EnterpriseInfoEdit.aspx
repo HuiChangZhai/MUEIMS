@@ -24,7 +24,7 @@
             });
         });
         $(document).ready(function ($) {
-            $("input:file").FileInput()
+            $("input:file").FileInput();
             $("#enterpriseLogoSubit").click(function () {
                 var formData = new FormData($("#EnterpriseInfoForm")[0]);
 

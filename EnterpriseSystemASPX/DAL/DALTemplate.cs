@@ -23,5 +23,18 @@ namespace EnterpriseSystemASPX.DAL
 
             return list;
         }
+
+        public bool AddTemplate(string templateName, string templateFile)
+        {
+            EMSEntities entity = new EMSEntities();
+
+            Templates template = new Templates();
+
+            template.TemplateName = templateName;
+            template.Template = templateFile;
+            entity.Templates.Add(template);
+
+            return entity.SaveChanges() != 0;
+        }
     }
 }

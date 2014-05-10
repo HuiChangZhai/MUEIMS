@@ -26,7 +26,7 @@
                     window.location.href = "EPAchieveCase";
                 }, 3000);
             </script>
-            没有找到企业动态，页面将在3秒钟后跳转到<a href="EPAchieveCase" class="noRecord-return">成功案例列表</a>
+            没有找到企业动态，页面将在3秒钟后跳转到<a href="/Enterprise/<%:(ViewBag.Enterprise as Enterprise).EnterpriseUrl %>/EPAchieveCase" class="noRecord-return">成功案例列表</a>
             <%
         }
         else 
@@ -38,6 +38,6 @@
         }
     %>
     </div>
-    <div class="return-to-list"><a href="EPAchieveCase">返回成功案例列表</a></div>
+    <div class="return-to-list"><a href="/Enterprise/<%:(ViewBag.Enterprise as Enterprise).EnterpriseUrl %>/EPAchieveCase">返回成功案例列表</a></div>
 </asp:Content>
 

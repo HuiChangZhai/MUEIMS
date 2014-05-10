@@ -628,6 +628,7 @@
     <Content Include="Scripts\Website\jquery.js" />
     <Content Include="Scripts\Website\js.js" />
     <Content Include="Scripts\Website\Message.js" />
+    <Content Include="Scripts\Website\WebSite.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\AdminAccount\ChangePassword.aspx" />
     <Content Include="Views\AdminAccount\Login.aspx" />
@@ -640,6 +641,8 @@
     <Content Include="Views\AdminHome\MEnterpriseInfo.aspx" />
     <Content Include="Views\AdminHome\MessageDetail.aspx" />
     <Content Include="Views\AdminHome\MessageList.aspx" />
+    <Content Include="Views\AdminHome\TemplateAdd.aspx" />
+    <Content Include="Views\AdminHome\TemplateList.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

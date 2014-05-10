@@ -26,5 +26,11 @@ namespace EnterpriseSystemASPX.BLL
 
             return list;
         }
+
+        public static bool AddTemplate(string templateName, string templateFile)
+        {
+            DALTemplate _template = new DALTemplate();
+            return _template.AddTemplate(templateName, templateFile);
+        }
     }
 }

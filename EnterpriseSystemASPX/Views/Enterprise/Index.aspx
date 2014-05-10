@@ -25,7 +25,7 @@
                 for (int i = 0; i < EnterpriseDynamicList.Count; i++)
                 {
                     %>
-                    <div class="IndexArticleTitleDiv"><a href="EPDynamic?enterpriseDynamicID=<%:EnterpriseDynamicList[i].EnterpriseDynamicID %>"><%:EnterpriseDynamicList[i].EnterpriseDynamicTitle %></a></div>
+                    <div class="IndexArticleTitleDiv"><a href="/Enterprise/<%:(ViewBag.Enterprise as Enterprise).EnterpriseUrl %>/EPDynamic?enterpriseDynamicID=<%:EnterpriseDynamicList[i].EnterpriseDynamicID %>"><%:EnterpriseDynamicList[i].EnterpriseDynamicTitle %></a></div>
                     <%
                 }
             %>
@@ -36,7 +36,7 @@
                 for (int i = 0; i < EnterpriseCaseList.Count; i++)
                 {
                     %>
-                    <div class="IndexArticleTitleDiv"><a href="EPAchieveCase?enterpriseCaseID=<%:EnterpriseCaseList[i].EnterpriseCasesID %>"><%:EnterpriseCaseList[i].EnterpriseTitle %></a></div>
+                    <div class="IndexArticleTitleDiv"><a href="/Enterprise/<%:(ViewBag.Enterprise as Enterprise).EnterpriseUrl %>/EPAchieveCase?enterpriseCaseID=<%:EnterpriseCaseList[i].EnterpriseCasesID %>"><%:EnterpriseCaseList[i].EnterpriseTitle %></a></div>
                     <%
                 }
             %>
