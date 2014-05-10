@@ -139,6 +139,13 @@
     <Content Include="Content\CSS\FileInput.css" />
     <Content Include="Content\CSS\FixedItemListTable.css" />
     <Content Include="Content\CSS\template2.css" />
+    <Content Include="Content\Images\slide-5.jpg" />
+    <Content Include="Content\Images\slide-4.jpg" />
+    <Content Include="Content\Images\slide-1.jpg" />
+    <Content Include="Content\Images\slide-2.jpg" />
+    <Content Include="Content\Images\slide-3.jpg" />
+    <Content Include="Content\Images\favicon.ico" />
+    <Content Include="Content\Images\favicon1.ico" />
     <Content Include="Content\Images\Help\Login.png" />
     <Content Include="Content\Images\Help\register.png" />
     <Content Include="Content\ueditor1_3_6-utf8-net\net\Config.cs" />
@@ -377,7 +384,6 @@
     <Content Include="Content\Images\bgImages\yc.gif" />
     <Content Include="Content\Images\bgImages\yx.gif" />
     <Content Include="Content\Images\border-horiz.gif" />
-    <Content Include="Content\Images\favicon.ico" />
     <Content Include="Content\Images\image-blank.png" />
     <Content Include="Content\Images\indicator.png" />
     <Content Include="Content\Images\indicator1.png" />
@@ -387,7 +393,6 @@
     <Content Include="Content\Images\marker-1.png" />
     <Content Include="Content\Images\marker.png" />
     <Content Include="Content\Images\next.png" />
-    <Content Include="Content\Images\page1-img5.jpg" />
     <Content Include="Content\Images\page3-img1.jpg" />
     <Content Include="Content\Images\page3-img10.jpg" />
     <Content Include="Content\Images\page3-img11.jpg" />
@@ -407,11 +412,6 @@
     <Content Include="Content\Images\page4-img1.jpg" />
     <Content Include="Content\Images\page4-img2.jpg" />
     <Content Include="Content\Images\prev.png" />
-    <Content Include="Content\Images\slide-1.jpg" />
-    <Content Include="Content\Images\slide-2.jpg" />
-    <Content Include="Content\Images\slide-3.jpg" />
-    <Content Include="Content\Images\slide-4.jpg" />
-    <Content Include="Content\Images\slide-5.jpg" />
     <Content Include="Content\Images\soc-icon-1.png" />
     <Content Include="Content\Images\soc-icon-2.png" />
     <Content Include="Content\Images\soc-icon-3.png" />

@@ -27,7 +27,7 @@
                 <div class="span12">
                     <!--============================== slider =================================-->
                     <div class="flexslider">
-                        <ul class="slides">
+                        <ul class="slides Propaganda">
                             <li>
                                 <img src="/Content/Images/slide-1.jpg" alt="">
                             </li>
@@ -77,12 +77,12 @@
                                 <div class="thumbnail thumbnail-1">
                                     <h3 style="font-size: 20px;"><%:item.MEnterpriseCasesTitle %></h3>
                                     <a target="_blank" href="/Enterprise/<%:item.EnterprisUrl%>/Index" title="<%:item.MEnterpriseCasesTitle %>">
-                                        <img src="<%:item.MEnterpriseCaseUrl %>" alt="" style="height: 146px;">
+                                        <img src="<%:item.MEnterpriseCaseUrl %>" alt="" style="width:270px;height: 146px;">
                                     </a>
                                     <section>
                                         <strong><%:item.MEnterpriseCasesTitle %></strong>
                                         <p><%:item.MEnterpriseCasesContent %></p>
-                                        <a href="/Enterprise/<%:item.EnterprisUrl%>/Index" class="btn btn-1">详情更多</a>
+                                        <a target="_blank" href="/Enterprise/<%:item.EnterprisUrl%>/Index" class="btn btn-1">详情更多</a>
                                     </section>
                                 </div>
                             </li>

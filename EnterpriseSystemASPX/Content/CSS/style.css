@@ -1779,3 +1779,8 @@ footer
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+.Propaganda img
+{
+    width:754px;
+    height:339px;
+}
