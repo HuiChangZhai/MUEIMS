@@ -36,7 +36,7 @@
                     success: function (responseDate) {//completeHandler,
                         if (responseDate !== "") {
                             $("#imgEnterpriseLogo").attr("src", "/uploadImages/" + responseDate);
-                            $("#enterpriseLogo").val(responseDate);
+                            $("#enterpriseLogo_f").val(responseDate);
                         }
                     },
                     //error: errorHandler,
@@ -91,6 +91,7 @@
                 <td>上传logo</td>
                 <td class="tdContent">
                     <div class="FileInput" style="margin-bottom: 10px;">
+                        <input type="hidden" id="enterpriseLogo_f" name="enterpriseLogo_f" multiple />
                         <input type="file" id="enterpriseLogo" name="enterpriseLogo" multiple />
                     </div>
                     <input class="SubmitButton" id="enterpriseLogoSubit" type="button" value="上传" />

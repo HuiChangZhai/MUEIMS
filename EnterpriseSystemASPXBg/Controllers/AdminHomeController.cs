@@ -110,7 +110,7 @@ namespace EnterpriseSystemASPXBg.Controllers
         }
 
         [HttpPost]
-        public ActionResult MEnterpriseInfo(string id, string name, string tel, string email, string copy, string address, string shortbrief, string enterpriseLogo)
+        public ActionResult MEnterpriseInfo(string id, string name, string tel, string email, string copy, string address, string shortbrief, string enterpriseLogo_f)
         {
             ViewBag.MenuGroup = "SI";
             ViewBag.MenuTitle = "系统说明";
@@ -125,7 +125,7 @@ namespace EnterpriseSystemASPXBg.Controllers
             menterprise.MEnterpriseEmail = email;
             menterprise.MEnterpriseAddress = address;
             menterprise.MEnterpriseBriefShort = shortbrief;
-            menterprise.MEnterpriseLogo = enterpriseLogo;
+            menterprise.MEnterpriseLogo = enterpriseLogo_f;
             BLLMEnterprise.UpdateMEnterprise(menterprise);
             ViewBag.Result = "success";
             return View(menterprise);

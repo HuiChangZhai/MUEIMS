@@ -7,7 +7,6 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="HeaderHolder" runat="server">
     <script type="text/javascript">
         $(document).ready(function (){
-            var content = "<%:(ViewBag.Enterprise as Enterprise).EnterpriseBrief %>";
             $("div.content").each(function () {
                 $(this).html(HTMLEncoding.Coding2Txt($(this).html()));
             });
@@ -16,7 +15,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div>
+    <div class="IndexMain">
         <div class="EnterpriseBrief content"><%:(ViewBag.Enterprise as Enterprise).EnterpriseBriefShort %></div>
         <div class="dynamicList">
             <%
