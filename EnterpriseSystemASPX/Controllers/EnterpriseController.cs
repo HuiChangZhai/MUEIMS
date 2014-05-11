@@ -24,10 +24,10 @@ namespace EnterpriseSystemASPX.Controllers
             ViewBag.EPmenu = "EPI";
             ViewBag.title = name == null ? "多企业用户管理系统" : name;
 
-            List<EnterpriseCases> EnterpriseCaseList = BLLEnterpriseCases.GetEnterpriseCasesList(entreprise.EnterpriseID, 0, 10);
+            List<EnterpriseCases> EnterpriseCaseList = BLLEnterpriseCases.GetEnterpriseCasesList(entreprise.EnterpriseID, 0, 50);
             ViewBag.EnterpriseCaseList = EnterpriseCaseList;
 
-            List<EnterpriseDynamic> EnterpriseDynamicList = BLLEnterpriseDynamic.EnterpriseDynamic(entreprise.EnterpriseID, 0, 10);
+            List<EnterpriseDynamic> EnterpriseDynamicList = BLLEnterpriseDynamic.EnterpriseDynamic(entreprise.EnterpriseID, 0, 50);
             ViewBag.EnterpriseDynamicList = EnterpriseDynamicList;
 
             return View();
@@ -79,7 +79,7 @@ namespace EnterpriseSystemASPX.Controllers
             ViewBag.CurrentPage = page;
             ViewBag.TotalPage = dynamicList.Count() / 9 + (dynamicList.Count() % 9 == 0 ? 0 : 1);
 
-            List<EnterpriseDynamic> list = BLLEnterpriseDynamic.EnterpriseDynamic(entreprise.EnterpriseID, 0, 9);
+            List<EnterpriseDynamic> list = BLLEnterpriseDynamic.EnterpriseDynamic(entreprise.EnterpriseID, page - 1, 9);
 
             return View(list);
         }

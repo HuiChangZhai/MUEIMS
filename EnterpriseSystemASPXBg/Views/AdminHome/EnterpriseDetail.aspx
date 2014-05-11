@@ -10,7 +10,7 @@
     <script type="text/javascript">
         $(function () {
             $(".detailTxt").each(function () {
-                var content = HTMLEncoding.Coding2Txt($(this).attr("contentdetail"));
+                var content = HTMLEncoding.Decoding($(this).attr("contentdetail"));
                 //alert(content.trim());
                 $(".detailTxt").html(content);
             });

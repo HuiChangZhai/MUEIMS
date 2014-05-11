@@ -121,11 +121,15 @@ body{
 .IndexArticleTitleDiv {
     display:inline-block;
     padding:3px 20px;
-    background:#ebebeb;
+    background:#dedede;
     margin:5px;
     border-radius:5px 5px 5px 5px;
     -moz-border-radius:5px 5px 5px 5px;
     -webkit-border-radius:5px 5px 5px 5px;
+}
+
+.IndexArticleTitleDiv a {
+    color:#7f7f7f;
 }
 
 .IndexArticleTitleDiv a:hover {
@@ -142,14 +146,17 @@ body{
 
 .enterpriseCaseItemsLine, .dynamicItemsLine {
     margin-bottom:10px;
+    text-overflow:ellipsis;
+    overflow:hidden;
 }
 
 .enterpriseCasesItem, .dynamicItem {
-    height:150px;
+    height:180px;
     border:1px solid #968989;
     border-radius:5px 5px;
     -moz-border-radius:5px 5px;
     -webkit-border-radius:5px 5px;
+    cursor:pointer;
 }
 
 .enterpriseCasesItem, .dynamicItem {
@@ -157,9 +164,9 @@ body{
 }
 
 .enterpriseCaseItemContent, .dynamicItemContent{
+    padding:12px;
     height:120px;
     overflow:hidden;
-    text-overflow: ellipsis;
 }
 .enterpriseCasesItem:hover,.dynamicItem:hover{
     border:1px solid #e8bf9d;
@@ -167,6 +174,14 @@ body{
 
 .enterpriseCaseItemTitle, .dynamicItemTitle {
     border-bottom:1px solid #d5d5d5;
+    font-weight:bold;
+    padding:12px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    word-break:break-all;
+    text-overflow:ellipsis;
 }
 
 .noRecord-return {

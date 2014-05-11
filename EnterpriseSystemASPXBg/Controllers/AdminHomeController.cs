@@ -153,6 +153,44 @@ namespace EnterpriseSystemASPXBg.Controllers
             return View();
         }
 
+        public ActionResult TemplateList(int? page)
+        {
+            ViewBag.MenuGroup = "TL";
+            ViewBag.MenuTitle = "企业模板";
+
+            List<Templates> list = BLLTemplate.GetTemplateList();
+
+            if (page == null)
+            {
+                page = 1;
+            }
+
+            ViewBag.CurrentMEnterprise = BLLMEnterprise.GetMEnterprise();
+
+            ViewBag.TotalPage = list.Count();
+            ViewBag.CurrentPage = page.Value;
+            int pageSize = 10;
+
+            list = list.OrderBy(m => m.TemplateID).Skip((page.Value - 1) * pageSize).Take(pageSize).ToList();
+
+            return View(list);
+        }
+
+        public ActionResult TemplateAdd(string templateName, string templateFile)
+        {
+            ViewBag.MenuGroup = "TL";
+            ViewBag.MenuTitle = "企业模板";
+
+            if(templateName !=null && templateFile != null)
+            {
+                templateFile = templateFile.Replace(".css", "");
+                BLLTemplate.AddTemplate(templateName, templateFile);
+                return Redirect("TemplateList");
+            }
+
+            return View();
+        }
+
         public ActionResult CasesList(int? pageindex)
         {
             ViewBag.MenuGroup = "AC";
@@ -227,7 +265,7 @@ namespace EnterpriseSystemASPXBg.Controllers
             builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>版权声明</td><td class='tdContent'>" + enterprise.EnterpriseRight ?? "" + "</td></tr>");
             //builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>注册时间</td><td class='tdContent'>" + enterprise.EnterpriseRegistTime.HasValue ? enterprise.EnterpriseRegistTime.Value.ToString("yyyy-MM-dd") : "" + "</td></tr>");
             builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>企业说明</td><td class='tdContent'>" + enterprise.EnterpriseBriefShort ?? "" + "</td></tr>");
-            builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>企业简介</td><td class='tdContent'>" + enterprise.EnterpriseBrief ?? "" + "</td></tr>");
+            builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>企业简介</td><td class='tdContent contentBriefHtmlToTxt'>" + enterprise.EnterpriseBrief ?? "" + "</td></tr>");
 
             builder.Append("<input type='hidden' name='ename' value='" + enterprise.EnterpriseName + "' />");
             builder.Append("<input type='hidden' name='eshort' value='" + enterprise.EnterpriseBriefShort + "' />");

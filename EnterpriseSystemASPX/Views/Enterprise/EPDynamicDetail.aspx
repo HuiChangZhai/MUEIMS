@@ -26,7 +26,7 @@
                     window.location.href = "EPDynamic";
                 }, 3000);
             </script>
-            没有找到企业动态，页面将在3秒钟后跳转到<a href="EPDynamic" class="noRecord-return">企业动态列表</a>
+            没有找到企业动态，页面将在3秒钟后跳转到<a href="/Enterprise/<%:(ViewBag.Enterprise as Enterprise).EnterpriseUrl %>/EPDynamic" class="noRecord-return">企业动态列表</a>
             <%
         }
         else 
@@ -38,6 +38,6 @@
         }
     %>
     </div>
-    <div class="return-to-list"><a href="EPDynamic">返回企业动态列表</a></div>
+    <div class="return-to-list"><a href="/Enterprise/<%:(ViewBag.Enterprise as Enterprise).EnterpriseUrl %>/EPDynamic">返回企业动态列表</a></div>
 </asp:Content>
 

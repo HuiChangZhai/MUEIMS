@@ -6,6 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <link href="/Content/CSS/HomeMessage.css" rel="stylesheet" />
+    <script src="../../Scripts/Website/HTMLEncoding.js"></script>
     <script src="/Scripts/Website/Message.js"></script>
     <script type="text/javascript">
         $(function () {
@@ -24,10 +25,19 @@
                     dataType: "html",
                     success: function (data) {
                         $("#enterpriseInfo").after(data);
+                        setTimeout(function () {
+                            DecodingHtml();
+                        }, 0);
                     }
                 });
             })
-        })
+        });
+
+        function DecodingHtml() {
+            $("td.contentBriefHtmlToTxt").each(function () {
+                $(this).html(HTMLEncoding.Decoding($(this).html()));
+            });
+        }
     </script>
     <form action="AddCases" method="post">
         <table class="ItemListTable Fixed" id="tableDetail">
