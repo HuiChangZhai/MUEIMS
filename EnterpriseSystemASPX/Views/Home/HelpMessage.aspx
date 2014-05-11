@@ -118,7 +118,11 @@
                                 <li><a href="#Q01">企业用户注册和激活</a></li>
                                 <li><a href="#Q02">等待后台的审核</a></li>
                                 <li><a href="#Q03">登录您的账户</a></li>
-                                <li><a href="#Q04">进入管理后台</a></li>
+                                <li><a href="#Q05">编辑企业详情</a></li>
+                                <li><a href="#Q06">添加和编辑企业动态</a></li>
+                                <li><a href="#Q07">添加和编辑成功案例</a></li>
+                                <li><a href="#Q08">修改密码</a></li>
+                                <li><a href="#Q09">前台展示</a></li>
                             </ul>
                         </div>
 
@@ -142,17 +146,52 @@
                                     <img src="/Content/Images/Help/Login.png" class="help-right-margin" />
                                 </div>
                                 <div class="help-right-margin">
-                                    <a name="Q04"></a><strong>Step4. 进入管理后台</strong>
+                                    <a name="Q04"></a><strong>Step4. 进入管理后台,看到企业的详细信息</strong>
                                 </div>
                                 <div>
-                                    <img src="/Content/Images/Help/LoginBg.png" class="help-right-margin" />
+                                    <img src="/Content/Images/Help/bg1.png" class="help-right-margin" />
                                 </div>
                                 <div class="help-right-margin">
-                                    <a name="Q05"></a><strong>Step5. </strong>
+                                    <a name="Q05"></a><strong>Step5. 编辑企业的详细信息</strong>
                                 </div>
                                 <div>
-                                    
+                                    编辑企业名称、选择企业模板、填写电话、邮箱和企业说明、上传logo
+                                    <img src="/Content/Images/Help/bg2.png" class="help-right-margin" />
+                                    编辑企业详细说明
+                                    <img src="/Content/Images/Help/bg3.png" class="help-right-margin" />
                                 </div>
+                                <div class="help-right-margin">
+                                    <a name="Q06"></a><strong>Step6. 添加和编辑企业动态</strong>
+                                </div>
+                                <div>
+                                    企业动态的列表，并查看企业动态的详情
+                                    <img src="/Content/Images/Help/bg4.png" class="help-right-margin" />
+                                    添加企业动态：文章标题和文章内容
+                                     <img src="/Content/Images/Help/bg5.png" class="help-right-margin" />
+                                </div>
+                                <div class="help-right-margin">
+                                    <a name="Q07"></a><strong>Step7. 添加和编辑成功案例</strong>
+                                </div>
+                                <div>
+                                    企业成功案例的列表，并查看企业成功案例的详情
+                                    <img src="/Content/Images/Help/bg6.png" class="help-right-margin" />
+                                    添加企业成功案例：文章标题和文章内容
+                                     <img src="/Content/Images/Help/bg7.png" class="help-right-margin" />
+                                </div>
+                                <div class="help-right-margin">
+                                    <a name="Q08"></a><strong>Step8. 企业可以修改密码</strong>
+                                </div>
+                                <div>
+                                    企业修改密码
+                                    <img src="/Content/Images/Help/bg8.png" class="help-right-margin" />
+                                </div>
+                                <div class="help-right-margin">
+                                    <a name="Q09"></a><strong>Step9. 前台展示</strong>
+                                </div>
+                                <div>
+                                    <img src="/Content/Images/Help/adidas.png" class="help-right-margin" />
+                                </div>
+                                
                                 <div class="help-right-margin">
                                     客服联系方式：
                                 </div>

@@ -139,6 +139,17 @@
     <Content Include="Content\CSS\FileInput.css" />
     <Content Include="Content\CSS\FixedItemListTable.css" />
     <Content Include="Content\CSS\template2.css" />
+    <Content Include="Content\Images\Help\bg8.png" />
+    <Content Include="Content\Images\Help\bg1.png" />
+    <Content Include="Content\Images\Help\bg2.png" />
+    <Content Include="Content\Images\Help\bg3.png" />
+    <Content Include="Content\Images\Help\bg4.png" />
+    <Content Include="Content\Images\Help\bg5.png" />
+    <Content Include="Content\Images\Help\bg6.png" />
+    <Content Include="Content\Images\Help\bg7.png" />
+    <Content Include="Content\Images\Help\adidas.png" />
+    <Content Include="Content\Images\Help\register.png" />
+    <Content Include="Content\Images\Help\Login.png" />
     <Content Include="Content\Images\slide-5.jpg" />
     <Content Include="Content\Images\slide-51.jpg" />
     <Content Include="Content\Images\slide-4.jpg" />
@@ -147,8 +158,6 @@
     <Content Include="Content\Images\slide-3.jpg" />
     <Content Include="Content\Images\favicon.ico" />
     <Content Include="Content\Images\favicon1.ico" />
-    <Content Include="Content\Images\Help\Login.png" />
-    <Content Include="Content\Images\Help\register.png" />
     <Content Include="Content\ueditor1_3_6-utf8-net\net\Config.cs" />
     <Content Include="Content\ueditor1_3_6-utf8-net\net\Uploader.cs" />
     <Compile Include="Controllers\AccountController.cs" />

@@ -8,7 +8,7 @@
     <script src="/Scripts/WebSite/HTMLEncoding.js"></script>
     <script type="text/javascript">
         $(function () {
-            $("#briefTxt").html(HTMLEncoding.Coding2Txt($("#briefTxt").html()));
+            $("#briefTxt").html(HTMLEncoding.Decoding($("#briefTxt").html()));
         })
 
     </script>
