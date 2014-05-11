@@ -77,12 +77,12 @@
                                 <div class="thumbnail thumbnail-1">
                                     <h3 style="font-size: 20px;"><%:item.MEnterpriseCasesTitle %></h3>
                                     <a target="_blank" href="/Enterprise/<%:item.EnterprisUrl%>/Index" title="<%:item.MEnterpriseCasesTitle %>">
-                                        <img src="<%:item.MEnterpriseCaseUrl %>" alt="" style="width:270px;height: 146px;">
+                                        <img src="/uploadImages/<%:item.MEnterpriseCaseUrl %>" alt="" style="width:270px;height: 146px;">
                                     </a>
                                     <section>
                                         <strong><%:item.MEnterpriseCasesTitle %></strong>
-                                        <p><%:item.MEnterpriseCasesContent %></p>
-                                        <a target="_blank" href="/Enterprise/<%:item.EnterprisUrl%>/Index" class="btn btn-1">详情更多</a>
+                                        <p style="height: 118px;overflow: hidden;"><%:item.MEnterpriseCasesContent %></p>
+                                        <a target="_blank" href="/Enterprise/<%:item.EnterprisUrl%>/Index" class="btn btn-1" style="margin-top:18px;">详情更多</a>
                                     </section>
                                 </div>
                             </li>
@@ -142,7 +142,7 @@
                                           foreach (Enterprise item in _EList)
                                           {%>
                                     <li class="imglogo"><a target="_blank" href="/Enterprise/<%:item.EnterpriseUrl %>" title="<%:item.EnterpriseName %>">
-                                        <img src="<%:item.EnterpriseLogo %>" alt="" title="<%:item.EnterpriseName %>"/></a></li>
+                                        <img src="/uploadImages/<%:item.EnterpriseLogo %>" alt="" title="<%:item.EnterpriseName %>"/></a></li>
                                     <%++tempCountLogo;
                                           }
                                       }%>
