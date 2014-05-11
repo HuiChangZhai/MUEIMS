@@ -8,6 +8,12 @@
     <link href="/Content/CSS/Account.css" rel="stylesheet" />
     <script type="text/javascript">
         $(document).ready(function () {
+            $("#useremail").keypress(function (e) {
+                if (e.keyCode == 13) {
+                    $("#userpwd").focus();
+                }
+            });
+
             $("#userpwd").keypress(function (e) {
                 if (e.keyCode == 13) {
                     if ($("#useremail").val() != "" && $("#userpwd") != "") {

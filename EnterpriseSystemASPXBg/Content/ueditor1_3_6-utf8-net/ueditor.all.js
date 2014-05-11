@@ -2818,7 +2818,12 @@ var domUtils = dom.domUtils = {
         name = utils.trim(name).replace(/[ ]{2,}/g,' ').split(' ');
         var arr = [];
         for(var n = 0,ni;ni=name[n++];){
-            var list = node.getElementsByTagName(ni);
+            var list;
+            if (node) {
+                list = node.getElementsByTagName(ni);
+            } else {
+                list = document.getElementsByTagName(ni);
+            }
             for (var i = 0, ci; ci = list[i++];) {
                 if(!filter || filter(ci))
                     arr.push(ci);
@@ -3044,7 +3049,7 @@ var domUtils = dom.domUtils = {
                     break;
                 case 'style':
                     node.style.cssText = '';
-                    !browser.ie && node.removeAttributeNode(node.getAttributeNode('style'))
+                    !browser.ie && node.getAttributeNode('style') && node.removeAttributeNode(node.getAttributeNode('style'))
             }
             node.removeAttribute(ci);
         }
