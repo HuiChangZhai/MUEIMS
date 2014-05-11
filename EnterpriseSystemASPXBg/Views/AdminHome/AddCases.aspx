@@ -24,7 +24,14 @@
                     url: url,
                     dataType: "html",
                     success: function (data) {
+                        //debugger;
+                        //var txthtml = $(data).find("#contentBriefHtmlToTxt").html();
+                        //alert(txthtml);
+                        //("#contentBriefHtmlToTxt").html(HTMLEncoding.Decoding(txthtml));
+                        //alert(HTMLEncoding.Decoding(html));
                         $("#enterpriseInfo").after(data);
+                        
+                        
                         setTimeout(function () {
                             DecodingHtml();
                         }, 0);

@@ -19,6 +19,14 @@ namespace EnterpriseSystemASPX.BLL
             return _list;
         }
 
+        public static List<MEnterpriseCases> GetMEnterpriseCasesAll()
+        {
+            DALMEnterpriseCases _DAL = new DALMEnterpriseCases();
+            List<MEnterpriseCases> _list = _DAL.GetMEnterpriseCasesAll();
+
+            return _list;
+        }
+
         public static MEnterpriseCases GetMEnterpriseCases(int id)
         {
             DALMEnterpriseCases _DAL = new DALMEnterpriseCases();

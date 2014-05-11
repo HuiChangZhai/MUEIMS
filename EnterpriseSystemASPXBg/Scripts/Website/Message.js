@@ -28,7 +28,7 @@ function DeleteEDetail(index) {
     }
 }
 
-function DeleteCDetail() {
+function DeleteCDetail(index) {
     if (confirm("你确定要删除吗?")) {
         window.location.href = "/AdminHome/DeleteCases?id=" + index;
     }

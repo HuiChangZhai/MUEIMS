@@ -17,6 +17,14 @@ namespace EnterpriseSystemASPX.DAL
             return _list;
         }
 
+        public List<MEnterpriseCases> GetMEnterpriseCasesAll()
+        {
+            EMSEntities entity = new EMSEntities();
+            List<MEnterpriseCases> _list = entity.MEnterpriseCases.ToList();
+
+            return _list;
+        }
+
         public List<MEnterpriseCases> GetBgMEnterpriseCases()
         {
             EMSEntities entity = new EMSEntities();

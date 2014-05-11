@@ -16,7 +16,7 @@
                     <th>案例URL名称</th>
                     <th>案例标题</th>
                     <%--<th>案例图片</th>--%>
-                    <th>案例内容</th>                    
+                    <th>案例内容</th>
                     <th>是否显示前台</th>
                     <th>操作</th>
                 </tr>
@@ -58,13 +58,13 @@
                   { %>
                 <td><a href="/AdminHome/MessageList?pageindex=<%:i+1 %>">|&nbsp;<%:i+1 %>&nbsp;|</a></td>
                 <%} %>
-                <td>
-                    <%if (page.PageCurrent != page.TotalCount / page.PageSize + 1)
-                      { %>
-                    <a href="/AdminHome/MessageList?pageindex=<%:page.PageCurrent+1%>">下一页</a>
-                    <%} %>
 
-                </td>
+                <%if (page.PageCurrent != page.TotalCount / page.PageSize + 1)
+                  { %>
+                <td><a href="/AdminHome/MessageList?pageindex=<%:page.PageCurrent+1%>">下一页</a></td>
+                <%} %>
+
+
                 <%} %>
             </tr>
         </table>

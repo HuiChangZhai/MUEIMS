@@ -198,7 +198,7 @@ namespace EnterpriseSystemASPXBg.Controllers
             PageHelper page = new PageHelper();
             if (!pageindex.HasValue)
                 pageindex = 1;
-            page.TotalCount = BLLMEnterpriseCases.GetMEnterpriseCases().Count;
+            page.TotalCount = BLLMEnterpriseCases.GetMEnterpriseCasesAll().Count;
             page.PageNext = pageindex.Value + 1;
             page.PageCurrent = pageindex.Value;
             page.PagePre = pageindex.Value - 1;
@@ -246,7 +246,7 @@ namespace EnterpriseSystemASPXBg.Controllers
                 cases.MEnterpriseCasesTitle = ename;
                 cases.MEnterpriseCasesContent = eshort;
                 cases.MEnterpriseCaseShow = show == "是" ? true : false;
-                cases.MEnterpriseCaseUrl = eurl;
+                cases.EnterprisUrl = eurl;
 
                 BLLMEnterpriseCases.InsertMEnterpriseCases(cases);
                 ViewBag.Result = "success";
@@ -265,11 +265,11 @@ namespace EnterpriseSystemASPXBg.Controllers
             builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>版权声明</td><td class='tdContent'>" + enterprise.EnterpriseRight ?? "" + "</td></tr>");
             //builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>注册时间</td><td class='tdContent'>" + enterprise.EnterpriseRegistTime.HasValue ? enterprise.EnterpriseRegistTime.Value.ToString("yyyy-MM-dd") : "" + "</td></tr>");
             builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>企业说明</td><td class='tdContent'>" + enterprise.EnterpriseBriefShort ?? "" + "</td></tr>");
-            builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>企业简介</td><td class='tdContent contentBriefHtmlToTxt'>" + enterprise.EnterpriseBrief ?? "" + "</td></tr>");
+            builder.Append("<tr class='enterpriseinfo'><td style='width: 100px;'>企业简介</td><td class='tdContent contentBriefHtmlToTxt' id='contentBriefHtmlToTxt'>" + enterprise.EnterpriseBrief ?? "" + "</td></tr>");
 
-            builder.Append("<input type='hidden' name='ename' value='" + enterprise.EnterpriseName + "' />");
-            builder.Append("<input type='hidden' name='eshort' value='" + enterprise.EnterpriseBriefShort + "' />");
-            builder.Append("<input type='hidden' name='eurl' value='" + enterprise.EnterpriseUrl + "' />");
+            builder.Append("<tr style=\"display:none;\"><td></td><td><input type='hidden' name='ename' id='ename' value='" + enterprise.EnterpriseName + "' />");
+            builder.Append("<input type='hidden' name='eshort' id='eshort' value='" + enterprise.EnterpriseBriefShort + "' />");
+            builder.Append("<input type='hidden' name='eurl' id='eurl' value='" + enterprise.EnterpriseUrl + "' /></td></tr>");
             //builder.Append("<input type='hidden' name='imgurl' value='" + BLLEnterprise.ServerDns + enterprise. + "' />");
 
 
