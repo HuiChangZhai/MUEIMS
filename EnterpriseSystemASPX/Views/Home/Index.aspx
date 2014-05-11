@@ -16,8 +16,8 @@
 
         #logoWall img
         {
-            border: 3px solid #F2F2F2;
-            display: block;
+            /*border: 3px solid #F2F2F2;
+            display: block;*/
         }
         -->
     </style>
@@ -142,7 +142,7 @@
                                           foreach (Enterprise item in _EList)
                                           {%>
                                     <li class="imglogo"><a target="_blank" href="/Enterprise/<%:item.EnterpriseUrl %>" title="<%:item.EnterpriseName %>">
-                                        <img src="<%:item.EnterpriseLogo %>" alt="" title="<%:item.EnterpriseName %>" /></a></li>
+                                        <img src="<%:item.EnterpriseLogo %>" alt="" title="<%:item.EnterpriseName %>"/></a></li>
                                     <%++tempCountLogo;
                                           }
                                       }%>

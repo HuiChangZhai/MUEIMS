@@ -657,6 +657,10 @@ p
     {
         opacity: 0.7;
     }
+.imglogo
+{
+    width:120px;
+}
     .imglogo:hover
     {
         opacity: 0.7;

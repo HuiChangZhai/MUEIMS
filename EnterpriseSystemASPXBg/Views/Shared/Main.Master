@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width" />
     <title>
         <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
-    </title>
+    </title>    
+    <link rel="icon" href="/Content/Images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/Content/Images/favicon.ico" type="image/x-icon" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="/Content/CSS/SiteBg.css" rel="stylesheet" />
     <script src="/Scripts/jquery-1.7.1.min.js"></script>

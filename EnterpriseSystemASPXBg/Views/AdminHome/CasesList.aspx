@@ -35,7 +35,7 @@
                     <td><%:item.EnterprisUrl %></td>
                     <td><%:!string.IsNullOrWhiteSpace(item.MEnterpriseCasesTitle)&&item.MEnterpriseCasesTitle.Length>15?item.MEnterpriseCasesTitle.Substring(0,14)+" ... ":item.MEnterpriseCasesTitle %></td>
                     <%--<td><img src="<%:BLLEnterprise.ServerDns+item.MEnterpriseCaseUrl %>" alt="" /></td>--%>
-                    <td><%:!string.IsNullOrWhiteSpace(item.MEnterpriseCasesContent)&&item.MEnterpriseCasesContent.Length>15?item.MEnterpriseCasesContent.Substring(0,14)+" ... ":item.MEnterpriseCasesContent  %></td>
+                    <td><%=!string.IsNullOrWhiteSpace(item.MEnterpriseCasesContent)&&item.MEnterpriseCasesContent.Length>15?item.MEnterpriseCasesContent.Substring(0,14)+" ... ":item.MEnterpriseCasesContent  %></td>
                     <td><%:item.MEnterpriseCaseShow?"是":"否" %></td>
                     <td class="handle"><a href="/AdminHome/CasesDetail?id=<%:item.MEnterpriseCasesID.ToString() %>">查看</a>&nbsp;|&nbsp;
                         <a onclick="DeleteCDetail('<%:item.MEnterpriseCasesID.ToString()%>')">删除</a></td>

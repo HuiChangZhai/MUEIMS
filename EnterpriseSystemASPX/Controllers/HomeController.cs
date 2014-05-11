@@ -36,6 +36,9 @@ namespace EnterpriseSystemASPX.Controllers
         public ActionResult ManagementBrief()
         {
             ViewBag.Menu = "MB";
+            string brief = BLLMEnterprise.GetMEnterprise().MEnterpriseBrief;
+
+            ViewBag.BriefTxt = brief;
             return View();
         }
 

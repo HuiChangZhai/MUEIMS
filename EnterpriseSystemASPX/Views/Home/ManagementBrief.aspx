@@ -8,7 +8,9 @@
     <div class="bg-content">
         <div id="content">
             <div class="container">
-                <div>Enterprise</div>
+                <div style="margin-top: 33px;margin-bottom: 33px;">
+                    <%=ViewBag.BriefTxt %>
+                </div>
             </div>
         </div>
     </div>

@@ -176,6 +176,7 @@
     <Content Include="Content\Images\edit.gif" />
     <Content Include="Content\Images\ershou_1.gif" />
     <Content Include="Content\Images\ershou_2.gif" />
+    <Content Include="Content\Images\favicon.ico" />
     <Content Include="Content\Images\format.gif" />
     <Content Include="Content\Images\fox.css" />
     <Content Include="Content\Images\g.gif" />

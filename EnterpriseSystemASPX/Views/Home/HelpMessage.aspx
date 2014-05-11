@@ -109,7 +109,7 @@
                         <h3>帮助中心</h3>
                     </article>
                     <div class="clear"></div>
-                    <div style="background: #000000; padding: 10px; margin-left: 30px;">
+                    <div style="background: #000000; padding: 10px; margin-left: 30px;border-radius: 6px;">
                         <div class="help-left float-left">
                             <div class="help-left-title help-left-padding">
                                 企业用户使用流程
