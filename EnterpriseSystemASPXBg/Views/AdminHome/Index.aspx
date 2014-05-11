@@ -70,7 +70,7 @@
                   { %>
                 <td><a href="/AdminHome/Index?pageindex=<%:page.PageCurrent-1 %>">上一页</a></td>
                 <%} %>
-                <%for (int i = 0; i < page.TotalCount / page.PageSize; ++i)
+                <%for (int i = 0; i < page.TotalCount / page.PageSize + 1; ++i)
                   { %>
                 <td><a href="/AdminHome/Index?pageindex=<%:i+1 %>">|&nbsp;<%:i+1 %>&nbsp;|</a></td>
                 <%} %>
