@@ -121,11 +121,15 @@ body{
 .IndexArticleTitleDiv {
     display:inline-block;
     padding:3px 20px;
-    background:#ebebeb;
+    background:#dedede;
     margin:5px;
     border-radius:5px 5px 5px 5px;
     -moz-border-radius:5px 5px 5px 5px;
     -webkit-border-radius:5px 5px 5px 5px;
+}
+
+.IndexArticleTitleDiv a {
+    color:#7f7f7f;
 }
 
 .IndexArticleTitleDiv a:hover {
@@ -152,6 +156,7 @@ body{
     border-radius:5px 5px;
     -moz-border-radius:5px 5px;
     -webkit-border-radius:5px 5px;
+    cursor:pointer;
 }
 
 .enterpriseCasesItem, .dynamicItem {

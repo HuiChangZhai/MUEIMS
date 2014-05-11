@@ -172,6 +172,7 @@
     -webkit-border-radius:5px 5px;
     text-overflow:ellipsis;
     overflow:hidden;
+    cursor:pointer;
 }
 
 .enterpriseCasesItem, .dynamicItem {
