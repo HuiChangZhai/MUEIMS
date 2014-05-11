@@ -20,10 +20,10 @@
                           {%>
                         <li class="span4">
                             <div class="thumbnail thumbnail-1">
-                                <img src="<%:item.MEnterpriseCaseUrl %>" style="width:350px;">
+                                <img src="/uploadImages/<%:item.MEnterpriseCaseUrl %>" style="width:350px;height: 200px;">
                                 <section>
                                     <a href="/Enterprise/<%:item.EnterprisUrl%>/Index" target="_blank" class="link-1"><%:item.MEnterpriseCasesTitle %></a>
-                                    <p><%:item.MEnterpriseCasesContent %></p>
+                                    <p style="height: 118px;overflow: hidden;"><%:item.MEnterpriseCasesContent %></p>
                                 </section>
                             </div>
                         </li>
