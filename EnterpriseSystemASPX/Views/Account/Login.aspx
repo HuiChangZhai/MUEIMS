@@ -6,6 +6,17 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <link href="/Content/CSS/Account.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#userpwd").keypress(function (e) {
+                if (e.keyCode == 13) {
+                    if ($("#useremail").val() != "" && $("#userpwd") != "") {
+                        $("#LoginForm").submit();
+                    }
+                }
+            });
+        });
+    </script>
     <script src="/Scripts/WebSite/Accountlogin.js"></script>
     <!--============================== content begin=================================-->
     <div class="bg-content">
